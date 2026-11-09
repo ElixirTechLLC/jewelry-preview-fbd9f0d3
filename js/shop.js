@@ -25,7 +25,7 @@ window.JW.pages.shop = function () {
   $("#shopTitle").textContent = title;
   $("#shopIntro").textContent = q ? `${base.length} piece${base.length === 1 ? "" : "s"} found.` : meta.intro;
   $("#crumbs").innerHTML = `<a href="index.html">Home</a><span>/</span><a href="${shopUrl(cat)}">${esc(meta.title)}</a>${chip ? `<span>/</span>${esc(chip[0])}` : ""}`;
-  document.title = `${title} — ${window.SITE.brand}`;
+  document.title = `${title} | ${window.SITE.brand}`;
   if (!q && meta.chips && meta.chips.length) {
     $("#chips").innerHTML =
       `<a class="pill${!tag ? " is-active" : ""}" href="${shopUrl(cat)}">All</a>` +
@@ -80,7 +80,7 @@ window.JW.pages.shop = function () {
     $("#resultCount").textContent = `${list.length} piece${list.length === 1 ? "" : "s"}`;
     $("#results").innerHTML = list.length
       ? list.map(productCard).join("")
-      : `<div class="empty"><h3>Nothing in the case matches — yet.</h3><p>We make almost anything to order. Tell us what you are looking for.</p><p style="margin-top:22px"><a class="btn" href="custom.html">Request a Custom Piece</a></p></div>`;
+      : `<div class="empty"><h3>No pieces match those filters.</h3><p>We also make jewelry to order. Tell us what you are looking for.</p><p style="margin-top:22px"><a class="btn" href="custom.html">Request a custom piece</a></p></div>`;
   }
   const score = (p) => (imagesFor(p.id).length ? 2 : 0) + (p.featured ? 1 : 0);
 

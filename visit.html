@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Visit Us — {brand}</title>
-  <meta name="description" content="Visit our jewelry shop: hours, directions, appointments, sizing and repairs.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Cpath d='M10 9h12l5 6-11 11L5 15z' fill='none' stroke='%23d4af37' stroke-width='1.6'/%3E%3C/svg%3E">
+  <title>Visit Us | {brand}</title>
+  <meta name="description" content="Shop address, hours, appointments, sizing and repairs.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Cpath d='M10 9h12l5 6-11 11L5 15z' fill='none' stroke='%23c9a24b' stroke-width='1.6'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,50 +18,45 @@
   <section class="page-head">
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span>Visit Us</nav>
-      <h1>Come see it <em class="gold-text">being made.</em></h1>
-      <p><span data-brand></span> is a working jewelry shop. Try pieces on, sit down with a jeweler, and see where everything on this site comes from.</p>
+      <h1>Visit the shop</h1>
+      <p>Everything on this site is made here. Come in to try pieces on or to talk through a custom design with a jeweler.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap visit-grid">
       <div>
-        <span class="eyebrow">The shop</span>
         <div class="contact-list">
           <div><b>Address</b><span data-address1></span><br><span data-address2></span></div>
           <div><b>Phone</b><a data-tel href="#"><span data-phone></span></a></div>
           <div><b>Email</b><a data-mailto href="#"><span data-email></span></a></div>
         </div>
-        <span class="eyebrow">Hours</span>
+        <h2 class="h3" style="font-family:var(--sans)">Hours</h2>
         <table class="hours"><tbody data-hours></tbody></table>
-        <p style="margin-top:34px;display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn btn--gold" id="apptLink" href="#">Book an Appointment</a>
-          <a class="btn" data-tel href="#">Call the Shop</a>
+        <p style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn--gold" id="apptLink" href="#">Book an appointment</a>
+          <a class="btn" data-tel href="#">Call the shop</a>
         </p>
-        <p class="fine" style="margin-top:14px">Walk-ins are welcome. For engagement rings and custom design, an appointment guarantees you a jeweler's full attention.</p>
+        <p class="fine" style="margin-top:12px">Walk-ins are welcome. For engagement rings and custom work, an appointment means a jeweler is free when you arrive.</p>
       </div>
       <div>
         <!-- Replace this block with a Google Maps embed once the address is final -->
-        <div class="map-ph">Map goes here<br>(add the shop address in js/config.js)</div>
+        <div class="map-ph">Map</div>
       </div>
     </div>
   </section>
 
   <section class="section section--alt" id="services">
     <div class="wrap">
-      <div class="section-head center">
-        <span class="eyebrow">In the shop</span>
-        <h2>Services</h2>
-        <hr class="rule">
-      </div>
-      <div class="cards-3">
-        <div class="info-card"><div class="num">01</div><h3>Custom design</h3><p>From sketch to finished piece, all under one roof. <a class="gold-text" href="custom.html">See how it works.</a></p></div>
-        <div class="info-card"><div class="num">02</div><h3>Sizing &amp; repairs</h3><p>Ring sizing, chain and clasp repair, prong re-tipping and polishing, done on site.</p></div>
-        <div class="info-card"><div class="num">03</div><h3>Stone setting &amp; remounting</h3><p>Reset a loose stone, upgrade a center diamond, or move heirloom stones into a new piece.</p></div>
-        <div class="info-card"><div class="num">04</div><h3>Cleaning &amp; inspection</h3><p>Bring any piece we made for a professional clean and a check of every setting.</p></div>
-        <div class="info-card"><div class="num">05</div><h3>Watch customization</h3><p>Diamond bezels, dials and bracelets, set by hand at our bench.</p></div>
-        <div class="info-card"><div class="num">06</div><h3>Financing</h3><p>Available on every purchase and every custom order. <a class="gold-text" href="financing.html">Learn more.</a></p></div>
-      </div>
+      <div class="section-head"><h2>Services</h2></div>
+      <ul class="two-col-list">
+        <li><b>Custom design</b><span>From sketch to finished piece. <a class="text-link" href="custom.html">How it works</a></span></li>
+        <li><b>Sizing and repairs</b><span>Ring sizing, chain and clasp repair, prong re-tipping and polishing.</span></li>
+        <li><b>Stone setting and remounting</b><span>Tighten a loose stone, change a center diamond, or move stones into a new piece.</span></li>
+        <li><b>Cleaning and inspection</b><span>Bring in any piece we made for a clean and a check of the settings.</span></li>
+        <li><b>Watch customization</b><span>Diamond bezels, dials and bracelets.</span></li>
+        <li><b>Financing</b><span>On purchases and custom orders. <a class="text-link" href="financing.html">Details</a></span></li>
+      </ul>
     </div>
   </section>
 

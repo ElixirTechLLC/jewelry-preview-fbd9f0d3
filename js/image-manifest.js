@@ -4,7 +4,11 @@ window.IMAGES = {
     "assets/products/eng-round-solitaire/1.webp"
   ],
   "eng-oval-hidden-halo": [
-    "assets/products/eng-oval-hidden-halo/1.webp"
+    "assets/products/eng-oval-hidden-halo/1.webp",
+    "assets/products/eng-oval-hidden-halo/2.webp",
+    "assets/products/eng-oval-hidden-halo/3.webp",
+    "assets/products/eng-oval-hidden-halo/4.webp",
+    "assets/products/eng-oval-hidden-halo/5.webp"
   ],
   "eng-emerald-three-stone": [
     "assets/products/eng-emerald-three-stone/1.webp"

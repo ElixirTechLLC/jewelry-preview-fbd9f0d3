@@ -43,7 +43,7 @@ window.SITE = {
       { months: 36, label: "36 months", note: "[Terms TBD]" },
     ],
     disclosure:
-      "Placeholder example only — not an offer of credit. Final provider, rates, terms and eligibility will be published here at launch.",
+      "Example only, not an offer of credit. The provider, rates, terms and eligibility will be published here at launch.",
   },
 
   // Default diamond quality line shown when a piece does not override it.

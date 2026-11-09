@@ -26,7 +26,7 @@ window.CATALOG = [
     price: 6450, metal: "14K Yellow Gold", goldG: 3.8,
     dia: { ctw: 1.5, count: 1, shape: "Round Brilliant", color: "G", clarity: "VS1" },
     specs: { Setting: "Six-prong cathedral", "Band width": "2.0 mm", "Center stone": "1.50 ct round brilliant" },
-    blurb: "One perfect round brilliant, lifted high on six slender prongs so light enters from every side. The ring every other ring is measured against.",
+    blurb: "A 1.50 ct round brilliant diamond in a six-prong cathedral setting on a 2 mm polished band.",
     prompt: "a classic solitaire engagement ring, single 1.5 carat round brilliant diamond in a six-prong setting, slim polished 14k yellow gold band, standing upright, three-quarter view",
   },
   {
@@ -35,7 +35,7 @@ window.CATALOG = [
     price: 9800, metal: "18K Yellow Gold", goldG: 4.2,
     dia: { ctw: 2.18, count: 25, shape: "Oval & Round", color: "F–G", clarity: "VS1" },
     specs: { Setting: "Four-prong with hidden halo", "Band width": "1.8 mm", "Center stone": "2.00 ct oval", "Accent stones": "0.18 ctw round" },
-    blurb: "An elongated oval that looks larger than its carat weight, with a secret ring of diamonds tucked beneath the stone — visible only from the side.",
+    blurb: "A 2.00 ct oval diamond held in four claw prongs, with a row of small diamonds under the stone that shows from the side.",
     prompt: "an engagement ring with a 2 carat oval cut diamond center stone, four claw prongs, a hidden halo of tiny diamonds under the stone, thin polished 18k yellow gold band, three-quarter view",
   },
   {
@@ -44,7 +44,7 @@ window.CATALOG = [
     price: 14900, metal: "18K Yellow Gold", goldG: 5.4,
     dia: { ctw: 2.61, count: 3, shape: "Emerald & Trapezoid", color: "F", clarity: "VVS2" },
     specs: { Setting: "Four-prong basket", "Band width": "2.2 mm", "Center stone": "2.01 ct emerald cut", "Side stones": "0.60 ctw trapezoid" },
-    blurb: "A hall-of-mirrors emerald cut flanked by two tapered trapezoids. Architectural, quiet, and unmistakably serious.",
+    blurb: "A 2.01 ct emerald cut diamond with a tapered trapezoid diamond on each side, set in 18K gold.",
     prompt: "a three-stone engagement ring, large emerald cut diamond center flanked by two trapezoid cut side diamonds, polished 18k yellow gold band and prongs, three-quarter view",
   },
   {
@@ -53,7 +53,7 @@ window.CATALOG = [
     price: 5950, metal: "14K Rose Gold", goldG: 4.0,
     dia: { ctw: 1.65, count: 47, shape: "Cushion & Round", color: "G–H", clarity: "VS2" },
     specs: { Setting: "Halo with pavé shoulders", "Band width": "1.9 mm", "Center stone": "1.20 ct cushion", "Accent stones": "0.45 ctw round" },
-    blurb: "A soft-cornered cushion wrapped in a halo of pavé, set in warm rose gold. Romantic without trying too hard.",
+    blurb: "A 1.20 ct cushion cut diamond with a diamond halo and a pavé band, in 14K rose gold.",
     prompt: "a halo engagement ring, cushion cut diamond center surrounded by a halo of small round diamonds, pave diamond band, polished 14k rose gold, three-quarter view",
   },
   {
@@ -62,7 +62,7 @@ window.CATALOG = [
     price: 4950, was: 5800, metal: "14K Yellow Gold", goldG: 4.6,
     dia: { ctw: 1.5, count: 11, shape: "Princess", color: "G–H", clarity: "VS2" },
     specs: { Setting: "Four-prong with channel-set shoulders", "Band width": "2.6 mm", "Center stone": "1.00 ct princess", "Accent stones": "0.50 ctw princess" },
-    blurb: "Crisp square lines from end to end: a princess-cut center with a row of matching princess cuts flush-set down each shoulder.",
+    blurb: "A 1.00 ct princess cut diamond with princess cuts channel-set down each shoulder.",
     prompt: "an engagement ring with a princess cut square diamond center stone and channel-set princess cut diamonds along the shoulders, polished 14k yellow gold, three-quarter view",
   },
   {
@@ -71,7 +71,7 @@ window.CATALOG = [
     price: 7900, metal: "18K Yellow Gold", goldG: 3.4,
     dia: { ctw: 1.75, count: 1, shape: "Pear", color: "G", clarity: "VS1" },
     specs: { Setting: "Five-prong with V-tip", "Band width": "1.7 mm", "Center stone": "1.75 ct pear" },
-    blurb: "A single teardrop of light on the finest band we make. Wear the point up or down — it flatters either way.",
+    blurb: "A 1.75 ct pear shaped diamond on a thin 18K gold band. It can be worn with the point up or down.",
     prompt: "a solitaire engagement ring with a pear shaped teardrop diamond, delicate claw prongs, very thin polished 18k yellow gold band, three-quarter view",
   },
   {
@@ -80,7 +80,7 @@ window.CATALOG = [
     price: 13500, metal: "18K Yellow Gold", goldG: 4.4,
     dia: { ctw: 2.82, count: 33, shape: "Radiant & Round", color: "G", clarity: "VS1" },
     specs: { Setting: "Four-prong with French pavé band", "Band width": "2.0 mm", "Center stone": "2.50 ct radiant", "Accent stones": "0.32 ctw round" },
-    blurb: "The fire of a brilliant in the outline of an emerald cut, on a band paved three-quarters of the way round.",
+    blurb: "A 2.50 ct radiant cut diamond on a band set with round diamonds three quarters of the way around.",
     prompt: "an engagement ring with a large elongated radiant cut diamond center stone on a pave diamond band, polished 18k yellow gold, three-quarter view",
   },
   {
@@ -89,7 +89,7 @@ window.CATALOG = [
     price: 4400, metal: "14K Yellow Gold", goldG: 3.9,
     dia: { ctw: 1.25, count: 29, shape: "Marquise & Round", color: "H", clarity: "VS2" },
     specs: { Setting: "Milgrain halo", "Band width": "2.0 mm", "Center stone": "1.00 ct marquise", "Accent stones": "0.25 ctw round" },
-    blurb: "Hand-applied milgrain beading and a navette-shaped center give this ring the feel of an heirloom found in a velvet box.",
+    blurb: "A 1.00 ct marquise diamond in a milgrain-edged halo, on an engraved band.",
     prompt: "a vintage style engagement ring with a marquise cut diamond center, milgrain beaded halo of small diamonds, engraved 14k yellow gold band, three-quarter view",
   },
   {
@@ -98,7 +98,7 @@ window.CATALOG = [
     price: 11200, metal: "18K Yellow Gold", goldG: 4.1,
     dia: { ctw: 2.0, count: 2, shape: "Pear & Emerald", color: "F–G", clarity: "VS1" },
     specs: { Setting: "Open bypass, claw prongs", "Band width": "1.9 mm", "Stones": "1.00 ct pear + 1.00 ct emerald cut" },
-    blurb: "“You and me.” Two different stones, set side by side at a tilt — a pear and an emerald cut that have no business looking this good together.",
+    blurb: "A two-stone ring with a 1.00 ct pear and a 1.00 ct emerald cut diamond set side by side.",
     prompt: "a toi et moi engagement ring with two diamonds side by side, one pear shaped and one emerald cut, set at an angle on a thin polished 18k yellow gold band, three-quarter view",
   },
 
@@ -109,7 +109,7 @@ window.CATALOG = [
     price: 3950, metal: "14K Yellow Gold", goldG: 3.2,
     dia: { ctw: 2.0, count: 22, shape: "Round Brilliant" },
     specs: { Setting: "Shared prong, full eternity", "Band width": "2.8 mm" },
-    blurb: "Twenty-two matched round brilliants running the full circle, with as little metal between them as we dare.",
+    blurb: "Twenty-two round brilliant diamonds in shared prongs, set all the way around the band.",
     prompt: "a full eternity wedding band with a continuous row of round brilliant diamonds in shared prong setting, polished 14k yellow gold, standing upright, three-quarter view",
   },
   {
@@ -118,7 +118,7 @@ window.CATALOG = [
     price: 495, metal: "14K Yellow Gold", goldG: 2.6,
     dia: null,
     specs: { Finish: "High polish", "Band width": "2.0 mm", Profile: "Half-round, comfort fit" },
-    blurb: "The plain gold band, done properly: solid, softly domed, rounded on the inside so you forget you are wearing it.",
+    blurb: "A plain 2 mm gold band with a half-round profile and a comfort-fit interior.",
     prompt: "a plain thin polished 14k yellow gold wedding band, 2mm wide, domed half-round profile, no stones, standing upright, three-quarter view",
   },
   {
@@ -127,7 +127,7 @@ window.CATALOG = [
     price: 1450, metal: "14K Yellow Gold", goldG: 9.8,
     dia: null,
     specs: { Finish: "High polish", "Band width": "6.0 mm", Profile: "Low dome, comfort fit" },
-    blurb: "Nearly ten grams of solid gold with a low dome and a comfort-fit interior. Substantial on the hand, easy over the knuckle.",
+    blurb: "A plain 6 mm gold band with a low dome and a comfort-fit interior. Solid gold, 9.8 g.",
     prompt: "a men's plain polished 14k yellow gold wedding band, 6mm wide, low dome profile, no stones, standing upright, three-quarter view",
   },
   {
@@ -136,7 +136,7 @@ window.CATALOG = [
     price: 3250, metal: "14K Yellow Gold", goldG: 11.4,
     dia: { ctw: 0.75, count: 9, shape: "Round Brilliant" },
     specs: { Setting: "Channel", "Band width": "7.0 mm", Finish: "Satin center, polished edges" },
-    blurb: "Nine round brilliants sunk flush into a satin-finished band. Nothing to snag, plenty to notice.",
+    blurb: "A 7 mm satin-finished band with nine round diamonds channel-set across the top.",
     prompt: "a men's wide wedding band with a row of nine round diamonds channel-set across the top, satin brushed 14k yellow gold with polished edges, three-quarter view",
   },
   {
@@ -145,7 +145,7 @@ window.CATALOG = [
     price: 2850, metal: "18K Yellow Gold", goldG: 3.0,
     dia: { ctw: 1.1, count: 13, shape: "Baguette", color: "F–G", clarity: "VVS2–VS1" },
     specs: { Setting: "Channel, half eternity", "Band width": "3.0 mm" },
-    blurb: "Thirteen straight baguettes laid end to end like a strip of mirror. Sits flush against almost any engagement ring.",
+    blurb: "Thirteen baguette diamonds channel-set across the top half of an 18K gold band. It sits flush against most engagement rings.",
     prompt: "a half eternity wedding band with a row of baguette cut diamonds channel-set side by side, polished 18k yellow gold, three-quarter view",
   },
   {
@@ -154,7 +154,7 @@ window.CATALOG = [
     price: 895, metal: "14K Yellow Gold", goldG: 1.9,
     dia: { ctw: 0.22, count: 23, shape: "Round Brilliant" },
     specs: { Setting: "Micro-pavé", "Band width": "1.6 mm", Profile: "Curved to nest beside a solitaire" },
-    blurb: "A gentle chevron of micro-pavé shaped to tuck under your center stone. We can match the curve to your exact ring.",
+    blurb: "A thin pavé band with a slight curve so it sits against a solitaire. We can match the curve to your ring.",
     prompt: "a thin curved chevron contour wedding band with micro pave round diamonds, polished 14k yellow gold, three-quarter view",
   },
   {
@@ -163,16 +163,15 @@ window.CATALOG = [
     price: 1550, was: 1850, metal: "14K Yellow Gold", goldG: 10.2,
     dia: null,
     specs: { Finish: "Hand-hammered, satin", "Band width": "6.0 mm", Profile: "Flat, comfort fit" },
-    blurb: "Every facet struck by hand at our bench, so no two are alike. A band with some texture and some story.",
+    blurb: "A 6 mm band with a hand-hammered satin finish. The pattern is slightly different on every ring.",
     prompt: "a men's 14k yellow gold wedding band with a hand hammered faceted texture, 6mm wide, satin finish, no stones, three-quarter view",
   },
   {
     id: "wed-emerald-eternity", sku: "WED-2008", name: "Emerald Cut Eternity Band",
-    cat: "wedding", type: "band", tags: ["her", "eternity", "diamond", "anniversary"], badge: "Statement",
-    price: 12400, metal: "18K Yellow Gold", goldG: 4.8,
+    cat: "wedding", type: "band", tags: ["her", "eternity", "diamond", "anniversary"],     price: 12400, metal: "18K Yellow Gold", goldG: 4.8,
     dia: { ctw: 4.5, count: 18, shape: "Emerald", color: "F–G", clarity: "VVS2–VS1" },
     specs: { Setting: "Shared prong, full eternity", "Band width": "4.2 mm" },
-    blurb: "Eighteen quarter-carat emerald cuts, shoulder to shoulder, all the way round. An anniversary ring that needs no explanation.",
+    blurb: "Eighteen emerald cut diamonds of about a quarter carat each, set all the way around in shared prongs.",
     prompt: "a full eternity band of large emerald cut diamonds set side by side in shared prongs, polished 18k yellow gold, standing upright, three-quarter view",
   },
 
@@ -183,7 +182,7 @@ window.CATALOG = [
     price: 7950, metal: "14K Yellow Gold", goldG: 11.6,
     dia: { ctw: 5.0, count: 55, shape: "Round Brilliant" },
     specs: { Setting: "Four-prong", Length: "7 in", Width: "3.2 mm", Clasp: "Box clasp with double safety" },
-    blurb: "Fifty-five matched round brilliants in a line that moves like fabric. The piece you put on and never take off.",
+    blurb: "Fifty-five round brilliant diamonds in four-prong settings. 7 inches long, with a box clasp and double safety.",
     prompt: "a diamond tennis bracelet, single row of round brilliant diamonds in four-prong 14k yellow gold settings, laid in a graceful curve",
   },
   {
@@ -192,7 +191,7 @@ window.CATALOG = [
     price: 1950, metal: "14K Yellow Gold", goldG: 1.1,
     dia: { ctw: 1.0, count: 2, shape: "Round Brilliant", color: "G–H", clarity: "VS2" },
     specs: { Setting: "Four-prong basket", Backing: "Push back (screw back on request)" },
-    blurb: "A matched pair of half-carat rounds in low-profile baskets. The safest gift in the case, and still the most worn.",
+    blurb: "A matched pair of half-carat round diamonds in four-prong basket settings.",
     prompt: "a pair of round brilliant diamond stud earrings in four-prong 14k yellow gold basket settings, side by side",
   },
   {
@@ -201,16 +200,15 @@ window.CATALOG = [
     price: 1150, metal: "14K Yellow Gold", goldG: 2.4,
     dia: { ctw: 0.33, count: 44, shape: "Round Brilliant" },
     specs: { Setting: "Micro-pavé", Diameter: "12 mm", Closure: "Hinged snap" },
-    blurb: "Small hoops that sit close to the lobe, paved front and back so they catch the light from either side.",
+    blurb: "Small 12 mm hoops with pavé diamonds on the front and back, and a hinged snap closure.",
     prompt: "a pair of small huggie hoop earrings covered in micro pave round diamonds, polished 14k yellow gold, side by side",
   },
   {
     id: "wom-tennis-necklace", sku: "WOM-3004", name: "Riviera Diamond Tennis Necklace",
-    cat: "womens", type: "necklace", tags: ["her", "necklace", "tennis", "anniversary"], badge: "Statement",
-    price: 16500, metal: "14K Yellow Gold", goldG: 21.5,
+    cat: "womens", type: "necklace", tags: ["her", "necklace", "tennis", "anniversary"],     price: 16500, metal: "14K Yellow Gold", goldG: 21.5,
     dia: { ctw: 10.0, count: 142, shape: "Round Brilliant" },
     specs: { Setting: "Four-prong", Length: "16 in", Width: "3.0 mm", Clasp: "Box clasp with safety" },
-    blurb: "Ten carats in an unbroken river around the collarbone. We match every stone by eye before a single one is set.",
+    blurb: "A 16 inch line of 142 round brilliant diamonds in four-prong settings.",
     prompt: "a riviera diamond tennis necklace, continuous single row of round brilliant diamonds in 14k yellow gold prong settings, laid in an elegant loop",
   },
   {
@@ -219,7 +217,7 @@ window.CATALOG = [
     price: 1450, metal: "14K Yellow Gold", goldG: 2.2,
     dia: { ctw: 0.5, count: 1, shape: "Round Brilliant", color: "G", clarity: "VS2" },
     specs: { Setting: "Full bezel", Chain: "1.1 mm cable, adjustable 16–18 in", Clasp: "Lobster" },
-    blurb: "A half-carat round floating in a rim of polished gold. Simple enough for every day, good enough for the day itself.",
+    blurb: "A 0.50 ct round diamond in a full bezel, on an adjustable 16 to 18 inch cable chain.",
     prompt: "a solitaire pendant necklace, single round diamond in a polished 14k yellow gold bezel setting on a fine cable chain",
   },
   {
@@ -228,7 +226,7 @@ window.CATALOG = [
     price: 1150, metal: "14K Yellow Gold", goldG: 6.8,
     dia: null,
     specs: { Length: "18 in", "Link size": "4 × 12 mm", Clasp: "Lobster", Construction: "Solid links" },
-    blurb: "Long, flat-sided links with a mirror polish. Wear it alone, layer it, or hang a charm from any link.",
+    blurb: "An 18 inch chain of solid elongated links with a polished finish and a lobster clasp.",
     prompt: "a paperclip link chain necklace with elongated oval links in polished 14k yellow gold, no stones, laid in a loop",
   },
   {
@@ -238,7 +236,7 @@ window.CATALOG = [
     dia: { ctw: 0.4, count: 16, shape: "Round Brilliant" },
     gem: { name: "Natural Colombian Emerald", ct: 1.4, shape: "Emerald cut" },
     specs: { Setting: "Double-claw with diamond halo", "Band width": "2.0 mm" },
-    blurb: "A garden-green Colombian emerald framed in white diamonds. Green and gold have been keeping company for five thousand years.",
+    blurb: "A 1.40 ct natural Colombian emerald surrounded by round diamonds, in 18K yellow gold.",
     prompt: "a cocktail ring with a rich green emerald cut emerald center stone surrounded by a halo of round white diamonds, polished 18k yellow gold band, three-quarter view",
   },
   {
@@ -248,7 +246,7 @@ window.CATALOG = [
     dia: { ctw: 0.3, count: 28, shape: "Round Brilliant" },
     gem: { name: "Natural Blue Sapphire", ct: 2.0, shape: "Pear (pair)" },
     specs: { Setting: "Prong with pavé halo", Drop: "22 mm", Backing: "Lever back" },
-    blurb: "A pair of royal-blue pear sapphires swinging beneath a small diamond-set frame. They move when you do.",
+    blurb: "Pear shaped blue sapphires in diamond halos, hanging from diamond-set tops. The drop is 22 mm.",
     prompt: "a pair of drop earrings each with a pear shaped royal blue sapphire framed by a halo of small white diamonds, 14k yellow gold, side by side",
   },
   {
@@ -257,7 +255,7 @@ window.CATALOG = [
     price: 5400, metal: "14K Yellow Gold", goldG: 14.2,
     dia: { ctw: 1.5, count: 31, shape: "Round Brilliant" },
     specs: { Setting: "Shared prong, top half", "Inner size": "6.75 in (oval)", Width: "3.5 mm", Closure: "Hidden hinge with safety catch" },
-    blurb: "An oval bangle shaped to the wrist, with diamonds across the top and solid polished gold beneath.",
+    blurb: "An oval hinged bangle with round diamonds across the top half and a hidden clasp.",
     prompt: "a hinged oval bangle bracelet with a row of round diamonds across the top half, polished 14k yellow gold, standing upright",
   },
   {
@@ -266,7 +264,7 @@ window.CATALOG = [
     price: 6950, metal: "14K Yellow Gold", goldG: 7.4,
     dia: { ctw: 3.25, count: 112, shape: "Baguette & Round" },
     specs: { Setting: "Channel-set baguettes, prong-set round halo", "Face size": "20 × 15 mm", Shank: "Split, pavé-set" },
-    blurb: "Two tiers of baguettes framed and divided by rows of round brilliants, on a split pavé shank. One big, bright face that covers the finger knuckle to knuckle.",
+    blurb: "Two rows of baguette diamonds framed by round diamonds, on a split pavé shank. The face measures about 20 by 15 mm.",
     prompt: "a cocktail ring with a large rectangular face of two rows of baguette diamonds framed and divided by rows of round diamonds, split pave shank, polished 14k yellow gold, three-quarter view",
   },
   {
@@ -275,7 +273,7 @@ window.CATALOG = [
     price: 595, metal: "14K Yellow Gold", goldG: 1.6,
     dia: { ctw: 0.1, count: 17, shape: "Round Brilliant" },
     specs: { Setting: "Micro-pavé", "Letter height": "9 mm", Chain: "1.0 mm cable, adjustable 16–18 in" },
-    blurb: "Any letter, paved in diamonds, cut and set in our shop. Tell us the initial at checkout.",
+    blurb: "A 9 mm letter set with pavé diamonds, on an adjustable cable chain. Available in any initial.",
     prompt: "a small letter initial pendant necklace covered in micro pave diamonds, polished 14k yellow gold on a fine cable chain",
   },
   {
@@ -284,7 +282,7 @@ window.CATALOG = [
     price: 695, metal: "14K Yellow Gold", goldG: 3.6,
     dia: null,
     specs: { Diameter: "30 mm", "Tube width": "3.0 mm", Closure: "Hinged snap post", Finish: "High polish" },
-    blurb: "Round, bright, and light enough to wear from breakfast to last call. The hoop everybody ends up borrowing.",
+    blurb: "30 mm polished tube hoops with a hinged snap post.",
     prompt: "a pair of classic round polished 14k yellow gold hoop earrings, medium size, no stones, side by side",
   },
   {
@@ -293,7 +291,7 @@ window.CATALOG = [
     price: 895, was: 1050, metal: "14K Yellow Gold", goldG: 1.8,
     dia: { ctw: 0.3, count: 12, shape: "Round Brilliant" },
     specs: { Setting: "Shared prong", "Pendant size": "17 × 10 mm", Chain: "1.0 mm cable, adjustable 16–18 in" },
-    blurb: "A dozen matched rounds in a small, bright cross. A first-communion, confirmation and every-day favorite.",
+    blurb: "A small cross set with twelve round diamonds, on an adjustable 16 to 18 inch chain.",
     prompt: "a small delicate cross pendant necklace set with round diamonds, polished 14k yellow gold on a fine chain",
   },
 
@@ -312,7 +310,7 @@ window.CATALOG = [
       "Face size": "18 × 18 mm",
       "Band width": "6.5 mm (at base)",
     },
-    blurb: "Our signature. A five-by-five panel of invisible-set princess cuts, framed in baguettes with an emerald cut at each corner, on shoulders paved to the base. Designed, cast and set under our own roof.",
+    blurb: "A square signet ring with 25 invisible-set princess cut diamonds in the center, a border of baguettes with an emerald cut at each corner, and pavé shoulders. Designed, cast and set in our shop.",
     prompt: "a men's square signet ring, top face of 25 invisible-set princess cut diamonds in a 5x5 grid framed by a border of baguette diamonds, pave round diamonds covering the shoulders, heavy polished 14k yellow gold, three-quarter view",
   },
   {
@@ -321,7 +319,7 @@ window.CATALOG = [
     price: 7950, metal: "14K Yellow Gold", goldG: 68.0,
     dia: null,
     specs: { Length: "22 in", Width: "8.0 mm", Construction: "Solid links, hand-polished", Clasp: "Box lock with double safety" },
-    blurb: "Solid, tight-linked and flat on the chest. Sixty-eight grams you can feel — no hollow links, ever.",
+    blurb: "A solid 8 mm Miami Cuban link chain, 22 inches long, with a box lock and double safety.",
     prompt: "a heavy solid miami cuban link chain necklace, flat tight interlocking curb links, polished 14k yellow gold, no stones, laid in a loop with box clasp",
   },
   {
@@ -330,16 +328,15 @@ window.CATALOG = [
     price: 2750, metal: "14K Yellow Gold", goldG: 22.4,
     dia: null,
     specs: { Length: "24 in", Width: "4.0 mm", Construction: "Solid, diamond-cut", Clasp: "Lobster" },
-    blurb: "The classic rope, faceted along every twist so it flashes like it has stones in it. Strong enough for a heavy pendant.",
+    blurb: "A solid 4 mm diamond-cut rope chain, 24 inches long, with a lobster clasp.",
     prompt: "a twisted rope chain necklace with sparkling diamond-cut facets, polished 14k yellow gold, no stones, laid in a loop",
   },
   {
     id: "men-tennis-chain", sku: "MEN-4004", name: "Men's Diamond Tennis Chain · 4 mm",
-    cat: "mens", type: "chain", tags: ["him", "chain", "tennis"], badge: "Statement",
-    price: 18900, metal: "14K Yellow Gold", goldG: 34.0,
+    cat: "mens", type: "chain", tags: ["him", "chain", "tennis"],     price: 18900, metal: "14K Yellow Gold", goldG: 34.0,
     dia: { ctw: 12.0, count: 118, shape: "Round Brilliant" },
     specs: { Setting: "Four-prong", Length: "20 in", Width: "4.0 mm", Clasp: "Box lock with double safety" },
-    blurb: "One hundred eighteen ten-pointers, set by hand, link by link. Lies dead flat and throws light across the room.",
+    blurb: "A 20 inch tennis chain with 118 round diamonds of equal size in four-prong settings.",
     prompt: "a men's diamond tennis chain necklace, one long single row of identical round brilliant diamonds that are all exactly the same size from clasp to clasp, uniform and not graduated, 14k yellow gold four-prong settings, laid flat in a large loop with the box clasp at the top",
   },
   {
@@ -348,7 +345,7 @@ window.CATALOG = [
     price: 11400, metal: "14K Yellow Gold", goldG: 48.5,
     dia: { ctw: 4.25, count: 312, shape: "Round Brilliant" },
     specs: { Setting: "Micro-pavé on every link", Length: "8.5 in", Width: "10.0 mm", Clasp: "Box lock with double safety" },
-    blurb: "A solid Cuban link with every top surface paved. Three hundred twelve stones, each set under a microscope.",
+    blurb: "A solid 10 mm Cuban link bracelet with pavé diamonds on every link. 8.5 inches long.",
     prompt: "a men's cuban link bracelet with every link covered in micro pave round diamonds, heavy polished 14k yellow gold, laid in a curve",
   },
   {
@@ -357,7 +354,7 @@ window.CATALOG = [
     price: 3450, metal: "14K Yellow Gold", goldG: 7.4,
     dia: { ctw: 1.5, count: 16, shape: "Round Brilliant" },
     specs: { Setting: "Four-prong", "Pendant size": "38 × 24 mm (with bail)", Bail: "Fits chains up to 5 mm", Chain: "Sold separately" },
-    blurb: "Sixteen bold rounds in a clean prong-set cross. Pair it with the rope chain or hang it from one you already own.",
+    blurb: "A cross set with sixteen round diamonds in four-prong settings. The bail fits chains up to 5 mm. Chain sold separately.",
     prompt: "a men's cross pendant set with a single row of round brilliant diamonds in prong settings, polished 14k yellow gold with bail, on a gold chain",
   },
   {
@@ -367,7 +364,7 @@ window.CATALOG = [
     dia: { ctw: 0.75, count: 50, shape: "Round Brilliant" },
     gem: { name: "Black Onyx", ct: null, shape: "Flat-top, cut-corner, 13 × 12 mm" },
     specs: { Setting: "Bezel-set onyx, pavé shoulders", "Face size": "15 × 14 mm", "Band width": "4.5 mm (at base)" },
-    blurb: "A slab of polished black onyx in a heavy cut-corner gold frame, with shoulders paved in diamonds. Black and gold, the way we like it.",
+    blurb: "A polished black onyx in a cut-corner gold bezel, with pavé diamond shoulders.",
     prompt: "a men's signet ring with a flat rectangular polished black onyx stone in a heavy 14k yellow gold bezel, small pave diamonds on the shoulders, three-quarter view",
   },
   {
@@ -376,7 +373,7 @@ window.CATALOG = [
     price: 4250, metal: "14K Yellow Gold", goldG: 1.6,
     dia: { ctw: 2.0, count: 2, shape: "Round Brilliant", color: "G–H", clarity: "VS2" },
     specs: { Setting: "Four-prong basket", Backing: "Screw back" },
-    blurb: "One carat in each ear, secured with screw backs so they stay put. Clean, bright, and impossible to overthink.",
+    blurb: "A pair of 1.00 ct round diamonds in four-prong baskets with screw backs.",
     prompt: "a pair of large round brilliant diamond stud earrings in four-prong 14k yellow gold settings with screw backs, side by side",
   },
   {
@@ -385,7 +382,7 @@ window.CATALOG = [
     price: 3650, was: 4200, metal: "14K Yellow Gold", goldG: 29.5,
     dia: null,
     specs: { Length: "24 in", Width: "3.5 mm", Construction: "Solid, four-sided", Clasp: "Lobster" },
-    blurb: "Dense V-shaped links woven four ways. Won't kink, won't pull hair, and carries a pendant better than anything we sell.",
+    blurb: "A solid 3.5 mm Franco chain, 24 inches long, with a lobster clasp. Strong enough to carry a pendant.",
     prompt: "a franco chain necklace with dense square woven v-shaped links, polished 14k yellow gold, no stones, laid in a loop",
   },
   {
@@ -394,7 +391,7 @@ window.CATALOG = [
     price: 7450, metal: "14K Yellow Gold", goldG: 14.8,
     dia: { ctw: 3.5, count: 127, shape: "Round Brilliant" },
     specs: { Setting: "Prong cluster with pavé shoulders", "Face size": "17 mm round", "Band width": "5.5 mm (at base)" },
-    blurb: "A domed circle of tightly clustered rounds stepping down into paved shoulders. Big look, comfortable weight.",
+    blurb: "A domed cluster of round diamonds with pavé shoulders. The face measures 17 mm across.",
     prompt: "a men's ring with a round domed cluster of many round diamonds on top and pave diamonds on the shoulders, heavy polished 14k yellow gold, three-quarter view",
   },
   {
@@ -403,7 +400,7 @@ window.CATALOG = [
     price: 2950, metal: "14K Yellow Gold", goldG: 24.0,
     dia: null,
     specs: { Length: "8.5 in", Width: "8.0 mm", "ID plate": "40 × 10 mm, engravable", Clasp: "Lobster" },
-    blurb: "Solid Figaro links either side of a polished plate. We hand-engrave a name, a date or a few words at no charge.",
+    blurb: "Solid Figaro links with a polished ID plate that can be engraved.",
     prompt: "a men's ID bracelet with a blank polished rectangular plate and figaro chain links, solid 14k yellow gold, no stones, laid in a curve",
   },
 
@@ -414,7 +411,7 @@ window.CATALOG = [
     price: 28500, metal: "18K Yellow Gold", goldG: 96.0,
     dia: null,
     specs: { "Case size": "41 mm", Movement: "Swiss automatic, 28,800 vph", Dial: "Champagne sunburst", Crystal: "Sapphire", Bracelet: "Solid 18K three-link", "Water resistance": "100 m" },
-    blurb: "A solid 18-karat case and bracelet around a Swiss automatic movement. Champagne dial, applied gold markers, and the heft only real gold has.",
+    blurb: "A 41 mm automatic watch with a solid 18K gold case and bracelet and a champagne sunburst dial.",
     prompt: "a men's luxury wristwatch in solid polished yellow gold with a three-link gold bracelet, champagne sunburst dial with plain gold baton markers and clearly visible gold hour, minute and seconds hands, smooth plain polished gold bezel, plain polished gold case and lugs, absolutely no diamonds and no gemstones anywhere on the watch, completely unbranded with no logo and no text on the dial",
   },
   {
@@ -423,16 +420,15 @@ window.CATALOG = [
     price: 14900, metal: "18K Yellow Gold & Steel", goldG: 28.0,
     dia: { ctw: 2.5, count: 40, shape: "Round Brilliant", color: "F–G", clarity: "VS1" },
     specs: { "Case size": "41 mm", Movement: "Swiss automatic, 28,800 vph", Dial: "Black with diamond hour markers", Crystal: "Sapphire", Bracelet: "Two-tone steel & 18K gold", "Water resistance": "100 m" },
-    blurb: "Two-tone steel and gold with a bezel of forty brilliants, set in our own shop. Black dial, gold hands — the house colors.",
+    blurb: "A 41 mm automatic watch in steel and 18K gold, with a 2.50 ctw diamond bezel and a black dial with diamond hour markers.",
     prompt: "a men's luxury two-tone stainless steel and yellow gold wristwatch with a bezel set with round diamonds, black dial with diamond hour markers and gold hands, completely unbranded with no logo and no text on the dial",
   },
   {
     id: "wat-monarch-42-pave", sku: "WAT-5003", name: "Monarch 42 · Full Pavé",
-    cat: "watches", type: "watch", tags: ["him", "diamond", "solid-gold"], badge: "Statement",
-    price: 64000, metal: "14K Yellow Gold", goldG: 142.0,
+    cat: "watches", type: "watch", tags: ["him", "diamond", "solid-gold"],     price: 64000, metal: "14K Yellow Gold", goldG: 142.0,
     dia: { ctw: 18.0, count: 1240, shape: "Round Brilliant" },
     specs: { "Case size": "42 mm", Movement: "Swiss automatic", Dial: "Full pavé diamond", Crystal: "Sapphire", Bracelet: "Solid 14K, fully set", "Water resistance": "30 m" },
-    blurb: "Case, bezel, dial and every link of the bracelet set by hand — twelve hundred forty stones in all. Built to order; allow six to eight weeks.",
+    blurb: "A 42 mm automatic watch in 14K gold with pavé diamonds on the case, bezel, dial and bracelet. Made to order in six to eight weeks.",
     prompt: "a men's luxury yellow gold wristwatch completely covered in pave round diamonds on the case, bezel, dial and bracelet, fully iced out, completely unbranded with no logo and no text on the dial",
   },
   {
@@ -441,7 +437,7 @@ window.CATALOG = [
     price: 9800, metal: "18K Yellow Gold", goldG: 52.0,
     dia: { ctw: 1.1, count: 46, shape: "Round Brilliant", color: "F–G", clarity: "VS1" },
     specs: { "Case size": "28 mm", Movement: "Swiss quartz", Dial: "White mother-of-pearl", Crystal: "Sapphire", Bracelet: "Solid 18K five-link", "Water resistance": "50 m" },
-    blurb: "A small, bright watch with a mother-of-pearl dial and a full diamond bezel on a supple five-link bracelet.",
+    blurb: "A 28 mm quartz watch in 18K gold with a mother-of-pearl dial and a diamond bezel.",
     prompt: "a women's small luxury wristwatch in polished yellow gold with a five-link gold bracelet, round diamond-set bezel, white mother of pearl dial, completely unbranded with no logo and no text on the dial",
   },
   {
@@ -450,7 +446,7 @@ window.CATALOG = [
     price: 4950, was: 5800, metal: "18K Yellow Gold & Steel", goldG: 14.5,
     dia: { ctw: 0.12, count: 10, shape: "Round Brilliant" },
     specs: { "Case size": "31 mm", Movement: "Swiss automatic", Dial: "Champagne with diamond markers", Crystal: "Sapphire", Bracelet: "Two-tone steel & 18K gold", "Water resistance": "100 m" },
-    blurb: "Steel for every day, gold where it shows, and ten small diamonds marking the hours on a champagne dial.",
+    blurb: "A 31 mm automatic watch in steel and 18K gold, with a fluted bezel and diamond hour markers.",
     prompt: "a women's luxury two-tone stainless steel and yellow gold wristwatch with a fluted gold bezel, champagne dial with small diamond hour markers, completely unbranded with no logo and no text on the dial",
   },
   {
@@ -459,7 +455,7 @@ window.CATALOG = [
     price: 12400, metal: "18K Yellow Gold", goldG: 44.0,
     dia: null,
     specs: { "Case size": "40 mm", Movement: "Swiss automatic chronograph", Dial: "Matte black, gold sub-dials", Crystal: "Sapphire, display case back", Strap: "Black alligator-grain leather, 18K buckle", "Water resistance": "50 m" },
-    blurb: "A solid gold chronograph on black leather with a matte black dial. The whole brand, on your wrist.",
+    blurb: "A 40 mm automatic chronograph in 18K gold with a matte black dial, on a black leather strap.",
     prompt: "a men's luxury chronograph wristwatch with a polished yellow gold case and a smooth plain polished gold bezel, absolutely no diamonds and no gemstones anywhere on the watch, matte black dial with three gold sub-dials, black alligator leather strap, completely unbranded with no logo and no text on the dial",
   },
 ];

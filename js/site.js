@@ -37,42 +37,42 @@
   const CATS = {
     engagement: {
       title: "Engagement Rings",
-      intro: "Solitaires, halos and three-stone rings — every one designed, cast and set in our own shop, in the shape and size you choose.",
+      intro: "Solitaires, halos and three-stone rings in every diamond shape. Each ring is made to order in our shop, in your size.",
       chips: [["Round", "round"], ["Oval", "oval"], ["Emerald", "emerald"], ["Cushion", "cushion"], ["Princess", "princess"], ["Pear", "pear"], ["Radiant", "radiant"], ["Marquise", "marquise"]],
     },
     wedding: {
       title: "Wedding Bands",
-      intro: "Classic gold bands, diamond eternity rings and men's bands, made to sit perfectly beside the ring you already love.",
+      intro: "Gold bands, diamond eternity rings and men's bands. We can shape a band to fit your engagement ring.",
       chips: [["For Her", "her"], ["For Him", "him"], ["Eternity", "eternity"], ["Diamond", "diamond"], ["Classic Gold", "plain"]],
     },
     womens: {
       title: "Women's Jewelry",
-      intro: "Tennis bracelets, diamond studs, pendants and color — fine jewelry made to be worn every day.",
+      intro: "Rings, necklaces, earrings and bracelets in gold, diamonds and colored stones.",
       chips: [["Rings", "ring"], ["Necklaces", "necklace"], ["Earrings", "earrings"], ["Bracelets", "bracelet"], ["Gemstones", "gemstone"]],
     },
     mens: {
       title: "Men's Jewelry",
-      intro: "Solid gold chains, diamond rings and bracelets with real weight. No hollow links, no shortcuts.",
+      intro: "Solid gold chains, rings, pendants and bracelets. Every link is solid, not hollow.",
       chips: [["Rings", "ring"], ["Chains", "chain"], ["Pendants", "pendant"], ["Bracelets", "bracelet"], ["Earrings", "earrings"]],
     },
     watches: {
       title: "Watches",
-      intro: "Solid gold and diamond-set timepieces, with every stone set by hand at our own bench.",
+      intro: "Gold and diamond watches. All diamond setting is done in our shop.",
       chips: [["Men's", "him"], ["Women's", "her"], ["Diamond", "diamond"], ["Solid Gold", "solid-gold"]],
     },
     gifts: {
       title: "Gifts",
-      intro: "Pieces chosen to be given — for anniversaries, birthdays, graduations, or no reason at all.",
+      intro: "Popular gifts for anniversaries, birthdays and graduations.",
       chips: [["For Her", "her"], ["For Him", "him"], ["Anniversary", "anniversary"]],
       filter: (p) => p.tags.includes("gift") || p.tags.includes("anniversary"),
     },
     sale: {
       title: "Sale",
-      intro: "The same solid gold and hand-set diamonds, at a quieter price. When they are gone, they are gone.",
+      intro: "Reduced prices on selected pieces, while they last.",
       chips: [["For Her", "her"], ["For Him", "him"]],
       filter: (p) => !!p.was,
     },
-    all: { title: "All Jewelry", intro: "Everything in the case.", chips: [], filter: () => true },
+    all: { title: "All Jewelry", intro: "Everything we currently offer.", chips: [], filter: () => true },
   };
   const inCat = (p, cat) => (CATS[cat] && CATS[cat].filter ? CATS[cat].filter(p) : p.cat === cat);
   const shopUrl = (cat, tag, extra) => `shop.html?cat=${cat}${tag ? "&tag=" + tag : ""}${extra || ""}`;
@@ -85,7 +85,7 @@
         { title: "Shop by Style", links: [["Solitaire", "solitaire"], ["Halo", "halo"], ["Three-Stone & Two-Stone", "three-stone"], ["Pavé Band", "pave"]] },
         { title: "Services", raw: [["All Engagement Rings", shopUrl("engagement")], ["Design Your Own Ring", "custom.html"], ["Financing", "financing.html"], ["Book an Appointment", "visit.html"]] },
       ],
-      promo: { title: "Design your own ring", text: "Bring a stone, a sketch or just an idea. We build it here.", href: "custom.html", cta: "Start a design" },
+      promo: { title: "Design your own ring", text: "Bring a stone, a photo or a sketch and we will make the ring.", href: "custom.html", cta: "Start a design" },
     },
     {
       label: "Wedding", cat: "wedding", feature: "wed-eternity-round",
@@ -94,7 +94,7 @@
         { title: "For Him", links: [["Men's Bands", "him"], ["Classic Gold Bands", "plain"]] },
         { title: "Services", raw: [["All Wedding Bands", shopUrl("wedding")], ["Custom Matching Bands", "custom.html"], ["Anniversary Gifts", shopUrl("gifts", "anniversary")]] },
       ],
-      promo: { title: "Made to match", text: "We shape a band to the exact curve of your engagement ring.", href: "custom.html", cta: "Ask our jewelers" },
+      promo: { title: "Matching bands", text: "We can shape a band to fit your engagement ring.", href: "custom.html", cta: "Custom design" },
     },
     {
       label: "Women's", cat: "womens", feature: "wom-tennis-bracelet",
@@ -103,7 +103,7 @@
         { title: "Featured", links: [["Tennis Collection", "tennis"], ["Gemstones", "gemstone"], ["Gifts for Her", "gift"]] },
         { title: "More", raw: [["All Women's Jewelry", shopUrl("womens")], ["Women's Watches", shopUrl("watches", "her")], ["Women's Sale", shopUrl("sale", "her")]] },
       ],
-      promo: { title: "The tennis bracelet", text: "Five carats, fifty-five stones, one unbroken line.", href: "product.html?id=wom-tennis-bracelet", cta: "View the piece" },
+      promo: { title: "Diamond tennis bracelet", text: "5.00 ctw in 14K yellow gold.", href: "product.html?id=wom-tennis-bracelet", cta: "Shop now" },
     },
     {
       label: "Men's", cat: "mens", feature: "men-sovereign-signet",
@@ -112,7 +112,7 @@
         { title: "Featured", links: [["Signature Pieces", "signature"], ["Diamond Tennis", "tennis"], ["Gifts for Him", "gift"]] },
         { title: "More", raw: [["All Men's Jewelry", shopUrl("mens")], ["Men's Wedding Bands", shopUrl("wedding", "him")], ["Men's Watches", shopUrl("watches", "him")]] },
       ],
-      promo: { title: "The Sovereign", text: "5.20 carats of princess, baguette and round diamonds in 18.5 g of gold.", href: "product.html?id=men-sovereign-signet", cta: "View the piece" },
+      promo: { title: "The Sovereign signet ring", text: "5.20 ctw in 18.5 g of 14K gold.", href: "product.html?id=men-sovereign-signet", cta: "Shop now" },
     },
     {
       label: "Watches", cat: "watches", feature: "wat-meridian-41-diamond",
@@ -121,7 +121,7 @@
         { title: "Featured", links: [["Diamond Watches", "diamond"], ["Solid Gold", "solid-gold"]] },
         { title: "Services", raw: [["All Watches", shopUrl("watches")], ["Custom Diamond Setting", "custom.html"], ["Financing", "financing.html"]] },
       ],
-      promo: { title: "Set in our shop", text: "Bezels, dials and bracelets — every diamond set by our own hands.", href: "custom.html", cta: "Customize a watch" },
+      promo: { title: "Custom diamond setting", text: "Bezels, dials and bracelets set in our shop.", href: "custom.html", cta: "Customize a watch" },
     },
     {
       label: "Gifts", cat: "gifts", feature: "wom-diamond-studs",
@@ -130,7 +130,7 @@
         { title: "Shop by Price", raw: [["Under $1,000", shopUrl("gifts", "", "&max=1000")], ["Under $2,500", shopUrl("gifts", "", "&max=2500")], ["Under $5,000", shopUrl("gifts", "", "&max=5000")]] },
         { title: "More", raw: [["All Gifts", shopUrl("gifts")], ["Custom & Engraved Gifts", "custom.html"], ["Sale", shopUrl("sale")]] },
       ],
-      promo: { title: "The safest gift in the case", text: "One-carat diamond studs she will wear every day.", href: "product.html?id=wom-diamond-studs", cta: "View the piece" },
+      promo: { title: "Diamond stud earrings", text: "1.00 ctw in 14K yellow gold.", href: "product.html?id=wom-diamond-studs", cta: "Shop now" },
     },
     { label: "Sale", cat: "sale", sale: true },
   ];
@@ -211,7 +211,7 @@
     badge.textContent = count;
     badge.hidden = !count;
     if (!lines.length) {
-      body.innerHTML = `<div class="bag-empty"><p>Your bag is empty.</p><a class="link-arrow" href="${shopUrl("all")}">Browse the collection</a></div>`;
+      body.innerHTML = `<div class="bag-empty"><p>Your bag is empty.</p><a class="link-arrow" href="${shopUrl("all")}">Shop all jewelry</a></div>`;
       $("#bagFoot").hidden = true;
       return;
     }
@@ -230,15 +230,15 @@
     const total = Bag.total();
     const mail = [
       `Hello ${S.brand},`, "", "I would like to purchase the following:", "",
-      ...lines.map((l) => `• ${l.p.name} (${l.p.sku})${l.opts ? " — " + l.opts : ""} × ${l.qty} — ${money(l.p.price * l.qty)}`),
+      ...lines.map((l) => `- ${l.p.name} (${l.p.sku})${l.opts ? ", " + l.opts : ""}, qty ${l.qty}: ${money(l.p.price * l.qty)}`),
       "", `Subtotal: ${money(total)}`, "", "Name:", "Phone:", "I am interested in financing: yes / no",
     ].join("\n");
     $("#bagFoot").hidden = false;
     $("#bagFoot").innerHTML = `
       <div class="bag-total"><span>Subtotal</span><strong>${money(total)}</strong></div>
-      <div class="bag-fin">or ${finLine(total).toLowerCase()} with financing · <a class="gold-text" href="financing.html">Learn more</a></div>
-      <a class="btn btn--gold btn--block" href="mailto:${esc(S.contact.email)}?subject=${encodeURIComponent("Purchase request")}&body=${encodeURIComponent(mail)}">Request to Purchase</a>
-      <p class="bag-note">Secure online checkout is coming soon. Send us your bag and a jeweler will confirm sizing, timing and payment — or call ${esc(S.contact.phone)}.</p>`;
+      <div class="bag-fin">or ${finLine(total).toLowerCase()} with financing. <a class="text-link" href="financing.html">Details</a></div>
+      <a class="btn btn--gold btn--block" href="mailto:${esc(S.contact.email)}?subject=${encodeURIComponent("Purchase request")}&body=${encodeURIComponent(mail)}">Request to purchase</a>
+      <p class="bag-note">Online checkout is not open yet. Send us your bag and a jeweler will confirm sizing, timing and payment. You can also call ${esc(S.contact.phone)}.</p>`;
   }
 
   function toast(msg) {
@@ -282,8 +282,8 @@
     header.innerHTML = `
       <div class="announce"><div class="wrap">
         <span><a href="financing.html">Financing available on every piece</a></span>
-        <span>Designed &amp; made in our own shop</span>
-        <span><a href="custom.html">Custom design — if you can imagine it, we can build it</a></span>
+        <span>Made in our own shop</span>
+        <span><a href="custom.html">Custom design</a></span>
       </div></div>
       <header class="site-header">
         <div class="wrap header-top">
@@ -292,7 +292,7 @@
             <a class="header-link" href="custom.html">Custom Design</a>
             <a class="header-link" href="financing.html">Financing</a>
           </div>
-          <a class="logo" href="index.html" aria-label="${esc(S.brand)} — home">
+          <a class="logo" href="index.html" aria-label="${esc(S.brand)} home">
             <span class="logo-name">${esc(S.brand)}</span>
             <span class="logo-tag">${esc(S.tagline)}</span>
           </a>
@@ -336,7 +336,7 @@
         <div class="wrap">
           <form class="search-row" id="searchForm" action="shop.html">
             <input type="hidden" name="cat" value="all">
-            <input type="search" name="q" id="searchInput" placeholder="Search rings, chains, watches…" autocomplete="off" aria-label="Search">
+            <input type="search" name="q" id="searchInput" placeholder="Search rings, chains, watches" autocomplete="off" aria-label="Search">
             <button type="button" class="close-btn" data-close aria-label="Close search">×</button>
           </form>
           <div class="search-results" id="searchResults"></div>
@@ -351,7 +351,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="logo" href="index.html"><span class="logo-name">${esc(S.brand)}</span></a>
-          <p>A working jewelry shop. We design, cast, set and finish under one roof — so if you can imagine it, we can build it.</p>
+          <p>We design, cast and set jewelry in our own shop.</p>
         </div>
         <div><h4>Shop</h4><ul>
           ${NAV.map((n) => `<li><a href="${shopUrl(n.cat)}">${n.label}</a></li>`).join("")}
@@ -359,8 +359,8 @@
         <div><h4>Services</h4><ul>
           <li><a href="custom.html">Custom Design</a></li>
           <li><a href="financing.html">Financing</a></li>
-          <li><a href="visit.html">Book an Appointment</a></li>
-          <li><a href="visit.html#services">Sizing &amp; Repairs</a></li>
+          <li><a href="visit.html">Book an appointment</a></li>
+          <li><a href="visit.html#services">Sizing and repairs</a></li>
         </ul></div>
         <div><h4>Visit</h4><ul>
           <li><a href="visit.html">${esc(S.contact.addressLine1)}<br>${esc(S.contact.addressLine2)}</a></li>
@@ -368,8 +368,8 @@
           <li><a href="mailto:${esc(S.contact.email)}">${esc(S.contact.email)}</a></li>
         </ul></div>
         <div class="footer-news">
-          <h4>First Look</h4>
-          <p class="muted" style="font-size:15px">New pieces and private sale previews, a few times a year.</p>
+          <h4>Email list</h4>
+          <p class="muted" style="font-size:14px;margin-bottom:10px">New pieces and sale notices.</p>
           <form class="newsletter" id="newsForm"><input type="email" placeholder="Email address" aria-label="Email address" required><button>Join</button></form>
           <div class="footer-note" id="newsNote" role="status"></div>
         </div>
@@ -431,12 +431,12 @@
       const hits = search(e.target.value).slice(0, 8);
       results.innerHTML = e.target.value.trim().length < 2 ? "" : hits.length
         ? hits.map((p) => `<a class="search-hit" href="product.html?id=${p.id}"><div class="thumb">${mediaHTML(p)}</div><div><b>${esc(p.name)}</b><span>${money(p.price)} · ${esc(specLine(p))}</span></div></a>`).join("")
-        : `<p class="muted">No pieces match that yet — <a class="gold-text" href="custom.html">we can make it for you</a>.</p>`;
+        : `<p class="muted">No matches. <a class="text-link" href="custom.html">Ask us to make it</a>.</p>`;
     });
 
     $("#newsForm").addEventListener("submit", (e) => {
       e.preventDefault();
-      $("#newsNote").textContent = "Thank you — the list opens at launch.";
+      $("#newsNote").textContent = "Thanks. The list opens at launch.";
       e.target.reset();
     });
 

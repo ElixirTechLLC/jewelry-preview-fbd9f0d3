@@ -13,11 +13,14 @@
        run --sync.
 
    OPENAI_API_KEY=sk-... node scripts/generate-images.mjs
-       Generate an image for every piece that has none yet.
-       Options:  --only <id>[,<id>]   just these pieces
+       Generate every photo that is missing. Photo 1 of a piece is made
+       from its text prompt; photos 2–5 (other angles, a close-up and an
+       on-model shot) are made FROM photo 1, so they show the same piece.
+       Options:  --views 5            photos per piece (default 1, max 5)
+                 --only <id>[,<id>]   just these pieces
                  --except <id>[,<id>] every piece but these
-                 --force              regenerate even if images exist
-                 --views 2            images per piece (default 1)
+                 --photo 5            only this photo number (e.g. with --force to redo one)
+                 --force              regenerate even if the photo exists
                  --parallel 3         images generated at once
                  --size 1600x2000     pixel size (default 1024x1536)
        Env:      IMAGE_MODEL    force a model (default: newest image
@@ -33,6 +36,7 @@ const PRODUCTS_DIR = path.join(ROOT, "assets", "products");
 const MANIFEST = path.join(ROOT, "js", "image-manifest.js");
 const IMAGE_EXT = /\.(webp|png|jpe?g|avif)$/i;
 const API = "https://api.openai.com/v1";
+const MAX_VIEWS = 5;
 
 const STYLE =
   "Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, " +
@@ -40,12 +44,47 @@ const STYLE =
   "photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. " +
   "No text, no lettering, no logos, no watermark, no hands, no people.";
 
-const VIEW_VARIANTS = [
-  "",
-  " Alternate angle: straight-on front view.",
-  " Alternate angle: low side profile view showing the craftsmanship.",
-  " Alternate angle: top-down view.",
-];
+const WORN_STYLE =
+  "Dark, moody luxury editorial photograph: black clothing, near-black background, warm golden highlights on the jewelry, " +
+  "razor-sharp focus on the piece with shallow depth of field, natural realistic skin, photorealistic, portrait orientation. " +
+  "The face is not shown. No text, no lettering, no logos, no watermark.";
+
+/* Photos 2–5 for each kind of piece. The last one is always the on-model shot. */
+const VIEWS = {
+  ring: [
+    "viewed straight on from the front, standing upright, the top of the ring facing the camera",
+    "viewed from a low side profile, showing the side of the setting and the band",
+    "in an extreme macro close-up of the stones and the setting",
+    (who) => `being worn properly on a ${who} hand: the band is slid all the way down onto the ring finger and wraps completely around that one finger at its base, below the knuckle, with the top of the ring facing up on the back of the finger. The ring is not held, pinched or resting between two fingers. It is true to life size, so the top of the ring is no wider than the finger it is on. The hand is relaxed against a black jacket, tight close-up on the hand`,
+  ],
+  necklace: [
+    "laid flat and viewed from directly above",
+    "in an extreme macro close-up of the stones, links and clasp",
+    "draped on a black velvet jewelry bust",
+    (who) => `being worn properly by a ${who.replace("'s", "")}: fastened around the neck and lying flat against the skin of the chest, at true life size, not held in the hand. Black clothing with an open neckline, cropped from the chin to the chest`,
+  ],
+  earrings: [
+    "as a single earring viewed from the side, showing the post and backing",
+    "in an extreme macro close-up of one earring",
+    "as the pair lying on the surface, viewed from directly above",
+    (who) => `being worn properly on a ${who} ear: the post goes through the earlobe and the earring sits against or hangs from the lobe at true life size, not held in the fingers. Tight close-up of one ear and the jawline with the hair pulled back`,
+  ],
+  bracelet: [
+    "laid flat in a straight line and viewed from directly above",
+    "in an extreme macro close-up of the links, stones and clasp",
+    "standing upright as a closed loop, three-quarter view",
+    (who) => `being worn properly on a ${who} wrist: fastened closed and wrapped all the way around the wrist at true life size, not held or draped over the fingers. The hand is relaxed, with a black sleeve, tight close-up on the wrist`,
+  ],
+  watch: [
+    "from a three-quarter angle, showing the side of the case and the crown",
+    "in an extreme macro close-up of the dial and bezel",
+    "lying on its side, showing the case profile and the bracelet or strap",
+    (who) => `being worn properly on a ${who} wrist: strapped closed around the wrist with the dial facing up, at true life size, not held in the hand. The cuff of a black suit sleeve is just behind it, tight close-up on the wrist`,
+  ],
+};
+VIEWS.band = VIEWS.ring;
+VIEWS.pendant = VIEWS.necklace;
+VIEWS.chain = VIEWS.necklace;
 
 function loadCatalog() {
   const src = fs.readFileSync(path.join(ROOT, "js", "catalog.js"), "utf8");
@@ -54,8 +93,22 @@ function loadCatalog() {
   return window.CATALOG;
 }
 
-function fullPrompt(p, view = 0) {
-  return `Luxury fine jewelry product photograph of ${p.prompt}.${VIEW_VARIANTS[view] || ""} ${STYLE}`;
+/* Prompt for photo 1 (text only). */
+function fullPrompt(p) {
+  return `Luxury fine jewelry product photograph of ${p.prompt}. ${STYLE}`;
+}
+
+/* Prompt for photos 2–5, sent together with photo 1 as the reference. */
+function viewPrompt(p, view) {
+  const v = (VIEWS[p.type] || VIEWS.ring)[view - 1];
+  const who = p.tags.includes("him") ? "man's" : "woman's";
+  const worn = typeof v === "function";
+  const what = worn ? v(who) : v;
+  return (
+    "The attached image is a product photograph of one piece of jewelry. Create a new photograph of this exact same piece — " +
+    "the identical design, the identical metal and metal color, and the identical stones in the same number, shapes, sizes and arrangement — " +
+    `now shown ${what}. Do not redesign, simplify or embellish the piece. ${worn ? WORN_STYLE : STYLE}`
+  );
 }
 
 function existingImages(id) {
@@ -66,23 +119,25 @@ function existingImages(id) {
     .filter((f) => IMAGE_EXT.test(f))
     .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
 }
+const photoFile = (id, n) => existingImages(id).find((f) => f.startsWith(`${n}.`));
 
 function sync() {
   const catalog = loadCatalog();
   const manifest = {};
-  let withImages = 0;
+  let withImages = 0, photos = 0;
   for (const p of catalog) {
     const files = existingImages(p.id);
     if (files.length) {
       manifest[p.id] = files.map((f) => `assets/products/${p.id}/${f}`);
       withImages++;
+      photos += files.length;
     }
   }
   const body =
     "/* AUTO-GENERATED by scripts/generate-images.mjs --sync. Do not edit by hand. */\n" +
     `window.IMAGES = ${JSON.stringify(manifest, null, 2)};\n`;
   fs.writeFileSync(MANIFEST, body);
-  console.log(`Manifest updated: ${withImages} of ${catalog.length} pieces have images.`);
+  console.log(`Manifest updated: ${withImages} of ${catalog.length} pieces have images (${photos} photos in all).`);
   const missing = catalog.filter((p) => !manifest[p.id]).map((p) => p.id);
   if (missing.length) console.log(`Still missing (${missing.length}): ${missing.join(", ")}`);
 }
@@ -141,19 +196,36 @@ function rankModels(ids) {
 
 /* Request options, from preferred to bare minimum, in case a model rejects one of them. */
 let SIZE = process.env.IMAGE_SIZE || "1024x1536"; // --size WIDTHxHEIGHT overrides (both divisible by 16)
-const OPTION_SETS = [
-  () => ({ size: SIZE, quality: process.env.IMAGE_QUALITY || "high", output_format: "webp" }),
-  () => ({ size: SIZE }),
-  () => ({}),
-];
-let working = null; // { model, set } once a combination has succeeded
+const QUALITY = () => process.env.IMAGE_QUALITY || "high";
+const OPTION_SETS = {
+  generate: [
+    () => ({ size: SIZE, quality: QUALITY(), output_format: "webp" }),
+    () => ({ size: SIZE }),
+    () => ({}),
+  ],
+  edit: [
+    () => ({ size: SIZE, quality: QUALITY(), output_format: "webp", input_fidelity: "high" }),
+    () => ({ size: SIZE, quality: QUALITY(), output_format: "webp" }),
+    () => ({ size: SIZE }),
+    () => ({}),
+  ],
+};
+const working = { generate: null, edit: null }; // { model, set } once a combination has succeeded
 
-async function callApi(body, key) {
-  const res = await fetch(`${API}/images/generations`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
-    body: JSON.stringify(body),
-  });
+async function callApi(kind, fields, key, ref) {
+  let res;
+  if (kind === "edit") {
+    const form = new FormData();
+    for (const [k, v] of Object.entries(fields)) form.append(k, String(v));
+    form.append("image", new Blob([ref.buf], { type: ref.mime }), ref.name);
+    res = await fetch(`${API}/images/edits`, { method: "POST", headers: { Authorization: `Bearer ${key}` }, body: form });
+  } else {
+    res = await fetch(`${API}/images/generations`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${key}` },
+      body: JSON.stringify(fields),
+    });
+  }
   if (!res.ok) {
     const err = new Error(`${res.status} ${await res.text()}`);
     err.status = res.status;
@@ -165,10 +237,10 @@ async function callApi(body, key) {
 }
 
 /* Retry rate limits and server hiccups; give up at once on anything else. */
-async function callWithRetry(body, key) {
+async function callWithRetry(kind, fields, key, ref) {
   for (let attempt = 1; ; attempt++) {
     try {
-      return await callApi(body, key);
+      return await callApi(kind, fields, key, ref);
     } catch (err) {
       const retryable = (err.status === 429 && !isOutOfCredit(err)) || err.status >= 500 || !err.status;
       if (!retryable || attempt >= 4) throw err;
@@ -177,15 +249,17 @@ async function callWithRetry(body, key) {
   }
 }
 
-async function generateOne(prompt, key, models) {
-  if (working) return callWithRetry({ model: working.model, prompt, n: 1, ...OPTION_SETS[working.set]() }, key);
+async function makeImage(kind, prompt, key, models, ref) {
+  const sets = OPTION_SETS[kind];
+  const w = working[kind];
+  if (w) return callWithRetry(kind, { model: w.model, prompt, n: 1, ...sets[w.set]() }, key, ref);
   let last;
   for (const model of models.slice(0, 4)) {
-    for (let set = 0; set < OPTION_SETS.length; set++) {
+    for (let set = 0; set < sets.length; set++) {
       try {
-        const buf = await callWithRetry({ model, prompt, n: 1, ...OPTION_SETS[set]() }, key);
-        working = { model, set };
-        console.log(`Using image model ${model}${set ? " (with reduced options)" : ""}.`);
+        const buf = await callWithRetry(kind, { model, prompt, n: 1, ...sets[set]() }, key, ref);
+        working[kind] = { model, set };
+        console.log(`Using image model ${model}${set ? ` (option set ${set + 1})` : ""}${kind === "edit" ? " for the extra angles" : ""}.`);
         return buf;
       } catch (err) {
         last = err;
@@ -203,6 +277,7 @@ function extensionOf(buf) {
   if (buf[0] === 0x89 && buf[1] === 0x50) return "png";
   return "jpg";
 }
+const MIME = { webp: "image/webp", png: "image/png", jpg: "image/jpeg", jpeg: "image/jpeg" };
 
 async function generate(args) {
   const key = cleanKey(process.env.OPENAI_API_KEY);
@@ -232,46 +307,62 @@ async function generate(args) {
   if (args.size) SIZE = String(args.size);
   console.log(`Image size: ${SIZE}`);
   const only = args.only ? new Set(args.only.split(",")) : null;
-  const views = Math.min(Number(args.views || 1), VIEW_VARIANTS.length);
   const except = new Set(args.except ? args.except.split(",") : []);
+  const photos = args.photo ? new Set(String(args.photo).split(",").map(Number)) : null; // --photo 5: only that photo number
+  const views = Math.max(1, Math.min(Number(args.views || (photos ? Math.max(...photos) : 1)), MAX_VIEWS));
   // Pieces marked ownPhotos in the catalog have real supplied photos and are never regenerated.
   const catalog = loadCatalog().filter((p) => (!only || only.has(p.id)) && !except.has(p.id) && !p.ownPhotos);
-  const jobs = [];
+
+  // Photo 1 jobs first (from text), then the extra views (each made from that piece's photo 1).
+  const first = [], extra = [];
   for (const p of catalog) {
-    if (existingImages(p.id).length && !args.force) continue;
-    for (let v = 0; v < views; v++) jobs.push({ p, v });
+    for (let n = 1; n <= views; n++) {
+      if (photos && !photos.has(n)) continue;
+      if (photoFile(p.id, n) && !args.force) continue;
+      (n === 1 ? first : extra).push({ p, n });
+    }
   }
-  if (!jobs.length) {
-    console.log("Every piece already has an image. Use --force to regenerate.");
+  const total = first.length + extra.length;
+  if (!total) {
+    console.log(`Every piece already has ${views} photo(s). Use --force to regenerate.`);
     sync();
     return;
   }
-  const total = jobs.length;
   const workers = Math.max(1, Math.min(Number(args.parallel || 3), 6));
-  console.log(`Generating ${total} image(s). The first one runs alone as a test, then ${workers} at a time…`);
+  console.log(`Generating ${total} image(s): ${first.length} main photo(s), ${extra.length} extra view(s). One runs alone as a test, then ${workers} at a time…`);
 
   let made = 0, failed = 0, done = 0, fatal = null;
-  async function run({ p, v }) {
+  async function run({ p, n }) {
+    const kind = n === 1 ? "generate" : "edit";
     try {
-      const buf = await generateOne(fullPrompt(p, v), key, models);
+      let ref = null;
+      if (kind === "edit") {
+        const main = photoFile(p.id, 1);
+        if (!main) throw new Error("no main photo (1) to work from — it failed or is missing");
+        const ext = main.split(".").pop().toLowerCase();
+        ref = { buf: fs.readFileSync(path.join(PRODUCTS_DIR, p.id, main)), mime: MIME[ext] || "image/webp", name: main };
+      }
+      const buf = await makeImage(kind, n === 1 ? fullPrompt(p) : viewPrompt(p, n - 1), key, models, ref);
       const dir = path.join(PRODUCTS_DIR, p.id);
       fs.mkdirSync(dir, { recursive: true });
-      if (args.force) existingImages(p.id).filter((f) => f.startsWith(`${v + 1}.`)).forEach((f) => fs.unlinkSync(path.join(dir, f)));
-      fs.writeFileSync(path.join(dir, `${v + 1}.${extensionOf(buf)}`), buf);
+      const old = photoFile(p.id, n);
+      if (old) fs.unlinkSync(path.join(dir, old));
+      fs.writeFileSync(path.join(dir, `${n}.${extensionOf(buf)}`), buf);
       made++;
-      console.log(`[${++done}/${total}] ${p.id} ok`);
+      console.log(`[${++done}/${total}] ${p.id} photo ${n} ok`);
     } catch (err) {
       failed++;
-      if (isAccess(err) || isOutOfCredit(err) || !working) fatal = err;
-      console.log(`[${++done}/${total}] ${p.id} FAILED: ${short(err)}`);
+      if (isAccess(err) || isOutOfCredit(err) || (err.status && !working[kind])) fatal = err;
+      console.log(`[${++done}/${total}] ${p.id} photo ${n} FAILED: ${short(err)}`);
     }
   }
 
-  await run(jobs.shift()); // test image: settles the model and options, and stops early if nothing works
-  async function worker() {
-    while (jobs.length && !fatal) await run(jobs.shift());
+  for (const jobs of [first, extra]) {
+    if (!jobs.length || fatal) continue;
+    await run(jobs.shift()); // test image: settles the model and options, and stops early if nothing works
+    const worker = async () => { while (jobs.length && !fatal) await run(jobs.shift()); };
+    if (!fatal) await Promise.all(Array.from({ length: workers }, worker));
   }
-  if (!fatal) await Promise.all(Array.from({ length: workers }, worker));
 
   if (fatal) {
     const why = isOutOfCredit(fatal)

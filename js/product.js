@@ -8,7 +8,7 @@ window.JW.pages.product = function () {
 
   if (!p) {
     root.style.display = "block";
-    root.innerHTML = `<div class="empty" style="margin:40px 0"><h3>We could not find that piece.</h3><p>It may have sold — but we can always make another.</p><p style="margin-top:22px"><a class="btn" href="shop.html?cat=all">Browse the Collection</a></p></div>`;
+    root.innerHTML = `<div class="empty" style="margin:40px 0"><h3>That piece was not found.</h3><p>It may no longer be available. We can make a similar piece to order.</p><p style="margin-top:22px"><a class="btn" href="shop.html?cat=all">Shop all jewelry</a></p></div>`;
     $("#relatedSection").remove();
     return;
   }
@@ -17,7 +17,7 @@ window.JW.pages.product = function () {
   const imgs = imagesFor(p.id);
   const isRing = p.type === "ring" || p.type === "band";
   const isWatch = p.type === "watch";
-  document.title = `${p.name} — ${S.brand}`;
+  document.title = `${p.name} | ${S.brand}`;
   $("#crumbs").innerHTML = `<a href="index.html">Home</a><span>/</span><a href="${shopUrl(p.cat)}">${esc(cat.title)}</a><span>/</span>${esc(p.name)}`;
 
   /* ----- Spec table: gold weight, diamond weight and every other detail ----- */
@@ -55,18 +55,18 @@ window.JW.pages.product = function () {
   const base = (p.metal.match(/\d+K/) || [""])[0];
   const sizeField = isRing
     ? `<div class="field"><label for="optSize">Ring size</label>
-        <select class="select" id="optSize"><option value="">Select size</option>${sizes.map((s) => `<option>${s}</option>`).join("")}<option value="Size to be confirmed">Not sure — help me size</option></select></div>`
+        <select class="select" id="optSize"><option value="">Select size</option>${sizes.map((s) => `<option>${s}</option>`).join("")}<option value="Size to be confirmed">Not sure, help me size</option></select></div>`
     : "";
   const colorField = !isWatch
     ? `<div class="field"><label for="optMetal">Gold color</label>
-        <select class="select" id="optMetal"><option value="">As shown — ${esc(p.metal)}</option>${["Yellow", "White", "Rose"]
+        <select class="select" id="optMetal"><option value="">As shown (${esc(p.metal)})</option>${["Yellow", "White", "Rose"]
           .filter((c) => !p.metal.includes(c))
           .map((c) => `<option value="${base} ${c} Gold">${base} ${c} Gold (made to order)</option>`)
           .join("")}</select></div>`
     : "";
 
   const price = p.was
-    ? `<span class="gold-text">${money(p.price)}</span><s>${money(p.was)}</s><span class="save">Save ${money(p.was - p.price)}</span>`
+    ? `<span class="now-sale">${money(p.price)}</span><s>${money(p.was)}</s><span class="save">Save ${money(p.was - p.price)}</span>`
     : `<span>${money(p.price)}</span>`;
   const m = Math.ceil(monthly(p.price));
 
@@ -77,40 +77,31 @@ window.JW.pages.product = function () {
     </div>
 
     <div class="pdp-info">
-      <span class="eyebrow">${esc(cat.title)}${p.badge ? " · " + esc(p.badge) : ""}</span>
+      <div class="pdp-cat"><a href="${shopUrl(p.cat)}">${esc(cat.title)}</a></div>
       <h1>${esc(p.name)}</h1>
-      <div class="pdp-sku">Item ${esc(p.sku)} · Made to order in our shop</div>
+      <div class="pdp-sku">Item ${esc(p.sku)}</div>
       <div class="pdp-price">${price}</div>
+      <div class="pdp-fin">or from ${money(m)}/mo* with financing. <a class="text-link" href="financing.html">Details</a></div>
       <p class="pdp-blurb">${esc(p.blurb)}</p>
 
       <div class="keyspecs" style="grid-template-columns:repeat(${Math.min(key.length, 3)},1fr)">
         ${key.slice(0, 3).map(([v, l]) => `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("")}
       </div>
 
-      <div class="fin-box">
-        <div>
-          ${F.isPlaceholder ? '<span class="ph-flag">Placeholder terms</span><br>' : ""}
-          <b>From ${money(m)}/mo*</b>
-          <p>Example: ${F.exampleTermMonths} monthly payments with ${esc(F.provider)}. Financing is available on this piece.</p>
-        </div>
-        <a class="link-arrow" href="financing.html">How it works</a>
-      </div>
-
       ${sizeField || colorField ? `<div class="options">${sizeField}${colorField}</div>` : ""}
       <div class="pdp-actions">
-        <button class="btn btn--gold btn--block" id="addToBag">Add to Bag</button>
-        <a class="btn btn--block" href="custom.html?piece=${p.id}">Customize This Piece</a>
+        <button class="btn btn--gold btn--block" id="addToBag">Add to bag</button>
+        <a class="btn btn--block" href="custom.html?piece=${p.id}">Customize this piece</a>
       </div>
 
       <ul class="pdp-assure">
-        <li>Designed, cast and hand-set in our own shop</li>
-        <li>Gold weight and diamond weight documented with every piece</li>
-        <li>Any size, gold color or stone — just ask</li>
-        <li>Questions? Call <a class="gold-text" href="tel:${esc(S.contact.phone.replace(/[^\d+]/g, ""))}">&nbsp;${esc(S.contact.phone)}</a></li>
+        <li>Made to order in our shop.</li>
+        <li>Available in other sizes, gold colors and stone options on request.</li>
+        <li>Questions? Call <a class="text-link" href="tel:${esc(S.contact.phone.replace(/[^\d+]/g, ""))}">${esc(S.contact.phone)}</a></li>
       </ul>
 
       <div class="specs">
-        <h2>Piece Details</h2>
+        <h2>Details</h2>
         <table class="spec-table"><tbody>
           ${rows.map(([k, v, hl]) => `<tr${hl ? ' class="hl"' : ""}><th scope="row">${esc(k)}</th><td>${esc(v)}</td></tr>`).join("")}
         </tbody></table>
@@ -121,7 +112,6 @@ window.JW.pages.product = function () {
         <details class="acc">
           <summary>Financing</summary>
           <div class="acc-body">
-            ${F.isPlaceholder ? '<span class="ph-flag">Placeholder — final terms at launch</span>' : ""}
             <p>This piece can be financed through ${esc(F.provider)}. Example plans:</p>
             <table class="spec-table"><tbody>
               ${F.plans.map((pl) => `<tr><th scope="row">${esc(pl.label)}</th><td>about ${money(Math.ceil(monthly(p.price, pl.months)))}/mo* · ${esc(pl.note)}</td></tr>`).join("")}
@@ -130,12 +120,12 @@ window.JW.pages.product = function () {
           </div>
         </details>
         <details class="acc">
-          <summary>Made to Order &amp; Sizing</summary>
-          <div class="acc-body"><p>Every piece is made in our shop, so it can be made your way: a different ${isRing ? "ring size, " : isWatch ? "dial, " : "length, "}gold color, karat or stone quality. Changes may alter the final gold weight, diamond weight and price — we confirm everything in writing before work begins.</p><p><a class="link-arrow" href="custom.html?piece=${p.id}">Ask about changes</a></p></div>
+          <summary>Sizing and changes</summary>
+          <div class="acc-body"><p>We can make this piece in a different ${isRing ? "ring size, " : isWatch ? "dial, " : "length, "}gold color, karat or stone quality. Changes can affect the gold weight, diamond weight and price. We confirm all three in writing before we start.</p><p><a class="text-link" href="custom.html?piece=${p.id}">Ask about changes</a></p></div>
         </details>
         <details class="acc">
-          <summary>Care &amp; Service</summary>
-          <div class="acc-body"><p>Bring your piece to the shop any time for cleaning and a setting check. Sizing, polishing and repairs are done on site by the same jewelers who made it.</p></div>
+          <summary>Care and service</summary>
+          <div class="acc-body"><p>Bring your piece in for cleaning and a check of the settings. Sizing, polishing and repairs are done in our shop.</p></div>
         </details>
       </div>
     </div>`;
