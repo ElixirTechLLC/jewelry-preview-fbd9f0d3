@@ -43,7 +43,24 @@ OPENAI_API_KEY=sk-... node scripts/generate-images.mjs --only eng-round-solitair
 
 Photos are used on the site exactly as generated — do not re-compress them. These images are mostly smooth near-black gradients, and re-saving them at ordinary WebP/JPEG settings leaves visible square blotches around the reflections.
 
+## Review copy on GitHub Pages
+
+The repo is https://github.com/ElixirTechLLC/jewelry-preview-fbd9f0d3 and the site is served from the `main` branch at
+https://elixirtechllc.github.io/jewelry-preview-fbd9f0d3/ (same setup as the Exodus Capital review copy).
+
+It is unlisted, not locked: the address ends in a random code and every page carries a `noindex` tag, but anyone with the link can open it and the repo is public. To take the link down, set the repo back to private.
+
+To update it after an edit:
+
+```bash
+git add -A && git commit -m "Update site" && git push
+```
+
+GitHub rebuilds the site a minute or two after each push.
+
 ## Before go-live
+
+- [ ] Remove the `<meta name="robots" content="noindex, nofollow">` line from all six pages so search engines can find the live site
 
 - [ ] Real brand name, phone, email, address and hours in `js/config.js`
 - [ ] Real financing provider and terms in `js/config.js`, then set `financing.isPlaceholder` to `false` (removes every "placeholder" notice) and complete the bracketed `[…]` text in `financing.html`
