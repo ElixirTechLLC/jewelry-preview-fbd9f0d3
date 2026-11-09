@@ -150,6 +150,7 @@ window.CATALOG = [
   },
   {
     id: "wed-curved-contour", sku: "WED-2006", name: "Curved Pavé Contour Band",
+    viewNotes: { 2: "lying flat on the surface and viewed from directly above, so the band is a plain round circle. The ring is round, not heart-shaped; the gentle V dip is only visible in the profile of its top edge" },
     cat: "wedding", type: "band", tags: ["her", "diamond", "gift"],
     price: 895, metal: "14K Yellow Gold", goldG: 1.9,
     dia: { ctw: 0.22, count: 23, shape: "Round Brilliant" },
@@ -196,6 +197,7 @@ window.CATALOG = [
   },
   {
     id: "wom-huggie-hoops", sku: "WOM-3003", name: "Pavé Huggie Hoops",
+    viewNotes: { 2: "as a single earring at a three-quarter angle, showing its hinged snap closure. It has no separate post, no butterfly back and no screw back" },
     cat: "womens", type: "earrings", tags: ["her", "earrings", "gift"],
     price: 1150, metal: "14K Yellow Gold", goldG: 2.4,
     dia: { ctw: 0.33, count: 44, shape: "Round Brilliant" },
@@ -241,6 +243,7 @@ window.CATALOG = [
   },
   {
     id: "wom-sapphire-drop-earrings", sku: "WOM-3008", name: "Blue Sapphire Drop Earrings",
+    viewNotes: { 2: "as a single earring at a three-quarter angle, hanging freely, with the same top as in the attached image. It has no separate post, no butterfly back and no screw back" },
     cat: "womens", type: "earrings", tags: ["her", "earrings", "gemstone", "gift"],
     price: 2650, was: 3100, metal: "14K Yellow Gold", goldG: 3.1,
     dia: { ctw: 0.3, count: 28, shape: "Round Brilliant" },
@@ -278,6 +281,7 @@ window.CATALOG = [
   },
   {
     id: "wom-gold-hoops", sku: "WOM-3012", name: "Classic Gold Hoops · 30 mm",
+    viewNotes: { 2: "as a single earring at a three-quarter angle, showing its hinged snap closure. It has no separate post, no butterfly back and no screw back" },
     cat: "womens", type: "earrings", tags: ["her", "earrings", "gift"],
     price: 695, metal: "14K Yellow Gold", goldG: 3.6,
     dia: null,

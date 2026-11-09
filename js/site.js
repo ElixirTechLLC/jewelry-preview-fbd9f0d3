@@ -171,7 +171,7 @@
       ? `<span class="now-sale">${money(p.price)}</span><s>${money(p.was)}</s>`
       : `<span>${money(p.price)}</span>`;
     return `<a class="card" href="product.html?id=${p.id}">
-      <div class="card-media">${badge}${mediaHTML(p, { hover: true })}</div>
+      <div class="card-media">${badge}${mediaHTML(p)}</div>
       <div class="card-body">
         <div class="card-name">${esc(p.name)}</div>
         <div class="card-spec">${esc(specLine(p))}</div>

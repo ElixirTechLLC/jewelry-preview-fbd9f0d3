@@ -100,7 +100,8 @@ function fullPrompt(p) {
 
 /* Prompt for photos 2–5, sent together with photo 1 as the reference. */
 function viewPrompt(p, view) {
-  const v = (VIEWS[p.type] || VIEWS.ring)[view - 1];
+  // A piece can override one view in the catalog: viewNotes: { 2: "…" } (keyed by photo number).
+  const v = (p.viewNotes && p.viewNotes[view + 1]) || (VIEWS[p.type] || VIEWS.ring)[view - 1];
   const who = p.tags.includes("him") ? "man's" : "woman's";
   const worn = typeof v === "function";
   const what = worn ? v(who) : v;
