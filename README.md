@@ -21,6 +21,15 @@ Then open http://localhost:4173.
 | Pages | `index.html`, `shop.html`, `product.html`, `financing.html`, `custom.html`, `visit.html` |
 | Product photos | `assets/products/<product id>/1.webp`, `2.webp`, … |
 
+## Color schemes
+
+The site has two looks: black and gold, and white and gold. Product photos keep their black backgrounds in both.
+
+- A link ending in `?theme=white` or `?theme=black` opens that look and remembers it for the visitor.
+- The footer has a "Color scheme" switch. It is there for review; remove it from `js/site.js` once a look is chosen.
+- `DEFAULT_THEME` at the top of `js/theme.js` sets which look a first-time visitor gets (`"dark"` or `"light"`).
+- The white-and-gold colors are the `[data-theme="light"]` block in `css/styles.css`.
+
 ## Product images
 
 Each piece shows a gold line-art placeholder until it has a photo.

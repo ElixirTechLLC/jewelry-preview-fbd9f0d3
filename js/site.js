@@ -377,6 +377,7 @@
       <div class="footer-bottom">
         <p>© ${new Date().getFullYear()} ${esc(S.brand)}. ${esc(S.imageNote)}</p>
         <p>*${esc(F.disclosure)}</p>
+        <p class="theme-switch">Color scheme: <button type="button" data-theme-set="dark">Black and gold</button> / <button type="button" data-theme-set="light">White and gold</button></p>
       </div>
     </div>`;
     document.body.appendChild(footer);
@@ -414,6 +415,8 @@
     document.addEventListener("keydown", (e) => e.key === "Escape" && closeAll());
     document.addEventListener("click", (e) => {
       if (e.target.closest("[data-close]")) closeAll();
+      const sw = e.target.closest("[data-theme-set]");
+      if (sw && window.JW_THEME) window.JW_THEME.set(sw.dataset.themeSet);
       const b = e.target.closest("[data-bag]");
       if (b) {
         const i = +b.dataset.i;
