@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Financing — {brand}</title>
+  <meta name="description" content="Financing is available on every piece we sell and every piece we make.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Cpath d='M10 9h12l5 6-11 11L5 15z' fill='none' stroke='%23d4af37' stroke-width='1.6'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<main>
+
+  <section class="page-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span>Financing</nav>
+      <h1>Wear it now. <em class="gold-text">Pay over time.</em></h1>
+      <p>Financing is available on every piece in the case and every custom piece we make — engagement rings, chains, watches, all of it.</p>
+      <p style="margin-top:28px"><a class="btn btn--gold" data-fin-apply href="#">Apply for Financing</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+
+      <!-- This notice disappears when financing.isPlaceholder is set to false in js/config.js -->
+      <div class="ph-ribbon" data-fin-flag>
+        <b>Placeholder page</b> The provider, rates, terms and legal disclosures below are stand-ins. Real financing details will be added here before the site goes live.
+      </div>
+
+      <div class="section-head center">
+        <span class="eyebrow">How it works</span>
+        <h2>Three steps, a few minutes</h2>
+        <hr class="rule">
+      </div>
+      <div class="cards-3">
+        <div class="info-card"><div class="num">01</div><h3>Choose your piece</h3><p>Anything on this site or anything we design for you. Every product page shows an example monthly payment.</p></div>
+        <div class="info-card"><div class="num">02</div><h3>Apply</h3><p>Apply online or in the shop with <span data-fin-provider></span>. [Application details and decision time to be confirmed.]</p></div>
+        <div class="info-card"><div class="num">03</div><h3>Pick a plan</h3><p>Choose the term that suits you, make your first payment, and take your piece home. [Plan details to be confirmed.]</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="ph-flag" data-fin-flag>Placeholder plans</span><br>
+        <span class="eyebrow">Plans</span>
+        <h2>Choose your term</h2>
+        <p>Example payments below are shown for a <span id="planPrice"></span> purchase.</p>
+      </div>
+      <div class="plans" id="plans"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Payment estimator</span>
+        <h2>What would it cost per month?</h2>
+        <hr class="rule">
+      </div>
+      <div class="estimator">
+        <div>
+          <label for="estAmount">Purchase amount</label>
+          <div class="amount" id="estAmountLabel"></div>
+          <input type="range" id="estAmount" min="500" max="30000" step="100" value="5000" aria-label="Purchase amount">
+          <div class="term-pills" id="estTerms" role="group" aria-label="Term"></div>
+        </div>
+        <div class="result">
+          <span class="ph-flag" data-fin-flag>Illustrative only</span>
+          <b class="gold-text" id="estMonthly"></b>
+          <span>per month*</span>
+          <a class="btn" data-fin-apply href="#">Apply Now</a>
+        </div>
+      </div>
+      <p class="fine center" style="margin-top:18px">*<span data-fin-disclosure></span></p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow">Questions</span>
+        <h2>Financing FAQ</h2>
+        <hr class="rule">
+      </div>
+      <div class="faq">
+        <details class="acc"><summary>Which pieces can be financed?</summary><div class="acc-body"><p>All of them — everything in the case and every custom design. [Minimum purchase amount, if any, to be confirmed.]</p></div></details>
+        <details class="acc"><summary>Does applying affect my credit?</summary><div class="acc-body"><p>[To be completed with the financing provider's credit-check policy.]</p></div></details>
+        <details class="acc"><summary>What rates and terms are available?</summary><div class="acc-body"><p>[To be completed with the provider's actual APR range, term lengths and any promotional offers.]</p></div></details>
+        <details class="acc"><summary>Can I finance a custom piece?</summary><div class="acc-body"><p>Yes. Once your design and final price are approved, financing works exactly as it does for a piece from the case. [Deposit policy to be confirmed.]</p></div></details>
+        <details class="acc"><summary>Can I pay my balance off early?</summary><div class="acc-body"><p>[To be completed with the provider's prepayment terms.]</p></div></details>
+        <details class="acc"><summary>How do I apply?</summary><div class="acc-body"><p>Online using the Apply button on this page, or in person at the shop. Call <a class="gold-text" data-tel href="#"><span data-phone></span></a> and we will walk you through it.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/image-manifest.js"></script>
+<script src="js/site.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>
