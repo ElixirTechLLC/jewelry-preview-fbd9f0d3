@@ -18,8 +18,7 @@ window.IMAGES = {
     "assets/products/eng-emerald-three-stone/1.webp",
     "assets/products/eng-emerald-three-stone/2.webp",
     "assets/products/eng-emerald-three-stone/3.webp",
-    "assets/products/eng-emerald-three-stone/4.webp",
-    "assets/products/eng-emerald-three-stone/5.webp"
+    "assets/products/eng-emerald-three-stone/4.webp"
   ],
   "eng-cushion-halo": [
     "assets/products/eng-cushion-halo/1.webp",

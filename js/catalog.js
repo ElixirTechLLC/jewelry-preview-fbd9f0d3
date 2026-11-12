@@ -40,6 +40,7 @@ window.CATALOG = [
   },
   {
     id: "eng-emerald-three-stone", sku: "ENG-1003", name: "Emerald Cut Three-Stone Ring",
+    viewNotes: { 5: "being worn properly on the ring finger of a woman's hand that rests flat and relaxed on black fabric, fingers extended straight and slightly apart, photographed from directly above. The band wraps completely around the base of the ring finger, below the knuckle. The center stone sits flat on the back of the finger with its long axis running along the finger toward the fingertip, and the two trapezoid side stones sit to its left and right across the finger, following the band. The ring is true to life size. It is not on any other finger, not turned, and not held" },
     cat: "engagement", type: "ring", tags: ["her", "emerald", "three-stone"],
     price: 14900, metal: "18K Yellow Gold", goldG: 5.4,
     dia: { ctw: 2.61, count: 3, shape: "Emerald & Trapezoid", color: "F", clarity: "VVS2" },
