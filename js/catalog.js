@@ -50,6 +50,7 @@ window.CATALOG = [
   },
   {
     id: "eng-cushion-halo", sku: "ENG-1004", name: "Cushion Halo Pavé Ring",
+    viewNotes: { 5: "being worn properly on the ring finger of a woman's hand that rests flat and relaxed on black fabric, fingers extended straight and slightly apart, photographed from directly above. The band wraps completely around the base of the ring finger, below the knuckle, crossing the finger at a right angle. The halo-set center stone sits flat and centered on the back of the finger, and the pavé band runs around the finger, not along it. The ring is true to life size. It is not on any other finger, not turned, and not held" },
     cat: "engagement", type: "ring", tags: ["her", "cushion", "halo", "pave"],
     price: 5950, metal: "14K Rose Gold", goldG: 4.0,
     dia: { ctw: 1.65, count: 47, shape: "Cushion & Round", color: "G–H", clarity: "VS2" },

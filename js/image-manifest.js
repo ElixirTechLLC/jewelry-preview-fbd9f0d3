@@ -24,8 +24,7 @@ window.IMAGES = {
     "assets/products/eng-cushion-halo/1.webp",
     "assets/products/eng-cushion-halo/2.webp",
     "assets/products/eng-cushion-halo/3.webp",
-    "assets/products/eng-cushion-halo/4.webp",
-    "assets/products/eng-cushion-halo/5.webp"
+    "assets/products/eng-cushion-halo/4.webp"
   ],
   "eng-princess-channel": [
     "assets/products/eng-princess-channel/1.webp",
