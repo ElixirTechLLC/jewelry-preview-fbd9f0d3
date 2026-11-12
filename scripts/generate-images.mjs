@@ -60,7 +60,7 @@ const VIEWS = {
   necklace: [
     "laid flat and viewed from directly above",
     "in an extreme macro close-up of the stones, links and clasp",
-    "draped on a black velvet jewelry bust",
+    "fastened closed around the neck of a black velvet jewelry display bust and hanging naturally from the neck at its true length, with the clasp at the back of the neck. It hangs down the chest of the bust the way a worn necklace does; it is not lying flat on the chest as a loop",
     (who) => `being worn properly by a ${who.replace("'s", "")}: fastened around the neck and lying flat against the skin of the chest, at true life size, not held in the hand. Black clothing with an open neckline, cropped from the chin to the chest`,
   ],
   earrings: [

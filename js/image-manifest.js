@@ -211,7 +211,6 @@ window.IMAGES = {
     "assets/products/men-cuban-chain/1.webp",
     "assets/products/men-cuban-chain/2.webp",
     "assets/products/men-cuban-chain/3.webp",
-    "assets/products/men-cuban-chain/4.webp",
     "assets/products/men-cuban-chain/5.webp"
   ],
   "men-rope-chain": [
