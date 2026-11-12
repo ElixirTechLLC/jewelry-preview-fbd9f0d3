@@ -161,8 +161,7 @@ window.IMAGES = {
     "assets/products/wom-emerald-halo-ring/1.webp",
     "assets/products/wom-emerald-halo-ring/2.webp",
     "assets/products/wom-emerald-halo-ring/3.webp",
-    "assets/products/wom-emerald-halo-ring/4.webp",
-    "assets/products/wom-emerald-halo-ring/5.webp"
+    "assets/products/wom-emerald-halo-ring/4.webp"
   ],
   "wom-sapphire-drop-earrings": [
     "assets/products/wom-sapphire-drop-earrings/1.webp",

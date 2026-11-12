@@ -237,6 +237,7 @@ window.CATALOG = [
   },
   {
     id: "wom-emerald-halo-ring", sku: "WOM-3007", name: "Colombian Emerald Halo Ring",
+    viewNotes: { 5: "being worn properly on the ring finger of a woman's hand that rests flat and relaxed on black fabric, fingers extended straight and slightly apart, photographed from directly above. The band wraps completely around the base of the ring finger, below the knuckle, crossing the finger at a right angle. The emerald and its diamond halo sit flat and centered on the back of the finger, with the long axis of the emerald running along the finger toward the fingertip. The ring is true to life size. It is not on any other finger, not turned, and not held" },
     cat: "womens", type: "ring", tags: ["her", "ring", "gemstone", "anniversary"], featured: true,
     price: 4800, metal: "18K Yellow Gold", goldG: 4.3,
     dia: { ctw: 0.4, count: 16, shape: "Round Brilliant" },
