@@ -10,8 +10,7 @@ window.IMAGES = {
   "eng-oval-hidden-halo": [
     "assets/products/eng-oval-hidden-halo/1.webp",
     "assets/products/eng-oval-hidden-halo/2.webp",
-    "assets/products/eng-oval-hidden-halo/4.webp",
-    "assets/products/eng-oval-hidden-halo/5.webp"
+    "assets/products/eng-oval-hidden-halo/4.webp"
   ],
   "eng-emerald-three-stone": [
     "assets/products/eng-emerald-three-stone/1.webp",
@@ -34,8 +33,7 @@ window.IMAGES = {
   "eng-pear-solitaire": [
     "assets/products/eng-pear-solitaire/1.webp",
     "assets/products/eng-pear-solitaire/2.webp",
-    "assets/products/eng-pear-solitaire/4.webp",
-    "assets/products/eng-pear-solitaire/5.webp"
+    "assets/products/eng-pear-solitaire/4.webp"
   ],
   "eng-radiant-pave": [
     "assets/products/eng-radiant-pave/1.webp",
