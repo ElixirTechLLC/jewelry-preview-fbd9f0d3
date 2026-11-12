@@ -21,6 +21,10 @@ Then open http://localhost:4173.
 | Pages | `index.html`, `shop.html`, `product.html`, `financing.html`, `custom.html`, `visit.html` |
 | Product photos | `assets/products/<product id>/1.webp`, `2.webp`, … |
 
+## Design studio (Custom Design page)
+
+Visitors sign up with an email, answer a few questions, get an AI picture of their piece (five per email), and submit the one they like. The page is in `js/design-studio.js`; the server side is a separate repo, https://github.com/ElixirTechLLC/jewelry-design-api, deployed on Vercel. Its README has the setup steps. Once it is deployed, put its address in `designApi` in `js/config.js`; until then the page shows a "coming soon" note in that spot.
+
 ## Color schemes
 
 The site has two looks: black and gold, and white and gold. Product photos keep their black backgrounds in both.

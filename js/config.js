@@ -49,6 +49,10 @@ window.SITE = {
   // Default diamond quality line shown when a piece does not override it.
   diamondDefaults: { color: "G–H", clarity: "VS1–VS2", origin: "Natural" },
 
+  /* DESIGN STUDIO — the address of the design API once it is deployed on Vercel,
+     e.g. "https://jewelry-design-api.vercel.app". Empty = the studio shows a "coming soon" note. */
+  designApi: "",
+
   imageNote:
     "Images are digital renderings. Each piece is made to order in our shop; gold and diamond weights are approximate and vary slightly with size.",
 };
