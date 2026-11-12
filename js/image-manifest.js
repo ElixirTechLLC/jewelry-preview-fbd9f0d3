@@ -4,13 +4,15 @@ window.IMAGES = {
     "assets/products/eng-round-solitaire/1.webp",
     "assets/products/eng-round-solitaire/2.webp",
     "assets/products/eng-round-solitaire/3.webp",
-    "assets/products/eng-round-solitaire/4.webp"
+    "assets/products/eng-round-solitaire/4.webp",
+    "assets/products/eng-round-solitaire/5.webp"
   ],
   "eng-oval-hidden-halo": [
     "assets/products/eng-oval-hidden-halo/1.webp",
     "assets/products/eng-oval-hidden-halo/2.webp",
     "assets/products/eng-oval-hidden-halo/3.webp",
-    "assets/products/eng-oval-hidden-halo/4.webp"
+    "assets/products/eng-oval-hidden-halo/4.webp",
+    "assets/products/eng-oval-hidden-halo/5.webp"
   ],
   "eng-emerald-three-stone": [
     "assets/products/eng-emerald-three-stone/1.webp",
@@ -30,19 +32,22 @@ window.IMAGES = {
     "assets/products/eng-princess-channel/1.webp",
     "assets/products/eng-princess-channel/2.webp",
     "assets/products/eng-princess-channel/3.webp",
-    "assets/products/eng-princess-channel/4.webp"
+    "assets/products/eng-princess-channel/4.webp",
+    "assets/products/eng-princess-channel/5.webp"
   ],
   "eng-pear-solitaire": [
     "assets/products/eng-pear-solitaire/1.webp",
     "assets/products/eng-pear-solitaire/2.webp",
     "assets/products/eng-pear-solitaire/3.webp",
-    "assets/products/eng-pear-solitaire/4.webp"
+    "assets/products/eng-pear-solitaire/4.webp",
+    "assets/products/eng-pear-solitaire/5.webp"
   ],
   "eng-radiant-pave": [
     "assets/products/eng-radiant-pave/1.webp",
     "assets/products/eng-radiant-pave/2.webp",
     "assets/products/eng-radiant-pave/3.webp",
-    "assets/products/eng-radiant-pave/4.webp"
+    "assets/products/eng-radiant-pave/4.webp",
+    "assets/products/eng-radiant-pave/5.webp"
   ],
   "eng-marquise-vintage": [
     "assets/products/eng-marquise-vintage/1.webp",
@@ -55,55 +60,64 @@ window.IMAGES = {
     "assets/products/eng-toi-et-moi/1.webp",
     "assets/products/eng-toi-et-moi/2.webp",
     "assets/products/eng-toi-et-moi/3.webp",
-    "assets/products/eng-toi-et-moi/4.webp"
+    "assets/products/eng-toi-et-moi/4.webp",
+    "assets/products/eng-toi-et-moi/5.webp"
   ],
   "wed-eternity-round": [
     "assets/products/wed-eternity-round/1.webp",
     "assets/products/wed-eternity-round/2.webp",
     "assets/products/wed-eternity-round/3.webp",
-    "assets/products/wed-eternity-round/4.webp"
+    "assets/products/wed-eternity-round/4.webp",
+    "assets/products/wed-eternity-round/5.webp"
   ],
   "wed-classic-band-2mm": [
     "assets/products/wed-classic-band-2mm/1.webp",
     "assets/products/wed-classic-band-2mm/2.webp",
     "assets/products/wed-classic-band-2mm/3.webp",
-    "assets/products/wed-classic-band-2mm/4.webp"
+    "assets/products/wed-classic-band-2mm/4.webp",
+    "assets/products/wed-classic-band-2mm/5.webp"
   ],
   "wed-mens-comfort-6mm": [
     "assets/products/wed-mens-comfort-6mm/1.webp",
     "assets/products/wed-mens-comfort-6mm/2.webp",
     "assets/products/wed-mens-comfort-6mm/3.webp",
-    "assets/products/wed-mens-comfort-6mm/4.webp"
+    "assets/products/wed-mens-comfort-6mm/4.webp",
+    "assets/products/wed-mens-comfort-6mm/5.webp"
   ],
   "wed-mens-channel-diamond": [
     "assets/products/wed-mens-channel-diamond/1.webp",
     "assets/products/wed-mens-channel-diamond/2.webp",
     "assets/products/wed-mens-channel-diamond/3.webp",
-    "assets/products/wed-mens-channel-diamond/4.webp"
+    "assets/products/wed-mens-channel-diamond/4.webp",
+    "assets/products/wed-mens-channel-diamond/5.webp"
   ],
   "wed-baguette-half-eternity": [
     "assets/products/wed-baguette-half-eternity/1.webp",
     "assets/products/wed-baguette-half-eternity/2.webp",
     "assets/products/wed-baguette-half-eternity/3.webp",
-    "assets/products/wed-baguette-half-eternity/4.webp"
+    "assets/products/wed-baguette-half-eternity/4.webp",
+    "assets/products/wed-baguette-half-eternity/5.webp"
   ],
   "wed-curved-contour": [
     "assets/products/wed-curved-contour/1.webp",
     "assets/products/wed-curved-contour/2.webp",
     "assets/products/wed-curved-contour/3.webp",
-    "assets/products/wed-curved-contour/4.webp"
+    "assets/products/wed-curved-contour/4.webp",
+    "assets/products/wed-curved-contour/5.webp"
   ],
   "wed-mens-hammered": [
     "assets/products/wed-mens-hammered/1.webp",
     "assets/products/wed-mens-hammered/2.webp",
     "assets/products/wed-mens-hammered/3.webp",
-    "assets/products/wed-mens-hammered/4.webp"
+    "assets/products/wed-mens-hammered/4.webp",
+    "assets/products/wed-mens-hammered/5.webp"
   ],
   "wed-emerald-eternity": [
     "assets/products/wed-emerald-eternity/1.webp",
     "assets/products/wed-emerald-eternity/2.webp",
     "assets/products/wed-emerald-eternity/3.webp",
-    "assets/products/wed-emerald-eternity/4.webp"
+    "assets/products/wed-emerald-eternity/4.webp",
+    "assets/products/wed-emerald-eternity/5.webp"
   ],
   "wom-tennis-bracelet": [
     "assets/products/wom-tennis-bracelet/1.webp",
@@ -172,7 +186,8 @@ window.IMAGES = {
     "assets/products/wom-baguette-cluster-ring/1.webp",
     "assets/products/wom-baguette-cluster-ring/2.webp",
     "assets/products/wom-baguette-cluster-ring/3.webp",
-    "assets/products/wom-baguette-cluster-ring/4.webp"
+    "assets/products/wom-baguette-cluster-ring/4.webp",
+    "assets/products/wom-baguette-cluster-ring/5.webp"
   ],
   "wom-initial-pendant": [
     "assets/products/wom-initial-pendant/1.webp",
@@ -241,7 +256,8 @@ window.IMAGES = {
     "assets/products/men-onyx-signet/1.webp",
     "assets/products/men-onyx-signet/2.webp",
     "assets/products/men-onyx-signet/3.webp",
-    "assets/products/men-onyx-signet/4.webp"
+    "assets/products/men-onyx-signet/4.webp",
+    "assets/products/men-onyx-signet/5.webp"
   ],
   "men-diamond-studs": [
     "assets/products/men-diamond-studs/1.webp",
@@ -261,7 +277,8 @@ window.IMAGES = {
     "assets/products/men-cluster-ring/1.webp",
     "assets/products/men-cluster-ring/2.webp",
     "assets/products/men-cluster-ring/3.webp",
-    "assets/products/men-cluster-ring/4.webp"
+    "assets/products/men-cluster-ring/4.webp",
+    "assets/products/men-cluster-ring/5.webp"
   ],
   "men-id-bracelet": [
     "assets/products/men-id-bracelet/1.webp",
