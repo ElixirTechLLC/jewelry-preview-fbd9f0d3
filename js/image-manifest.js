@@ -4,6 +4,7 @@ window.IMAGES = {
     "assets/products/eng-round-solitaire/1.webp",
     "assets/products/eng-round-solitaire/2.webp",
     "assets/products/eng-round-solitaire/3.webp",
+    "assets/products/eng-round-solitaire/4.webp",
     "assets/products/eng-round-solitaire/5.webp"
   ],
   "eng-oval-hidden-halo": [
@@ -72,12 +73,14 @@ window.IMAGES = {
   "wed-classic-band-2mm": [
     "assets/products/wed-classic-band-2mm/1.webp",
     "assets/products/wed-classic-band-2mm/2.webp",
+    "assets/products/wed-classic-band-2mm/3.webp",
     "assets/products/wed-classic-band-2mm/4.webp",
     "assets/products/wed-classic-band-2mm/5.webp"
   ],
   "wed-mens-comfort-6mm": [
     "assets/products/wed-mens-comfort-6mm/1.webp",
     "assets/products/wed-mens-comfort-6mm/2.webp",
+    "assets/products/wed-mens-comfort-6mm/3.webp",
     "assets/products/wed-mens-comfort-6mm/4.webp",
     "assets/products/wed-mens-comfort-6mm/5.webp"
   ],
