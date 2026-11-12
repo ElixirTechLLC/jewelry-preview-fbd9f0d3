@@ -53,7 +53,7 @@ const WORN_STYLE =
 const VIEWS = {
   ring: [
     "viewed straight on from the front, standing upright, the top of the ring facing the camera",
-    "viewed from a low side profile, showing the side of the setting and the band",
+    "standing upright on the surface on the bottom of its band, with the stone at the top, photographed exactly from the side as a true side profile: the band is a single thin vertical loop seen edge-on, and the height of the setting, the prongs and the gallery under the stone are visible. The ring is one solid piece standing up; the band is not lying flat on the surface and the setting is not tilted or turned",
     "in an extreme macro close-up of the stones and the setting",
     (who) => `being worn properly on a ${who} hand: the band is slid all the way down onto the ring finger and wraps completely around that one finger at its base, below the knuckle, with the top of the ring facing up on the back of the finger. The ring is not held, pinched or resting between two fingers. It is true to life size, so the top of the ring is no wider than the finger it is on. The hand is relaxed against a black jacket, tight close-up on the hand`,
   ],

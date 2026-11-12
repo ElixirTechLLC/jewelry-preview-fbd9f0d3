@@ -10,56 +10,48 @@ window.IMAGES = {
   "eng-oval-hidden-halo": [
     "assets/products/eng-oval-hidden-halo/1.webp",
     "assets/products/eng-oval-hidden-halo/2.webp",
-    "assets/products/eng-oval-hidden-halo/3.webp",
     "assets/products/eng-oval-hidden-halo/4.webp",
     "assets/products/eng-oval-hidden-halo/5.webp"
   ],
   "eng-emerald-three-stone": [
     "assets/products/eng-emerald-three-stone/1.webp",
     "assets/products/eng-emerald-three-stone/2.webp",
-    "assets/products/eng-emerald-three-stone/3.webp",
     "assets/products/eng-emerald-three-stone/4.webp",
     "assets/products/eng-emerald-three-stone/5.webp"
   ],
   "eng-cushion-halo": [
     "assets/products/eng-cushion-halo/1.webp",
     "assets/products/eng-cushion-halo/2.webp",
-    "assets/products/eng-cushion-halo/3.webp",
     "assets/products/eng-cushion-halo/4.webp",
     "assets/products/eng-cushion-halo/5.webp"
   ],
   "eng-princess-channel": [
     "assets/products/eng-princess-channel/1.webp",
     "assets/products/eng-princess-channel/2.webp",
-    "assets/products/eng-princess-channel/3.webp",
     "assets/products/eng-princess-channel/4.webp",
     "assets/products/eng-princess-channel/5.webp"
   ],
   "eng-pear-solitaire": [
     "assets/products/eng-pear-solitaire/1.webp",
     "assets/products/eng-pear-solitaire/2.webp",
-    "assets/products/eng-pear-solitaire/3.webp",
     "assets/products/eng-pear-solitaire/4.webp",
     "assets/products/eng-pear-solitaire/5.webp"
   ],
   "eng-radiant-pave": [
     "assets/products/eng-radiant-pave/1.webp",
     "assets/products/eng-radiant-pave/2.webp",
-    "assets/products/eng-radiant-pave/3.webp",
     "assets/products/eng-radiant-pave/4.webp",
     "assets/products/eng-radiant-pave/5.webp"
   ],
   "eng-marquise-vintage": [
     "assets/products/eng-marquise-vintage/1.webp",
     "assets/products/eng-marquise-vintage/2.webp",
-    "assets/products/eng-marquise-vintage/3.webp",
     "assets/products/eng-marquise-vintage/4.webp",
     "assets/products/eng-marquise-vintage/5.webp"
   ],
   "eng-toi-et-moi": [
     "assets/products/eng-toi-et-moi/1.webp",
     "assets/products/eng-toi-et-moi/2.webp",
-    "assets/products/eng-toi-et-moi/3.webp",
     "assets/products/eng-toi-et-moi/4.webp",
     "assets/products/eng-toi-et-moi/5.webp"
   ],
@@ -164,7 +156,6 @@ window.IMAGES = {
   "wom-emerald-halo-ring": [
     "assets/products/wom-emerald-halo-ring/1.webp",
     "assets/products/wom-emerald-halo-ring/2.webp",
-    "assets/products/wom-emerald-halo-ring/3.webp",
     "assets/products/wom-emerald-halo-ring/4.webp",
     "assets/products/wom-emerald-halo-ring/5.webp"
   ],
@@ -185,7 +176,6 @@ window.IMAGES = {
   "wom-baguette-cluster-ring": [
     "assets/products/wom-baguette-cluster-ring/1.webp",
     "assets/products/wom-baguette-cluster-ring/2.webp",
-    "assets/products/wom-baguette-cluster-ring/3.webp",
     "assets/products/wom-baguette-cluster-ring/4.webp",
     "assets/products/wom-baguette-cluster-ring/5.webp"
   ],
