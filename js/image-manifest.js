@@ -204,8 +204,7 @@ window.IMAGES = {
     "assets/products/men-sovereign-signet/1.webp",
     "assets/products/men-sovereign-signet/2.webp",
     "assets/products/men-sovereign-signet/3.webp",
-    "assets/products/men-sovereign-signet/4.webp",
-    "assets/products/men-sovereign-signet/5.webp"
+    "assets/products/men-sovereign-signet/4.webp"
   ],
   "men-cuban-chain": [
     "assets/products/men-cuban-chain/1.webp",

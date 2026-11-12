@@ -311,15 +311,16 @@ async function generate(args) {
   const except = new Set(args.except ? args.except.split(",") : []);
   const photos = args.photo ? new Set(String(args.photo).split(",").map(Number)) : null; // --photo 5: only that photo number
   const views = Math.max(1, Math.min(Number(args.views || (photos ? Math.max(...photos) : 1)), MAX_VIEWS));
-  // Pieces marked ownPhotos in the catalog have real supplied photos and are never regenerated.
-  const catalog = loadCatalog().filter((p) => (!only || only.has(p.id)) && !except.has(p.id) && !p.ownPhotos);
+  // Pieces marked ownPhotos in the catalog have real supplied photos. They are skipped unless named
+  // with --only together with --photo, and even then only photos that do not exist yet are made.
+  const catalog = loadCatalog().filter((p) => (!only || only.has(p.id)) && !except.has(p.id) && (!p.ownPhotos || (only && photos)));
 
   // Photo 1 jobs first (from text), then the extra views (each made from that piece's photo 1).
   const first = [], extra = [];
   for (const p of catalog) {
     for (let n = 1; n <= views; n++) {
       if (photos && !photos.has(n)) continue;
-      if (photoFile(p.id, n) && !args.force) continue;
+      if (photoFile(p.id, n) && (!args.force || p.ownPhotos)) continue;
       (n === 1 ? first : extra).push({ p, n });
     }
   }
