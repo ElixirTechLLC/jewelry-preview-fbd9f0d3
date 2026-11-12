@@ -94,6 +94,7 @@ window.CATALOG = [
   },
   {
     id: "eng-toi-et-moi", sku: "ENG-1009", name: "Toi et Moi Two-Stone Ring",
+    viewNotes: { 4: "in an extreme macro close-up of the two stones and their settings, copied exactly from the attached image: the slim pear shaped diamond on the left with its point upward, and the emerald cut diamond on the right tilted at the same slight angle as in the attached image, the same proportions, the same claw prongs, the two stones touching at the same point. Nothing is straightened, enlarged, reshaped or rearranged" },
     cat: "engagement", type: "ring", tags: ["her", "pear", "emerald", "three-stone"], badge: "New",
     price: 11200, metal: "18K Yellow Gold", goldG: 4.1,
     dia: { ctw: 2.0, count: 2, shape: "Pear & Emerald", color: "F–G", clarity: "VS1" },

@@ -48,7 +48,6 @@ window.IMAGES = {
   "eng-toi-et-moi": [
     "assets/products/eng-toi-et-moi/1.webp",
     "assets/products/eng-toi-et-moi/2.webp",
-    "assets/products/eng-toi-et-moi/4.webp",
     "assets/products/eng-toi-et-moi/5.webp"
   ],
   "wed-eternity-round": [
