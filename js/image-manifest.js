@@ -3,7 +3,6 @@ window.IMAGES = {
   "eng-round-solitaire": [
     "assets/products/eng-round-solitaire/1.webp",
     "assets/products/eng-round-solitaire/2.webp",
-    "assets/products/eng-round-solitaire/3.webp",
     "assets/products/eng-round-solitaire/4.webp",
     "assets/products/eng-round-solitaire/5.webp"
   ],
@@ -26,8 +25,7 @@ window.IMAGES = {
   "eng-princess-channel": [
     "assets/products/eng-princess-channel/1.webp",
     "assets/products/eng-princess-channel/2.webp",
-    "assets/products/eng-princess-channel/4.webp",
-    "assets/products/eng-princess-channel/5.webp"
+    "assets/products/eng-princess-channel/4.webp"
   ],
   "eng-pear-solitaire": [
     "assets/products/eng-pear-solitaire/1.webp",
