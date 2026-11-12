@@ -51,8 +51,7 @@ window.IMAGES = {
     "assets/products/eng-marquise-vintage/1.webp",
     "assets/products/eng-marquise-vintage/2.webp",
     "assets/products/eng-marquise-vintage/3.webp",
-    "assets/products/eng-marquise-vintage/4.webp",
-    "assets/products/eng-marquise-vintage/5.webp"
+    "assets/products/eng-marquise-vintage/4.webp"
   ],
   "eng-toi-et-moi": [
     "assets/products/eng-toi-et-moi/1.webp",
