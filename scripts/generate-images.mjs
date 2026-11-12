@@ -205,7 +205,6 @@ const OPTION_SETS = {
     () => ({}),
   ],
   edit: [
-    () => ({ size: SIZE, quality: QUALITY(), output_format: "webp", input_fidelity: "high" }),
     () => ({ size: SIZE, quality: QUALITY(), output_format: "webp" }),
     () => ({ size: SIZE }),
     () => ({}),

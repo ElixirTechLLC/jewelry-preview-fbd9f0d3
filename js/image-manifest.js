@@ -3,50 +3,63 @@ window.IMAGES = {
   "eng-round-solitaire": [
     "assets/products/eng-round-solitaire/1.webp",
     "assets/products/eng-round-solitaire/2.webp",
+    "assets/products/eng-round-solitaire/3.webp",
     "assets/products/eng-round-solitaire/4.webp",
     "assets/products/eng-round-solitaire/5.webp"
   ],
   "eng-oval-hidden-halo": [
     "assets/products/eng-oval-hidden-halo/1.webp",
     "assets/products/eng-oval-hidden-halo/2.webp",
-    "assets/products/eng-oval-hidden-halo/4.webp"
+    "assets/products/eng-oval-hidden-halo/3.webp",
+    "assets/products/eng-oval-hidden-halo/4.webp",
+    "assets/products/eng-oval-hidden-halo/5.webp"
   ],
   "eng-emerald-three-stone": [
     "assets/products/eng-emerald-three-stone/1.webp",
     "assets/products/eng-emerald-three-stone/2.webp",
-    "assets/products/eng-emerald-three-stone/4.webp"
+    "assets/products/eng-emerald-three-stone/3.webp",
+    "assets/products/eng-emerald-three-stone/4.webp",
+    "assets/products/eng-emerald-three-stone/5.webp"
   ],
   "eng-cushion-halo": [
     "assets/products/eng-cushion-halo/1.webp",
     "assets/products/eng-cushion-halo/2.webp",
+    "assets/products/eng-cushion-halo/3.webp",
     "assets/products/eng-cushion-halo/4.webp",
     "assets/products/eng-cushion-halo/5.webp"
   ],
   "eng-princess-channel": [
     "assets/products/eng-princess-channel/1.webp",
     "assets/products/eng-princess-channel/2.webp",
-    "assets/products/eng-princess-channel/4.webp"
+    "assets/products/eng-princess-channel/3.webp",
+    "assets/products/eng-princess-channel/4.webp",
+    "assets/products/eng-princess-channel/5.webp"
   ],
   "eng-pear-solitaire": [
     "assets/products/eng-pear-solitaire/1.webp",
     "assets/products/eng-pear-solitaire/2.webp",
-    "assets/products/eng-pear-solitaire/4.webp"
+    "assets/products/eng-pear-solitaire/3.webp",
+    "assets/products/eng-pear-solitaire/4.webp",
+    "assets/products/eng-pear-solitaire/5.webp"
   ],
   "eng-radiant-pave": [
     "assets/products/eng-radiant-pave/1.webp",
     "assets/products/eng-radiant-pave/2.webp",
+    "assets/products/eng-radiant-pave/3.webp",
     "assets/products/eng-radiant-pave/4.webp",
     "assets/products/eng-radiant-pave/5.webp"
   ],
   "eng-marquise-vintage": [
     "assets/products/eng-marquise-vintage/1.webp",
     "assets/products/eng-marquise-vintage/2.webp",
+    "assets/products/eng-marquise-vintage/3.webp",
     "assets/products/eng-marquise-vintage/4.webp",
     "assets/products/eng-marquise-vintage/5.webp"
   ],
   "eng-toi-et-moi": [
     "assets/products/eng-toi-et-moi/1.webp",
     "assets/products/eng-toi-et-moi/2.webp",
+    "assets/products/eng-toi-et-moi/3.webp",
     "assets/products/eng-toi-et-moi/4.webp",
     "assets/products/eng-toi-et-moi/5.webp"
   ],
@@ -151,6 +164,7 @@ window.IMAGES = {
   "wom-emerald-halo-ring": [
     "assets/products/wom-emerald-halo-ring/1.webp",
     "assets/products/wom-emerald-halo-ring/2.webp",
+    "assets/products/wom-emerald-halo-ring/3.webp",
     "assets/products/wom-emerald-halo-ring/4.webp",
     "assets/products/wom-emerald-halo-ring/5.webp"
   ],
@@ -171,6 +185,7 @@ window.IMAGES = {
   "wom-baguette-cluster-ring": [
     "assets/products/wom-baguette-cluster-ring/1.webp",
     "assets/products/wom-baguette-cluster-ring/2.webp",
+    "assets/products/wom-baguette-cluster-ring/3.webp",
     "assets/products/wom-baguette-cluster-ring/4.webp",
     "assets/products/wom-baguette-cluster-ring/5.webp"
   ],
@@ -199,12 +214,14 @@ window.IMAGES = {
     "assets/products/men-sovereign-signet/1.webp",
     "assets/products/men-sovereign-signet/2.webp",
     "assets/products/men-sovereign-signet/3.webp",
-    "assets/products/men-sovereign-signet/4.webp"
+    "assets/products/men-sovereign-signet/4.webp",
+    "assets/products/men-sovereign-signet/5.webp"
   ],
   "men-cuban-chain": [
     "assets/products/men-cuban-chain/1.webp",
     "assets/products/men-cuban-chain/2.webp",
     "assets/products/men-cuban-chain/3.webp",
+    "assets/products/men-cuban-chain/4.webp",
     "assets/products/men-cuban-chain/5.webp"
   ],
   "men-rope-chain": [
@@ -260,48 +277,56 @@ window.IMAGES = {
     "assets/products/men-cluster-ring/1.webp",
     "assets/products/men-cluster-ring/2.webp",
     "assets/products/men-cluster-ring/3.webp",
-    "assets/products/men-cluster-ring/4.webp"
+    "assets/products/men-cluster-ring/4.webp",
+    "assets/products/men-cluster-ring/5.webp"
   ],
   "men-id-bracelet": [
     "assets/products/men-id-bracelet/1.webp",
     "assets/products/men-id-bracelet/2.webp",
     "assets/products/men-id-bracelet/3.webp",
-    "assets/products/men-id-bracelet/4.webp"
+    "assets/products/men-id-bracelet/4.webp",
+    "assets/products/men-id-bracelet/5.webp"
   ],
   "wat-meridian-41-gold": [
     "assets/products/wat-meridian-41-gold/1.webp",
     "assets/products/wat-meridian-41-gold/2.webp",
     "assets/products/wat-meridian-41-gold/3.webp",
-    "assets/products/wat-meridian-41-gold/4.webp"
+    "assets/products/wat-meridian-41-gold/4.webp",
+    "assets/products/wat-meridian-41-gold/5.webp"
   ],
   "wat-meridian-41-diamond": [
     "assets/products/wat-meridian-41-diamond/1.webp",
     "assets/products/wat-meridian-41-diamond/2.webp",
     "assets/products/wat-meridian-41-diamond/3.webp",
-    "assets/products/wat-meridian-41-diamond/4.webp"
+    "assets/products/wat-meridian-41-diamond/4.webp",
+    "assets/products/wat-meridian-41-diamond/5.webp"
   ],
   "wat-monarch-42-pave": [
     "assets/products/wat-monarch-42-pave/1.webp",
     "assets/products/wat-monarch-42-pave/2.webp",
     "assets/products/wat-monarch-42-pave/3.webp",
-    "assets/products/wat-monarch-42-pave/4.webp"
+    "assets/products/wat-monarch-42-pave/4.webp",
+    "assets/products/wat-monarch-42-pave/5.webp"
   ],
   "wat-celeste-28-diamond": [
     "assets/products/wat-celeste-28-diamond/1.webp",
     "assets/products/wat-celeste-28-diamond/2.webp",
     "assets/products/wat-celeste-28-diamond/3.webp",
-    "assets/products/wat-celeste-28-diamond/4.webp"
+    "assets/products/wat-celeste-28-diamond/4.webp",
+    "assets/products/wat-celeste-28-diamond/5.webp"
   ],
   "wat-celeste-31-two-tone": [
     "assets/products/wat-celeste-31-two-tone/1.webp",
     "assets/products/wat-celeste-31-two-tone/2.webp",
     "assets/products/wat-celeste-31-two-tone/3.webp",
-    "assets/products/wat-celeste-31-two-tone/4.webp"
+    "assets/products/wat-celeste-31-two-tone/4.webp",
+    "assets/products/wat-celeste-31-two-tone/5.webp"
   ],
   "wat-nocturne-chrono": [
     "assets/products/wat-nocturne-chrono/1.webp",
     "assets/products/wat-nocturne-chrono/2.webp",
     "assets/products/wat-nocturne-chrono/3.webp",
-    "assets/products/wat-nocturne-chrono/4.webp"
+    "assets/products/wat-nocturne-chrono/4.webp",
+    "assets/products/wat-nocturne-chrono/5.webp"
   ]
 };
