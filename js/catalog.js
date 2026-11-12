@@ -22,6 +22,7 @@ window.CATALOG = [
   /* ========================= ENGAGEMENT ========================= */
   {
     id: "eng-round-solitaire", sku: "ENG-1001", name: "The Classic Round Solitaire",
+    viewNotes: { 4: "in a macro close-up of the center stone and its setting copied exactly from the attached image: the same round brilliant diamond at the same size relative to the band, held by exactly six slim prongs in a cathedral setting, with the plain polished band visible below. Nothing is enlarged, reshaped or rearranged" },
     cat: "engagement", type: "ring", tags: ["her", "round", "solitaire"], badge: "Best Seller", featured: true,
     price: 6450, metal: "14K Yellow Gold", goldG: 3.8,
     dia: { ctw: 1.5, count: 1, shape: "Round Brilliant", color: "G", clarity: "VS1" },
@@ -115,7 +116,7 @@ window.CATALOG = [
   },
   {
     id: "wed-classic-band-2mm", sku: "WED-2002", name: "Classic Comfort-Fit Band · 2 mm",
-    viewNotes: { 4: "in a close-up, the whole ring filling most of the frame, resting on the surface tilted slightly toward the camera so the polished outer surface and the comfort-fit interior are both visible. The band stays a complete, perfectly round circle; it is not flattened, cut off, squashed or bell-shaped" },
+    viewNotes: { 3: "standing upright on its edge, turned about 45 degrees from the camera so the band reads as an oval loop and both its outer and inner surfaces are visible; the whole ring is in frame and stays a complete round circle, not flattened or cut off", 4: "in a close-up, the whole ring filling most of the frame, resting on the surface tilted slightly toward the camera so the polished outer surface and the comfort-fit interior are both visible. The band stays a complete, perfectly round circle; it is not flattened, cut off, squashed or bell-shaped" },
     cat: "wedding", type: "band", tags: ["her", "plain", "gift"],
     price: 495, metal: "14K Yellow Gold", goldG: 2.6,
     dia: null,
@@ -125,7 +126,7 @@ window.CATALOG = [
   },
   {
     id: "wed-mens-comfort-6mm", sku: "WED-2003", name: "Men's Comfort-Fit Band · 6 mm",
-    viewNotes: { 4: "in a close-up, the whole ring filling most of the frame, resting on the surface tilted slightly toward the camera so the polished outer surface and the comfort-fit interior are both visible. The band stays a complete, perfectly round circle; it is not flattened, cut off, squashed or bell-shaped" },
+    viewNotes: { 3: "standing upright on its edge, turned about 45 degrees from the camera so the band reads as an oval loop and both its outer and inner surfaces are visible; the whole ring is in frame and stays a complete round circle, not flattened or cut off", 4: "in a close-up, the whole ring filling most of the frame, resting on the surface tilted slightly toward the camera so the polished outer surface and the comfort-fit interior are both visible. The band stays a complete, perfectly round circle; it is not flattened, cut off, squashed or bell-shaped" },
     cat: "wedding", type: "band", tags: ["him", "plain"], featured: true,
     price: 1450, metal: "14K Yellow Gold", goldG: 9.8,
     dia: null,

@@ -3,23 +3,27 @@ window.IMAGES = {
   "eng-round-solitaire": [
     "assets/products/eng-round-solitaire/1.webp",
     "assets/products/eng-round-solitaire/2.webp",
-    "assets/products/eng-round-solitaire/4.webp",
+    "assets/products/eng-round-solitaire/3.webp",
     "assets/products/eng-round-solitaire/5.webp"
   ],
   "eng-oval-hidden-halo": [
     "assets/products/eng-oval-hidden-halo/1.webp",
     "assets/products/eng-oval-hidden-halo/2.webp",
+    "assets/products/eng-oval-hidden-halo/3.webp",
     "assets/products/eng-oval-hidden-halo/4.webp",
     "assets/products/eng-oval-hidden-halo/5.webp"
   ],
   "eng-emerald-three-stone": [
     "assets/products/eng-emerald-three-stone/1.webp",
     "assets/products/eng-emerald-three-stone/2.webp",
-    "assets/products/eng-emerald-three-stone/4.webp"
+    "assets/products/eng-emerald-three-stone/3.webp",
+    "assets/products/eng-emerald-three-stone/4.webp",
+    "assets/products/eng-emerald-three-stone/5.webp"
   ],
   "eng-cushion-halo": [
     "assets/products/eng-cushion-halo/1.webp",
     "assets/products/eng-cushion-halo/2.webp",
+    "assets/products/eng-cushion-halo/3.webp",
     "assets/products/eng-cushion-halo/4.webp"
   ],
   "eng-princess-channel": [
@@ -60,13 +64,11 @@ window.IMAGES = {
   "wed-classic-band-2mm": [
     "assets/products/wed-classic-band-2mm/1.webp",
     "assets/products/wed-classic-band-2mm/2.webp",
-    "assets/products/wed-classic-band-2mm/3.webp",
     "assets/products/wed-classic-band-2mm/5.webp"
   ],
   "wed-mens-comfort-6mm": [
     "assets/products/wed-mens-comfort-6mm/1.webp",
     "assets/products/wed-mens-comfort-6mm/2.webp",
-    "assets/products/wed-mens-comfort-6mm/3.webp",
     "assets/products/wed-mens-comfort-6mm/5.webp"
   ],
   "wed-mens-channel-diamond": [
