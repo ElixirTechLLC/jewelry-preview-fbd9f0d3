@@ -72,14 +72,12 @@ window.IMAGES = {
     "assets/products/wed-classic-band-2mm/1.webp",
     "assets/products/wed-classic-band-2mm/2.webp",
     "assets/products/wed-classic-band-2mm/3.webp",
-    "assets/products/wed-classic-band-2mm/4.webp",
     "assets/products/wed-classic-band-2mm/5.webp"
   ],
   "wed-mens-comfort-6mm": [
     "assets/products/wed-mens-comfort-6mm/1.webp",
     "assets/products/wed-mens-comfort-6mm/2.webp",
     "assets/products/wed-mens-comfort-6mm/3.webp",
-    "assets/products/wed-mens-comfort-6mm/4.webp",
     "assets/products/wed-mens-comfort-6mm/5.webp"
   ],
   "wed-mens-channel-diamond": [

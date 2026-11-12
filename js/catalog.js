@@ -116,6 +116,7 @@ window.CATALOG = [
   },
   {
     id: "wed-classic-band-2mm", sku: "WED-2002", name: "Classic Comfort-Fit Band · 2 mm",
+    viewNotes: { 4: "in a close-up, the whole ring filling most of the frame, resting on the surface tilted slightly toward the camera so the polished outer surface and the comfort-fit interior are both visible. The band stays a complete, perfectly round circle; it is not flattened, cut off, squashed or bell-shaped" },
     cat: "wedding", type: "band", tags: ["her", "plain", "gift"],
     price: 495, metal: "14K Yellow Gold", goldG: 2.6,
     dia: null,
@@ -125,6 +126,7 @@ window.CATALOG = [
   },
   {
     id: "wed-mens-comfort-6mm", sku: "WED-2003", name: "Men's Comfort-Fit Band · 6 mm",
+    viewNotes: { 4: "in a close-up, the whole ring filling most of the frame, resting on the surface tilted slightly toward the camera so the polished outer surface and the comfort-fit interior are both visible. The band stays a complete, perfectly round circle; it is not flattened, cut off, squashed or bell-shaped" },
     cat: "wedding", type: "band", tags: ["him", "plain"], featured: true,
     price: 1450, metal: "14K Yellow Gold", goldG: 9.8,
     dia: null,
