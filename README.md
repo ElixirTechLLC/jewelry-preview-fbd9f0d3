@@ -80,6 +80,10 @@ git add -A && git commit -m "Update site" && git push
 
 GitHub rebuilds the site a minute or two after each push.
 
+## Publishing a change
+
+GitHub Pages and browsers cache files for ten minutes. Before committing a change to `css/` or `js/`, run `node scripts/stamp-assets.mjs`: it adds a fresh `?v=` stamp to every stylesheet and script link in the HTML pages so a plain reload fetches the new files.
+
 ## Before go-live
 
 - [ ] Remove the `<meta name="robots" content="noindex, nofollow">` line from all six pages so search engines can find the live site
