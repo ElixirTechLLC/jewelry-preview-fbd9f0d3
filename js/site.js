@@ -83,7 +83,7 @@
       cols: [
         { title: "Shop by Shape", links: [["Round", "round"], ["Oval", "oval"], ["Emerald", "emerald"], ["Cushion", "cushion"], ["Princess", "princess"], ["Pear", "pear"], ["Radiant", "radiant"], ["Marquise", "marquise"]] },
         { title: "Shop by Style", links: [["Solitaire", "solitaire"], ["Halo", "halo"], ["Three-Stone & Two-Stone", "three-stone"], ["Pavé Band", "pave"]] },
-        { title: "Services", raw: [["All Engagement Rings", shopUrl("engagement")], ["Design Your Own Ring", "custom.html"], ["Financing", "financing.html"], ["Book an Appointment", "visit.html"]] },
+        { title: "Services", raw: [["All Engagement Rings", shopUrl("engagement")], ["Design Your Own Ring", "custom.html"], ["Diamond Education", "education.html"], ["Financing", "financing.html"], ["Book an Appointment", "visit.html#appointment"]] },
       ],
       promo: { title: "Design your own ring", text: "Bring a stone, a photo or a sketch and we will make the ring.", href: "custom.html", cta: "Start a design" },
     },
@@ -294,9 +294,10 @@
           </div>
           <a class="logo" href="index.html" aria-label="${esc(S.brand)} home">
             <span class="logo-name">${esc(S.logoName || S.brand)}</span>
-            <span class="logo-tag">${esc(S.logoSub || S.tagline)}</span>
+            <span class="logo-tag"><i></i>${esc(S.logoSub || S.tagline)}<i></i></span>
           </a>
           <div class="header-right">
+            <a class="header-link" href="story.html">Our Story</a>
             <a class="header-link" href="visit.html">Visit Us</a>
             <button class="icon-btn" id="searchOpen" aria-label="Search">${ICON.search}</button>
             <button class="icon-btn" id="bagOpen" aria-label="Open shopping bag">${ICON.bag}<span class="bag-count" id="bagCount" hidden>0</span></button>
@@ -321,6 +322,8 @@
               </div></details>`
             : `<a class="plain sale" href="${shopUrl(n.cat)}">${n.label}</a>`).join("")}
           <a class="plain" href="custom.html">Custom Design</a>
+          <a class="plain" href="education.html">Diamond Education</a>
+          <a class="plain" href="story.html">Our Story</a>
           <a class="plain" href="financing.html">Financing</a>
           <a class="plain" href="visit.html">Visit Us</a>
         </div>
@@ -358,9 +361,11 @@
         </ul></div>
         <div><h4>Services</h4><ul>
           <li><a href="custom.html">Custom Design</a></li>
+          <li><a href="education.html">Diamond Education</a></li>
           <li><a href="financing.html">Financing</a></li>
-          <li><a href="visit.html">Book an appointment</a></li>
+          <li><a href="visit.html#appointment">Book an appointment</a></li>
           <li><a href="visit.html#services">Sizing and repairs</a></li>
+          <li><a href="story.html">Our Story</a></li>
         </ul></div>
         <div><h4>Visit</h4><ul>
           <li><a href="visit.html">${esc(S.contact.addressLine1)}<br>${esc(S.contact.addressLine2)}</a></li>

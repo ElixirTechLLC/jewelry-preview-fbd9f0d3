@@ -13,6 +13,8 @@
     theme = asked || names[localStorage.getItem(KEY)] || DEFAULT_THEME;
   } catch (e) { /* storage blocked: use the default */ }
   document.documentElement.setAttribute("data-theme", theme);
+  var page = (location.pathname.split("/").pop() || "index.html").replace(/\.html$/, "") || "index";
+  document.documentElement.setAttribute("data-page", page);
   window.JW_THEME = {
     get: function () { return document.documentElement.getAttribute("data-theme"); },
     set: function (t) {

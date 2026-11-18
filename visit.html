@@ -20,6 +20,7 @@
   <section class="page-head">
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span>Visit Us</nav>
+      <p class="eyebrow">A private appointment</p>
       <h1>Visit the shop</h1>
       <p>Our workshop and showroom are on Route 303 in Tappan, New York. Come in to try pieces on or to sit down with a jeweler about a custom design.</p>
     </div>
@@ -36,7 +37,7 @@
         <h2 class="h3" style="font-family:var(--sans)">Hours</h2>
         <table class="hours"><tbody data-hours></tbody></table>
         <p style="margin-top:26px;display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn btn--gold" id="apptLink" href="#">Book an appointment</a>
+          <a class="btn btn--gold" id="apptLink" href="#appointment">Book an appointment</a>
           <a class="btn" data-tel href="#">Call the shop</a>
         </p>
         <p class="fine" style="margin-top:12px">Walk-ins are welcome. For engagement rings and custom work, an appointment means a jeweler is free when you arrive.</p>
@@ -50,7 +51,32 @@
     </div>
   </section>
 
-  <section class="section section--alt" id="services">
+  <section class="section section--alt" id="appointment">
+    <div class="wrap appt">
+      <div>
+        <p class="eyebrow">The Wolf’s experience</p>
+        <h2>A dedicated consultation, just for you</h2>
+        <p class="muted">Whether you are choosing an engagement ring, marking an occasion or designing a one-of-a-kind piece, a jeweler sits down with you, one on one, in the showroom.</p>
+        <ul class="appt-points">
+          <li><b>Personal guidance</b><span>Advice shaped to your style, budget and occasion.</span></li>
+          <li><b>Custom creation</b><span>Bring a sketch, a photo or an heirloom stone.</span></li>
+          <li><b>Discreet and private</b><span>Time set aside for you, with no one else in the room.</span></li>
+        </ul>
+      </div>
+      <form class="appt-form" id="apptForm">
+        <h3><i></i>Book a consultation<i></i></h3>
+        <div class="row"><div class="field"><label for="ap_first">First name</label><input type="text" id="ap_first" required autocomplete="given-name"></div><div class="field"><label for="ap_last">Last name</label><input type="text" id="ap_last" required autocomplete="family-name"></div></div>
+        <div class="row"><div class="field"><label for="ap_email">Email</label><input type="email" id="ap_email" required autocomplete="email"></div><div class="field"><label for="ap_phone">Phone</label><input type="tel" id="ap_phone" autocomplete="tel"></div></div>
+        <div class="field"><label for="ap_type">Appointment type</label><select class="select" id="ap_type"><option>Engagement rings</option><option>Wedding bands</option><option>Custom design</option><option>Fine jewelry</option><option>Watches</option><option>Repair or sizing</option><option>Something else</option></select></div>
+        <div class="row"><div class="field"><label for="ap_date">Preferred date</label><input type="date" id="ap_date"></div><div class="field"><label for="ap_time">Preferred time</label><select class="select" id="ap_time"><option>Morning</option><option>Midday</option><option>Afternoon</option><option>Evening</option></select></div></div>
+        <div class="field"><label for="ap_msg">Tell us more (optional)</label><textarea id="ap_msg" maxlength="1200"></textarea></div>
+        <button class="btn btn--gold btn--block" type="submit">Request appointment</button>
+        <p class="fine" style="margin:12px 0 0;text-align:center">This opens an email to <span data-email></span> with your request filled in. A jeweler confirms the time with you.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" id="services">
     <div class="wrap">
       <div class="section-head"><h2>Services</h2></div>
       <ul class="two-col-list">

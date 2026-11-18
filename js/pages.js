@@ -51,9 +51,13 @@
   };
 
   JW.pages.visit = function () {
-    $("#apptLink").href =
-      "mailto:" + S.contact.email + "?subject=" + encodeURIComponent("Appointment request") +
-      "&body=" + encodeURIComponent("Name:\nPhone:\nPreferred day and time:\nWhat I would like to see:\n");
+    const f = $("#apptForm");
+    if (f) f.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const v = (id) => ($("#" + id).value || "").trim();
+      const body = [`Name: ${v("ap_first")} ${v("ap_last")}`, `Email: ${v("ap_email")}`, `Phone: ${v("ap_phone")}`, `Appointment: ${v("ap_type")}`, `Preferred: ${v("ap_date")} ${v("ap_time")}`, "", v("ap_msg")].join("\n");
+      location.href = `mailto:${S.contact.email}?subject=${encodeURIComponent("Appointment request: " + v("ap_type"))}&body=${encodeURIComponent(body)}`;
+    });
   };
 
   // On the normal multi-page site, run the one that belongs to this page.

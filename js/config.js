@@ -4,8 +4,8 @@
 ------------------------------------------------------------------- */
 window.SITE = {
   // Brand. "logoName" is the large word in the logo; "logoSub" the small line under it.
-  brand: "Wolfs Fine Jewelry",
-  logoName: "Wolfs",
+  brand: "Wolf’s Fine Jewelry",
+  logoName: "Wolf’s",
   logoSub: "Fine Jewelry",
   tagline: "Tappan, New York",
 

@@ -210,3 +210,183 @@ html[data-theme="avenue"] .pdp-fin, html[data-theme="avenue"] .card-fin { color:
 /* Hero text stays readable over any photo (and over the placeholder) */
 .ed-hero .stock::after, .av-hero .stock::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10, 20, 30, 0.6), rgba(10, 20, 30, 0) 55%); pointer-events: none; }
 .ed-hero .stock > span, .av-hero .stock > span { top: 40%; }
+
+/* ==================================================================
+   Wolf's blueprint: tokens, wordmark, italic display, eyebrow rules,
+   ivory shopping pages in the Maison and Avenue looks, new blocks
+================================================================== */
+/* Blueprint tokens, applied to every green look */
+:root, :root[data-theme="maison"], :root[data-theme="avenue"] {
+  --bg: #20291d;          /* Heritage Green */
+  --bg-2: #1b231a;
+  --panel: #343c2c;       /* Olive Forest */
+  --black: #161c14;
+  --walnut: #513422;
+  --ivory: #f0e4d0;       /* Warm Ivory */
+  --champagne: #b6a18a;   /* Muted Champagne */
+  --gold: #b08a50;        /* Antique Brass */
+  --gold-light: #d2b273;
+  --text: #f0e4d0;
+  --muted: #b6a18a;
+  --dim: #8a8572;
+  --line: rgba(176, 138, 80, 0.3);
+  --line-strong: rgba(176, 138, 80, 0.6);
+  --line-gold: rgba(176, 138, 80, 0.65);
+  --stock-a: #343c2c; --stock-b: #161c14;
+}
+:root[data-theme="light"] { --bg: #f0e4d0; --bg-2: #e8dbc5; --panel: #e3d5bd; --text: #20291d; --muted: #5a5f4f; --gold: #9a7538; --gold-light: #7e5e2a; --black: #20291d; }
+.ph svg { stroke: var(--champagne); }
+
+/* Wordmark: name in the serif, "FINE JEWELRY" between two brass hairlines */
+.logo-tag { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--gold-light); }
+.logo-tag i { display: block; width: 28px; height: 1px; background: var(--gold); }
+.footer-brand .logo-tag { justify-content: flex-start; }
+.announce .wrap > span:first-child::before, .announce .wrap > span:first-child::after { content: ""; display: inline-block; width: 26px; height: 1px; background: var(--gold); vertical-align: middle; margin: 0 12px; opacity: 0.8; }
+
+/* Eyebrow label with a short brass rule beneath, as in the mockups */
+.eyebrow { display: block; font-family: var(--sans); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin: 0 0 10px; }
+.eyebrow::after { content: ""; display: block; width: 34px; height: 1px; background: var(--gold); margin-top: 10px; }
+.center .eyebrow::after, .section-head .eyebrow::after { margin-left: auto; margin-right: auto; }
+.section-head .eyebrow { text-align: center; }
+.page-head .eyebrow::after { margin-left: 0; }
+.center .eyebrow { text-align: center; }
+
+/* Display headlines: Cormorant italic for the hero moments, larger as the blueprint asks */
+.hero h1, .ed-hero h1, .av-hero h1, .story-hero h1, .cta-band h2 { font-family: "Cormorant Garamond", var(--serif); font-weight: 400; }
+.hero h1 { font-size: clamp(40px, 5vw, 72px); }
+.hero h1 em, .ed-hero h1 em, .av-hero h1 em, .story-hero h1 em, .cta-band h2 em { font-style: italic; color: var(--text); }
+.ed-hero h1 { font-size: clamp(38px, 4.6vw, 68px); font-style: italic; }
+.av-hero h1 { font-size: clamp(38px, 4.6vw, 68px); font-style: italic; }
+.ed-hero .over, .av-hero .over { color: var(--ivory); }
+.ed-hero p, .av-hero p { color: var(--ivory); letter-spacing: 0.16em; text-transform: uppercase; font-size: 11.5px; }
+.ed-hero a { color: var(--ivory); border-color: var(--gold); }
+.av-hero .btn { background: transparent; color: var(--ivory); border-color: var(--ivory); }
+.av-hero .btn:hover { background: var(--ivory); color: var(--bg); }
+.btn { border-color: var(--gold); color: var(--text); }
+.btn--gold { background: var(--gold); color: var(--black); border-color: var(--gold); }
+.btn--gold:hover { background: var(--gold-light); border-color: var(--gold-light); color: var(--black); }
+.btn:hover { background: var(--gold); color: var(--black); }
+
+/* Category labels get the brass underline from the mockups */
+.ed-collections b::after, .av-cats b::after, .tile-label::after { content: ""; display: block; width: 28px; height: 1px; background: var(--gold); margin: 8px auto 0; }
+.ed-collections b { text-align: center; }
+.ed-collections span { text-align: center; }
+.ed-collections a, .av-cats a { text-align: center; }
+
+/* New blocks */
+.story-hero { position: relative; }
+.story-hero .stock { --ar: 16 / 8; }
+.story-hero .stock::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(22, 28, 20, 0.82) 0%, rgba(22, 28, 20, 0.35) 55%, rgba(22, 28, 20, 0) 100%); }
+.story-hero .over { position: absolute; z-index: 2; left: 0; right: 0; top: 50%; transform: translateY(-50%); color: var(--ivory); }
+.story-hero h1 { font-size: clamp(38px, 4.8vw, 70px); line-height: 1.05; max-width: 12ch; }
+.story-hero .lead { max-width: 440px; font-size: 18px; color: var(--ivory); margin-top: 14px; }
+.ed-split--tight { gap: 48px; }
+.ed-split--tight .text { padding: 0; }
+.ed-split--flip .text { order: -1; }
+.cta-band { background: var(--black); border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); padding: 80px 0; }
+.cta-band h2 { font-size: clamp(32px, 3.6vw, 52px); margin-bottom: 10px; }
+.cta-band .muted { max-width: 540px; margin: 0 auto 20px; }
+
+.appt { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+.appt h2 { font-family: "Cormorant Garamond", var(--serif); font-style: italic; font-weight: 400; font-size: clamp(30px, 3.2vw, 46px); margin-bottom: 14px; }
+.appt-points { margin-top: 26px; border-top: 1px solid var(--line); }
+.appt-points li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.appt-points b { display: block; font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
+.appt-points span { color: var(--muted); }
+.appt-form { background: var(--black); border: 1px solid var(--line-gold); outline: 1px solid var(--line); outline-offset: 3px; padding: 30px 32px 28px; }
+.appt-form h3 { display: flex; align-items: center; justify-content: center; gap: 14px; font-family: var(--sans); font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; font-weight: 500; color: var(--text); margin-bottom: 22px; }
+.appt-form h3 i { flex: 1; height: 1px; background: var(--gold); max-width: 80px; }
+.appt-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.appt-form .field { margin-bottom: 12px; }
+.appt-form .field input, .appt-form .field textarea, .appt-form .select { background: var(--bg); border-color: var(--line-gold); }
+.appt-form textarea { min-height: 96px; }
+
+.process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; counter-reset: none; }
+.process li { display: block; }
+.process li::before { content: none; }
+.process b { display: block; margin-top: 14px; font-family: var(--sans); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; }
+.process b em { font-family: "Cormorant Garamond", var(--serif); font-style: italic; font-size: 24px; color: var(--gold); margin-right: 10px; letter-spacing: 0; font-weight: 400; }
+.process span { display: block; margin-top: 6px; color: var(--muted); }
+
+.edu-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.edu-grid article { border: 1px solid var(--line-gold); background: var(--panel); padding: 0 0 20px; }
+.edu-grid .stock { border: 0; outline: 0; }
+.edu-grid h3 { font-family: var(--sans); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; margin: 16px 20px 6px; }
+.edu-grid p { margin: 0 20px; color: var(--muted); font-size: 15.5px; }
+.pdp-links { display: flex; gap: 12px; align-items: center; font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin: 4px 0 0; }
+.pdp-links span { color: var(--dim); }
+
+/* ---- Ivory shopping pages (blueprint: "use ivory for most shopping pages") in the Maison and Avenue looks ---- */
+html[data-theme="maison"][data-page="shop"], html[data-theme="avenue"][data-page="shop"],
+html[data-theme="maison"][data-page="product"], html[data-theme="avenue"][data-page="product"],
+html[data-theme="maison"][data-page="financing"], html[data-theme="avenue"][data-page="financing"],
+html[data-theme="maison"][data-page="education"], html[data-theme="avenue"][data-page="education"] {
+  --bg: #f0e4d0; --bg-2: #e8dbc5; --panel: #e3d5bd;
+  --text: #20291d; --muted: #5a5f4f; --dim: #8a8572;
+  --gold: #9a7538; --gold-light: #7e5e2a;
+  --line: rgba(32, 41, 29, 0.18); --line-strong: rgba(32, 41, 29, 0.45); --line-gold: rgba(154, 117, 56, 0.55);
+  --stock-a: #e3d5bd; --stock-b: #c9b996;
+  color-scheme: light;
+}
+/* ...while the header, drawers and footer stay green */
+html[data-page="shop"] .site-header, html[data-page="product"] .site-header, html[data-page="financing"] .site-header, html[data-page="education"] .site-header,
+html[data-page="shop"] .mega, html[data-page="product"] .mega, html[data-page="financing"] .mega, html[data-page="education"] .mega,
+html[data-page="shop"] .drawer, html[data-page="product"] .drawer, html[data-page="financing"] .drawer, html[data-page="education"] .drawer,
+html[data-page="shop"] .search-panel, html[data-page="product"] .search-panel, html[data-page="financing"] .search-panel, html[data-page="education"] .search-panel,
+html[data-page="shop"] .filters, html[data-page="product"] .filters, html[data-page="financing"] .filters, html[data-page="education"] .filters,
+html[data-page="shop"] .site-footer, html[data-page="product"] .site-footer, html[data-page="financing"] .site-footer, html[data-page="education"] .site-footer,
+html[data-page="shop"] .cta-band, html[data-page="product"] .cta-band, html[data-page="financing"] .cta-band, html[data-page="education"] .cta-band {
+  --bg: #20291d; --bg-2: #1b231a; --panel: #343c2c; --black: #161c14;
+  --text: #f0e4d0; --muted: #b6a18a; --dim: #8a8572; --gold: #b08a50; --gold-light: #d2b273;
+  --line: rgba(176, 138, 80, 0.3); --line-strong: rgba(176, 138, 80, 0.6); --line-gold: rgba(176, 138, 80, 0.65);
+  background: var(--bg); color: var(--text); color-scheme: dark;
+}
+html[data-page="shop"] .site-footer, html[data-page="product"] .site-footer, html[data-page="financing"] .site-footer, html[data-page="education"] .site-footer, html[data-page="shop"] .cta-band, html[data-page="product"] .cta-band, html[data-page="financing"] .cta-band, html[data-page="education"] .cta-band { background: var(--black); }
+html[data-page="shop"] .drawer-foot, html[data-page="product"] .drawer-foot { background: var(--bg-2); }
+html[data-theme="maison"][data-page="product"] .thumbs button, html[data-theme="avenue"][data-page="product"] .thumbs button { background: #000; }
+html[data-theme="maison"][data-page="product"] .btn--gold, html[data-theme="avenue"][data-page="product"] .btn--gold,
+html[data-theme="maison"][data-page="shop"] .btn--gold, html[data-theme="avenue"][data-page="shop"] .btn--gold,
+html[data-theme="maison"][data-page="financing"] .btn--gold, html[data-theme="avenue"][data-page="financing"] .btn--gold,
+html[data-theme="maison"][data-page="education"] .btn--gold, html[data-theme="avenue"][data-page="education"] .btn--gold { background: #b08a50; border-color: #b08a50; color: #161c14; }
+html[data-theme="maison"][data-page="shop"] .pill.is-active, html[data-theme="avenue"][data-page="shop"] .pill.is-active { background: #20291d; border-color: #20291d; color: #f0e4d0; }
+html[data-theme="maison"][data-page="shop"] .check input:checked, html[data-theme="avenue"][data-page="shop"] .check input:checked { box-shadow: inset 0 0 0 3px #f0e4d0; }
+
+@media (max-width: 960px) {
+  .appt { grid-template-columns: 1fr; gap: 30px; }
+  .appt-form { padding: 22px 18px; }
+  .appt-form .row { grid-template-columns: 1fr; }
+  .process, .edu-grid { grid-template-columns: 1fr 1fr; }
+  .story-hero .stock { --ar: 4 / 5; }
+  .story-hero .stock::after { background: linear-gradient(to top, rgba(22, 28, 20, 0.85), rgba(22, 28, 20, 0.1)); }
+  .story-hero .over { top: auto; bottom: 28px; transform: none; }
+  .ed-split--flip .text { order: 0; }
+}
+@media (max-width: 640px) { .process, .edu-grid { grid-template-columns: 1fr; } }
+.ed-hero .eyebrow, .av-hero .eyebrow, .story-hero .eyebrow { color: var(--gold-light); }
+.av-hero .eyebrow::after { margin-left: auto; margin-right: auto; }
+.ed-split .eyebrow::after, .text .eyebrow::after { margin-left: 0; }
+
+/* Campaign hero as a text panel beside the photo (the mockups' composition, without text over faces) */
+html[data-theme="maison"] .ed-hero[data-look="maison"], html[data-theme="avenue"] .av-hero[data-look="avenue"] { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); background: var(--black); border-bottom: 1px solid var(--line-strong); }
+.ed-hero .stock, .av-hero .stock { aspect-ratio: auto; height: 100%; min-height: 560px; }
+.ed-hero .stock::after, .av-hero .stock::after { background: linear-gradient(90deg, rgba(22, 28, 20, 0.55), rgba(22, 28, 20, 0) 30%); }
+.ed-hero .stock > span, .av-hero .stock > span { top: 50%; }
+.hero-text { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 72px 56px 72px max(32px, calc((100vw - var(--wrap)) / 2 + 32px)); color: var(--ivory); }
+.hero-text h1 { font-family: "Cormorant Garamond", var(--serif); font-style: italic; font-weight: 400; font-size: clamp(40px, 4.8vw, 72px); line-height: 1.05; color: var(--ivory); margin-bottom: 14px; }
+.hero-text p { font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--champagne); margin: 0 0 26px; max-width: 34ch; line-height: 1.7; }
+.hero-text .eyebrow { margin-bottom: 18px; }
+.hero-text .eyebrow::after { margin-left: 0; }
+.hero-text > a:not(.btn) { font-family: var(--sans); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ivory); border: 1px solid var(--gold); padding: 14px 26px; }
+.hero-text > a:not(.btn):hover { background: var(--gold); color: var(--black); }
+.hero-text .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-text .btn { border-color: var(--ivory); color: var(--ivory); }
+.hero-text .btn:hover { background: var(--ivory); color: var(--black); }
+/* the announcement bar stays green and readable on the ivory shopping pages */
+html[data-page="shop"] .announce, html[data-page="product"] .announce, html[data-page="financing"] .announce, html[data-page="education"] .announce { background: #161c14; color: #b6a18a; }
+html[data-page="shop"] .announce a, html[data-page="product"] .announce a, html[data-page="financing"] .announce a, html[data-page="education"] .announce a { color: #f0e4d0; }
+@media (max-width: 960px) {
+  html[data-theme="maison"] .ed-hero[data-look="maison"], html[data-theme="avenue"] .av-hero[data-look="avenue"] { grid-template-columns: 1fr; }
+  .ed-hero .stock, .av-hero .stock { order: -1; min-height: 0; aspect-ratio: 4 / 5; height: auto; }
+  .ed-hero .stock::after, .av-hero .stock::after { background: none; }
+  .hero-text { padding: 36px 20px 44px; }
+}

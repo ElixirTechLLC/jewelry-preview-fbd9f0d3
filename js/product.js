@@ -94,6 +94,8 @@ window.JW.pages.product = function () {
         <a class="btn btn--block" href="custom.html?piece=${p.id}">Customize this piece</a>
       </div>
 
+      <p class="pdp-links"><a class="text-link" href="visit.html#appointment">Book an appointment</a><span>·</span><a class="text-link" href="custom.html?piece=${p.id}">Ask a jeweler</a></p>
+
       <ul class="pdp-assure">
         <li>Made to order in our shop.</li>
         <li>Available in other sizes, gold colors and stone options on request.</li>
