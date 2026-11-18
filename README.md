@@ -33,8 +33,8 @@ The site has four looks, switched with a footer link or a `?theme=` address, and
 | --- | --- | --- |
 | Hunter green (default) | `?theme=green` | The panelled showroom: green, brass, cream, serif type |
 | Ivory | `?theme=ivory` | The same, on ivory walls |
-| Maison | `?theme=maison` | Piaget: white, navy light serif, full-width editorial photos |
-| Avenue | `?theme=avenue` | David Yurman, Blue Nile, Gabriel & Co: white, bold caps, model-led hero, perks strip |
+| Maison | `?theme=maison` | Piaget's layout in the hunter green palette: light serif, full-width editorial photos |
+| Avenue | `?theme=avenue` | David Yurman, Blue Nile, Gabriel & Co layout in the hunter green palette: bold caps, model-led hero, perks strip |
 
 Maison and Avenue have their own home page sections built around **stock photographs** that do not exist yet. Each slot shows a labelled placeholder describing the shot; drop AI-made photos into `assets/stock/` and list them in `js/stock-manifest.js`. The green and ivory looks share the panelled-room home page. Product photos keep their black backgrounds in every look.
 

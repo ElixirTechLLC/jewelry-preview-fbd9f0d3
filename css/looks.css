@@ -34,80 +34,69 @@ html[data-theme="maison"] .mega-feature .thumb, html[data-theme="avenue"] .mega-
 html[data-theme="maison"] .promo--text, html[data-theme="avenue"] .promo--text,
 html[data-theme="maison"] .map-frame, html[data-theme="avenue"] .map-frame { outline: none; border: 0; border-radius: 0; }
 html[data-theme="maison"] .tile-img img, html[data-theme="avenue"] .tile-img img, html[data-theme="maison"] .tile-img .ph, html[data-theme="avenue"] .tile-img .ph { border-radius: 0; }
-html[data-theme="maison"] .logo-tag, html[data-theme="avenue"] .logo-tag { color: var(--muted); }
 html[data-theme="maison"] .btn--gold, html[data-theme="avenue"] .btn--gold { box-shadow: none; }
-html[data-theme="maison"] .site-footer, html[data-theme="avenue"] .site-footer { background: var(--bg-2); border-top: 1px solid var(--line); }
-html[data-theme="maison"] .announce, html[data-theme="avenue"] .announce { background: var(--black); color: #fff; }
-html[data-theme="maison"] .announce a, html[data-theme="avenue"] .announce a { color: #fff; text-decoration-color: rgba(255, 255, 255, 0.5); }
-html[data-theme="maison"] .hero-caption, html[data-theme="avenue"] .hero-caption { background: rgba(255, 255, 255, 0.85); color: var(--text); }
-html[data-theme="maison"] .select, html[data-theme="avenue"] .select,
-html[data-theme="maison"] .field input, html[data-theme="avenue"] .field input,
-html[data-theme="maison"] .field textarea, html[data-theme="avenue"] .field textarea { background-color: #fff; }
-html[data-theme="maison"] .toast, html[data-theme="avenue"] .toast { background: var(--text); color: #fff; }
-html[data-theme="maison"] .badge, html[data-theme="avenue"] .badge { background: var(--text); color: #fff; }
-html[data-theme="maison"] .badge--sale, html[data-theme="avenue"] .badge--sale { background: var(--sale); }
+html[data-theme="maison"] .stock > span, html[data-theme="avenue"] .stock > span { color: rgba(243, 234, 216, 0.62); border-color: rgba(243, 234, 216, 0.3); }
+html[data-theme="maison"] .hero-caption, html[data-theme="avenue"] .hero-caption { background: rgba(15, 29, 21, 0.8); }
 
 /* ==================================================================
    MAISON (Piaget)
 ================================================================== */
 :root[data-theme="maison"] {
-  color-scheme: light;
-  --bg: #ffffff;
-  --bg-2: #f4f5f8;
-  --panel: #f0f2f6;
-  --black: #0a2065;
-  --line: rgba(10, 32, 101, 0.16);
-  --line-strong: rgba(10, 32, 101, 0.45);
-  --line-gold: rgba(10, 32, 101, 0.2);
-  --gold: #0a2065;
-  --gold-light: #0a2065;
-  --text: #0a2065;
-  --muted: #4a5a8c;
-  --dim: #8d97b8;
-  --sale: #a8422f;
+  color-scheme: dark;
+  /* The panelled room, laid out the Piaget way: green, cream light serif, brass */
+  --bg: #1b2f23;
+  --bg-2: #162a1e;
+  --panel: #213829;
+  --black: #0f1d15;
+  --line: rgba(200, 164, 90, 0.26);
+  --line-strong: rgba(200, 164, 90, 0.55);
+  --line-gold: rgba(200, 164, 90, 0.6);
+  --gold: #c8a45a;
+  --gold-light: #e2c788;
+  --text: #f3ead8;
+  --muted: #c9bda3;
+  --dim: #8f9a8b;
+  --sale: #d08a72;
   --serif: "Cormorant Garamond", "EB Garamond", Garamond, "Times New Roman", serif;
   --body: "Cormorant Garamond", "EB Garamond", Garamond, serif;
-  --stock-a: #eef0f4; --stock-b: #cdd3e0;
+  --stock-a: #2b4636; --stock-b: #13231a;
 }
 html[data-theme="maison"] body { font-size: 18px; line-height: 1.5; }
 html[data-theme="maison"] h1, html[data-theme="maison"] h2, html[data-theme="maison"] h3 { font-weight: 400; }
-html[data-theme="maison"] .logo-name { font-family: var(--serif); font-size: 36px; font-weight: 500; letter-spacing: 0.34em; padding-left: 0.34em; color: var(--text); }
+html[data-theme="maison"] .logo-name { font-family: var(--serif); font-size: 36px; font-weight: 500; letter-spacing: 0.34em; padding-left: 0.34em; color: var(--gold); }
 html[data-theme="maison"] .logo-tag { font-size: 9px; letter-spacing: 0.5em; padding-left: 0.5em; }
 html[data-theme="maison"] .nav-item > a { font-family: var(--sans); font-size: 11px; letter-spacing: 0.2em; font-weight: 500; color: var(--text); }
-html[data-theme="maison"] .nav-item > a::after { background: var(--text); height: 1px; }
+html[data-theme="maison"] .nav-item > a::after { background: var(--gold); height: 1px; }
 html[data-theme="maison"] .nav-item--sale > a { color: var(--sale); }
-html[data-theme="maison"] .btn { font-size: 11px; letter-spacing: 0.2em; border-color: var(--text); color: var(--text); padding: 15px 30px; }
-html[data-theme="maison"] .btn:hover { background: var(--text); color: #fff; }
-html[data-theme="maison"] .btn--gold { background: var(--text); color: #fff; }
-html[data-theme="maison"] .btn--gold:hover { background: #142e80; border-color: #142e80; color: #fff; }
+html[data-theme="maison"] .btn { font-size: 11px; letter-spacing: 0.2em; border-color: var(--gold); color: var(--text); padding: 15px 30px; }
 html[data-theme="maison"] .section-head h2, html[data-theme="maison"] .page-head h1 { font-size: clamp(30px, 3vw, 42px); font-weight: 400; }
 html[data-theme="maison"] .section-head { justify-content: center; text-align: center; flex-direction: column; align-items: center; gap: 8px; }
 html[data-theme="maison"] .section-head p { text-align: center; }
 html[data-theme="maison"] .card-name { font-family: var(--serif); font-size: 20px; font-weight: 500; }
 html[data-theme="maison"] .card-body { text-align: center; }
 html[data-theme="maison"] .card-price { justify-content: center; }
-html[data-theme="maison"] .card-media, html[data-theme="maison"] .tile-img { background: var(--bg-2); }
+html[data-theme="maison"] .card-media, html[data-theme="maison"] .tile-img { background: #000; }
 html[data-theme="maison"] .tile-label { font-family: var(--serif); font-size: 19px; letter-spacing: 0; text-transform: none; font-weight: 500; }
 html[data-theme="maison"] .pdp-info h1 { font-weight: 400; }
 html[data-theme="maison"] .section { padding: 84px 0; }
-html[data-theme="maison"] .section--alt { background: var(--bg); border: 0; }
+html[data-theme="maison"] .section--alt { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 html[data-theme="maison"] .link-arrow { font-family: var(--sans); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; }
 
 /* editorial blocks */
 .ed-hero { position: relative; }
 .ed-hero .stock { --ar: 16 / 7.5; }
-.ed-hero .over { left: 0; right: 0; bottom: 0; padding: 0 32px 44px; color: #fff; text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35); }
-.ed-hero h1 { font-size: clamp(34px, 3.6vw, 52px); font-weight: 400; margin-bottom: 8px; color: #fff; }
+.ed-hero .over { left: 0; right: 0; bottom: 0; padding: 0 32px 44px; color: #f3ead8; text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35); }
+.ed-hero h1 { font-size: clamp(34px, 3.6vw, 52px); font-weight: 400; margin-bottom: 8px; color: #f3ead8; }
 .ed-hero p { font-family: var(--sans); font-size: 12px; letter-spacing: 0.1em; margin: 0 0 14px; }
-.ed-hero a { font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; border-bottom: 1px solid rgba(255, 255, 255, 0.7); padding-bottom: 3px; color: #fff; }
+.ed-hero a { font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; border-bottom: 1px solid rgba(226, 199, 136, 0.8); padding-bottom: 3px; color: #e2c788; }
 .ed-collections { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .ed-collections a { display: block; }
 .ed-collections .stock { --ar: 4 / 5; }
-.ed-collections b { display: block; margin-top: 12px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; }
+.ed-collections b { display: block; margin-top: 12px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--gold-light); }
 .ed-collections span { display: block; color: var(--muted); font-size: 17px; }
-.ed-quote { background: var(--black); color: #fff; padding: 90px 0; text-align: center; }
+.ed-quote { background: var(--black); color: var(--text); padding: 90px 0; text-align: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .ed-quote blockquote { margin: 0 auto; max-width: 760px; font-family: var(--serif); font-size: clamp(26px, 2.8vw, 38px); font-weight: 400; line-height: 1.3; }
-.ed-quote cite { display: block; margin-top: 18px; font-family: var(--sans); font-style: normal; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; }
+.ed-quote cite { display: block; margin-top: 18px; font-family: var(--sans); font-style: normal; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); }
 .ed-split { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
 .ed-split .stock { --ar: 1; }
 .ed-split .text { padding: 0 8%; }
@@ -116,77 +105,75 @@ html[data-theme="maison"] .link-arrow { font-family: var(--sans); font-size: 11p
 .ed-services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .ed-services a { display: block; }
 .ed-services .stock { --ar: 4 / 3; }
-.ed-services b { display: block; margin-top: 12px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; }
+.ed-services b { display: block; margin-top: 12px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--gold-light); }
 .ed-services span { display: block; color: var(--muted); font-size: 16px; margin-top: 2px; }
 
 /* ==================================================================
    AVENUE (David Yurman + Blue Nile + Gabriel & Co)
 ================================================================== */
 :root[data-theme="avenue"] {
-  color-scheme: light;
-  --bg: #ffffff;
-  --bg-2: #f6f5f3;
-  --panel: #f3f1ed;
-  --black: #111111;
-  --line: rgba(17, 17, 17, 0.14);
-  --line-strong: rgba(17, 17, 17, 0.5);
-  --line-gold: rgba(17, 17, 17, 0.2);
-  --gold: #111111;
-  --gold-light: #14326e;
-  --text: #1a1a1a;
-  --muted: #5a5a5a;
-  --dim: #8c8c8c;
-  --sale: #b23a2e;
-  --navy: #14326e;
+  color-scheme: dark;
+  /* The panelled room, laid out the Yurman / Blue Nile / Gabriel way */
+  --bg: #1b2f23;
+  --bg-2: #162a1e;
+  --panel: #213829;
+  --black: #0f1d15;
+  --line: rgba(200, 164, 90, 0.26);
+  --line-strong: rgba(200, 164, 90, 0.55);
+  --line-gold: rgba(200, 164, 90, 0.6);
+  --gold: #c8a45a;
+  --gold-light: #e2c788;
+  --text: #f3ead8;
+  --muted: #c9bda3;
+  --dim: #8f9a8b;
+  --sale: #d08a72;
+  --navy: #e2c788;
   --rust: #a0472a;
   --serif: "EB Garamond", Garamond, "Times New Roman", serif;
   --body: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --stock-a: #e8e9ec; --stock-b: #c5c9d2;
+  --stock-a: #2b4636; --stock-b: #13231a;
 }
 html[data-theme="avenue"] body { font-size: 15px; line-height: 1.6; }
-html[data-theme="avenue"] .logo-name { font-family: var(--serif); font-size: 32px; font-weight: 600; letter-spacing: 0.2em; padding-left: 0.2em; color: var(--text); text-transform: uppercase; }
+html[data-theme="avenue"] .logo-name { font-family: var(--serif); font-size: 32px; font-weight: 600; letter-spacing: 0.2em; padding-left: 0.2em; color: var(--gold); text-transform: uppercase; }
 html[data-theme="avenue"] .logo-tag { font-size: 9px; letter-spacing: 0.42em; }
 html[data-theme="avenue"] .nav-item > a { font-size: 11.5px; letter-spacing: 0.14em; font-weight: 600; }
-html[data-theme="avenue"] .nav-item > a::after { background: var(--text); height: 1px; }
+html[data-theme="avenue"] .nav-item > a::after { background: var(--gold); height: 1px; }
 html[data-theme="avenue"] .nav-item--sale > a { color: var(--sale); }
-html[data-theme="avenue"] .btn { border-color: var(--text); color: var(--text); font-size: 11px; letter-spacing: 0.16em; font-weight: 600; }
-html[data-theme="avenue"] .btn:hover { background: var(--text); color: #fff; }
-html[data-theme="avenue"] .btn--gold { background: var(--text); color: #fff; }
-html[data-theme="avenue"] .btn--gold:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+html[data-theme="avenue"] .btn { border-color: var(--gold); font-size: 11px; letter-spacing: 0.16em; font-weight: 600; }
 html[data-theme="avenue"] .section-head h2, html[data-theme="avenue"] .page-head h1 { font-family: var(--serif); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; font-size: clamp(22px, 2.2vw, 30px); }
 html[data-theme="avenue"] .section-head { justify-content: center; text-align: center; flex-direction: column; align-items: center; gap: 6px; }
 html[data-theme="avenue"] .section-head .link-arrow { font-family: var(--sans); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; }
 html[data-theme="avenue"] .card-name { font-family: var(--sans); font-size: 14.5px; font-weight: 500; }
 html[data-theme="avenue"] .card-body { text-align: center; }
 html[data-theme="avenue"] .card-price { justify-content: center; font-size: 15px; }
-html[data-theme="avenue"] .card-media { background: var(--bg-2); }
+html[data-theme="avenue"] .card-media { background: #000; border: 1px solid var(--line-gold); }
 html[data-theme="avenue"] .tile-label { font-size: 11.5px; letter-spacing: 0.16em; }
 html[data-theme="avenue"] .pdp-info h1 { font-family: var(--serif); font-weight: 500; }
 html[data-theme="avenue"] .text-link, html[data-theme="avenue"] .link-arrow { color: var(--navy); }
-html[data-theme="avenue"] .section--alt { background: var(--bg-2); border: 0; }
+html[data-theme="avenue"] .section--alt { background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 html[data-theme="avenue"] .spec-table tr.hl td { color: var(--navy); }
 html[data-theme="avenue"] .pdp-fin, html[data-theme="avenue"] .card-fin { color: var(--navy); }
 
 .av-hero { position: relative; }
 .av-hero .stock { --ar: 16 / 8; }
-.av-hero .over { left: 0; right: 0; bottom: 0; text-align: center; padding: 0 20px 48px; color: #fff; text-shadow: 0 1px 14px rgba(0, 0, 0, 0.4); }
-.av-hero h1 { font-family: var(--serif); font-size: clamp(34px, 4vw, 56px); font-weight: 400; color: #fff; margin-bottom: 6px; }
+.av-hero .over { left: 0; right: 0; bottom: 0; text-align: center; padding: 0 20px 48px; color: #f3ead8; text-shadow: 0 1px 14px rgba(0, 0, 0, 0.4); }
+.av-hero h1 { font-family: var(--serif); font-size: clamp(34px, 4vw, 56px); font-weight: 400; color: #f3ead8; margin-bottom: 6px; }
 .av-hero p { font-family: var(--sans); font-size: 13px; letter-spacing: 0.06em; margin: 0 0 18px; }
 .av-hero .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-.av-hero .btn { background: #fff; color: #111; border-color: #fff; text-shadow: none; }
-.av-hero .btn:hover { background: #111; color: #fff; border-color: #111; }
+.av-hero .btn { background: var(--gold); color: var(--black); border-color: var(--gold); text-shadow: none; }
+.av-hero .btn:hover { background: var(--gold-light); border-color: var(--gold-light); color: var(--black); }
 .av-perks { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .av-perks .wrap { display: grid; grid-template-columns: repeat(4, 1fr); }
 .av-perks div { padding: 18px 16px; text-align: center; border-left: 1px solid var(--line); }
 .av-perks div:first-child { border-left: 0; }
-.av-perks b { display: block; font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; }
+.av-perks b { display: block; font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: var(--gold-light); }
 .av-perks span { font-size: 13.5px; color: var(--muted); }
 .av-split-head { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
-.av-split-head h2 { font-family: var(--sans); font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
+.av-split-head h2 { font-family: var(--sans); font-size: 14px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--gold-light); }
 .av-split-head .links a { font-family: var(--sans); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; margin-left: 18px; }
 .av-cats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
 .av-cats a { display: block; text-align: center; }
-.av-cats .stock { --ar: 4 / 5; --stock-a: #b4553a; --stock-b: #7d3620; }
+.av-cats .stock { --ar: 4 / 5; --stock-a: #b8934c; --stock-b: #6e5120; }
 .av-cats .stock > span { color: rgba(255, 255, 255, 0.75); border-color: rgba(255, 255, 255, 0.45); }
 .av-cats b { display: block; margin-top: 10px; font-family: var(--sans); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; }
 .av-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -194,7 +181,7 @@ html[data-theme="avenue"] .pdp-fin, html[data-theme="avenue"] .card-fin { color:
 .av-three .stock { --ar: 1; }
 .av-three b { display: block; margin-top: 12px; font-family: var(--sans); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
 .av-two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.av-two article { border: 1px solid var(--line); background: #fff; }
+.av-two article { border: 1px solid var(--line-gold); background: var(--panel); }
 .av-two .stock { --ar: 16 / 9; }
 .av-two .body { padding: 24px 26px 28px; }
 .av-two h3 { font-family: var(--serif); font-size: 20px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
