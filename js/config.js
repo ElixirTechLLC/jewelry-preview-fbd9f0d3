@@ -3,16 +3,18 @@
    lives in this one file: brand name, contact details, financing.
 ------------------------------------------------------------------- */
 window.SITE = {
-  // PLACEHOLDER brand — change these two lines to rename the whole site.
-  brand: "Aurum & Onyx",
-  tagline: "Fine Jewelry · Designed & Made In-House",
+  // Brand. "logoName" is the large word in the logo; "logoSub" the small line under it.
+  brand: "Wolfs Fine Jewelry",
+  logoName: "Wolfs",
+  logoSub: "Fine Jewelry",
+  tagline: "Tappan, New York",
 
   // PLACEHOLDER contact details — replace with the real shop details.
   contact: {
     phone: "(000) 000-0000",
     email: "hello@example.com",
-    addressLine1: "[Street address]",
-    addressLine2: "[City, State ZIP]",
+    addressLine1: "111 NY-303",
+    addressLine2: "Tappan, NY 10983",
     hours: [
       ["Monday – Friday", "[10:00 am – 6:00 pm]"],
       ["Saturday", "[10:00 am – 5:00 pm]"],

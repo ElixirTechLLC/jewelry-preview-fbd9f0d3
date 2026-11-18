@@ -1,11 +1,11 @@
 /* Picks the color scheme before the page paints (loaded in <head>).
-   DEFAULT_THEME is what a first-time visitor sees: "dark" = black and gold,
-   "light" = white and gold. A link ending in ?theme=white or ?theme=black
+   DEFAULT_THEME is what a first-time visitor sees: "dark" = hunter green,
+   "light" = ivory. A link ending in ?theme=green or ?theme=ivory
    switches scheme and is remembered for that visitor. */
 (function () {
   var DEFAULT_THEME = "dark";
   var KEY = "jw_theme";
-  var names = { white: "light", light: "light", black: "dark", dark: "dark" };
+  var names = { white: "light", light: "light", ivory: "light", cream: "light", black: "dark", dark: "dark", green: "dark" };
   var theme = DEFAULT_THEME;
   try {
     var asked = names[new URLSearchParams(location.search).get("theme")];

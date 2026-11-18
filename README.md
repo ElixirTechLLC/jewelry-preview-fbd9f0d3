@@ -27,12 +27,12 @@ Visitors sign up with an email, answer a few questions, get an AI picture of the
 
 ## Color schemes
 
-The site has two looks: black and gold, and white and gold. Product photos keep their black backgrounds in both.
+The site has two looks: hunter green with brass (default) and ivory with green trim. Product photos keep their black backgrounds in both, framed in brass.
 
-- A link ending in `?theme=white` or `?theme=black` opens that look and remembers it for the visitor.
+- A link ending in `?theme=green` or `?theme=ivory` opens that look and remembers it for the visitor.
 - The footer has a "Color scheme" switch. It is there for review; remove it from `js/site.js` once a look is chosen.
 - `DEFAULT_THEME` at the top of `js/theme.js` sets which look a first-time visitor gets (`"dark"` or `"light"`).
-- The white-and-gold colors are the `[data-theme="light"]` block in `css/styles.css`.
+- The ivory colors are the `[data-theme="light"]` block in `css/styles.css`; the green ones are at the top of the file.
 
 ## Product images
 
@@ -75,9 +75,8 @@ GitHub rebuilds the site a minute or two after each push.
 
 - [ ] Remove the `<meta name="robots" content="noindex, nofollow">` line from all six pages so search engines can find the live site
 
-- [ ] Real brand name, phone, email, address and hours in `js/config.js`
+- [ ] Real phone, email and hours in `js/config.js` (name and address are in)
 - [ ] Real financing provider and terms in `js/config.js`, then set `financing.isPlaceholder` to `false` (removes every "placeholder" notice) and complete the bracketed `[…]` text in `financing.html`
 - [ ] Replace the sample prices, gold weights, diamond weights and stone counts in `js/catalog.js` with the real figures for each piece
 - [ ] Product images for every piece (see above)
-- [ ] Map embed on `visit.html`
 - [ ] Online checkout — the bag currently sends a "Request to Purchase" email; connect a payment provider when ready

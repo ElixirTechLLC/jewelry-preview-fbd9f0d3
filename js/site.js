@@ -282,7 +282,7 @@
     header.innerHTML = `
       <div class="announce"><div class="wrap">
         <span><a href="financing.html">Financing available on every piece</a></span>
-        <span>Made in our own shop</span>
+        <span>Made in our workshop in Tappan, New York</span>
         <span><a href="custom.html">Custom design</a></span>
       </div></div>
       <header class="site-header">
@@ -293,8 +293,8 @@
             <a class="header-link" href="financing.html">Financing</a>
           </div>
           <a class="logo" href="index.html" aria-label="${esc(S.brand)} home">
-            <span class="logo-name">${esc(S.brand)}</span>
-            <span class="logo-tag">${esc(S.tagline)}</span>
+            <span class="logo-name">${esc(S.logoName || S.brand)}</span>
+            <span class="logo-tag">${esc(S.logoSub || S.tagline)}</span>
           </a>
           <div class="header-right">
             <a class="header-link" href="visit.html">Visit Us</a>
@@ -350,8 +350,8 @@
     footer.innerHTML = `<div class="wrap">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="logo" href="index.html"><span class="logo-name">${esc(S.brand)}</span></a>
-          <p>We design, cast and set jewelry in our own shop.</p>
+          <a class="logo" href="index.html"><span class="logo-name">${esc(S.logoName || S.brand)}</span><span class="logo-tag">${esc(S.logoSub || "")}</span></a>
+          <p>Fine jewelry designed and made in our own workshop in Tappan, New York.</p>
         </div>
         <div><h4>Shop</h4><ul>
           ${NAV.map((n) => `<li><a href="${shopUrl(n.cat)}">${n.label}</a></li>`).join("")}
@@ -377,7 +377,7 @@
       <div class="footer-bottom">
         <p>© ${new Date().getFullYear()} ${esc(S.brand)}. ${esc(S.imageNote)}</p>
         <p>*${esc(F.disclosure)}</p>
-        <p class="theme-switch">Color scheme: <button type="button" data-theme-set="dark">Black and gold</button> / <button type="button" data-theme-set="light">White and gold</button></p>
+        <p class="theme-switch">Color scheme: <button type="button" data-theme-set="dark">Hunter green</button> / <button type="button" data-theme-set="light">Ivory</button></p>
       </div>
     </div>`;
     document.body.appendChild(footer);
