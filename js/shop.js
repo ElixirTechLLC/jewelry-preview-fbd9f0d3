@@ -20,7 +20,7 @@ window.JW.pages.shop = function () {
   const chip = (meta.chips || []).find(([, t]) => t === tag);
   let title = meta.title;
   if (q) title = `Results for “${q}”`;
-  else if (max) title = `${meta.title} under ${money(max)}`;
+  else if (max) title = `${chip ? `${meta.title} · ${chip[0]}` : meta.title} under ${money(max)}`;
   else if (chip) title = cat === "engagement" ? `${chip[0]} Engagement Rings` : `${meta.title} · ${chip[0]}`;
   $("#shopTitle").textContent = title;
   $("#shopIntro").textContent = q ? `${base.length} piece${base.length === 1 ? "" : "s"} found.` : meta.intro;

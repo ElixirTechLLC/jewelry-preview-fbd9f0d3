@@ -379,6 +379,9 @@ p { margin: 0 0 1em; }
 .acc summary::after { content: "+"; color: var(--muted); font-weight: 300; font-size: 20px; }
 .acc[open] summary::after { content: "–"; }
 .acc .acc-body { padding: 0 0 18px; color: var(--muted); max-width: 680px; }
+.acc .acc-body--specs { color: var(--text); }
+.acc .acc-body--specs .spec-table { margin-top: 2px; }
+.acc .acc-body--specs .fine { color: var(--muted); }
 
 /* ---------- Forms ---------- */
 .form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }

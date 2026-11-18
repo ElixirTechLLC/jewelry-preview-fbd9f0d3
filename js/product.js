@@ -103,15 +103,16 @@ window.JW.pages.product = function () {
         <li>Questions? Call <a class="text-link" href="tel:${esc(S.contact.phone.replace(/[^\d+]/g, ""))}">${esc(S.contact.phone)}</a></li>
       </ul>
 
-      <div class="specs">
-        <h2>Details</h2>
-        <table class="spec-table"><tbody>
-          ${rows.map(([k, v, hl]) => `<tr${hl ? ' class="hl"' : ""}><th scope="row">${esc(k)}</th><td>${esc(v)}</td></tr>`).join("")}
-        </tbody></table>
-        <p class="fine" style="margin-top:14px">${esc(S.imageNote)}</p>
-      </div>
-
-      <div style="margin-top:26px">
+      <div class="specs" style="margin-top:26px">
+        <details class="acc">
+          <summary>Details</summary>
+          <div class="acc-body acc-body--specs">
+            <table class="spec-table"><tbody>
+              ${rows.map(([k, v, hl]) => `<tr${hl ? ' class="hl"' : ""}><th scope="row">${esc(k)}</th><td>${esc(v)}</td></tr>`).join("")}
+            </tbody></table>
+            <p class="fine" style="margin-top:14px">${esc(S.imageNote)}</p>
+          </div>
+        </details>
         <details class="acc">
           <summary>Financing</summary>
           <div class="acc-body">

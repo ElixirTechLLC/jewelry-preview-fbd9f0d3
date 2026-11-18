@@ -43,24 +43,24 @@
     wedding: {
       title: "Wedding Bands",
       intro: "Gold bands, diamond eternity rings and men's bands. We can shape a band to fit your engagement ring.",
-      chips: [["For Her", "her"], ["For Him", "him"], ["Eternity", "eternity"], ["Diamond", "diamond"], ["Classic Gold", "plain"]],
+      chips: [["For Her", "her"], ["For Him", "him"], ["Eternity", "eternity"], ["Diamond", "diamond"], ["Classic Gold", "plain"], ["Anniversary", "anniversary"]],
     },
     womens: {
       title: "Women's Jewelry",
       intro: "Rings, necklaces, earrings and bracelets in gold, diamonds and colored stones.",
-      chips: [["Rings", "ring"], ["Necklaces", "necklace"], ["Earrings", "earrings"], ["Bracelets", "bracelet"], ["Gemstones", "gemstone"]],
+      chips: [["Rings", "ring"], ["Necklaces", "necklace"], ["Earrings", "earrings"], ["Bracelets", "bracelet"], ["Gemstones", "gemstone"], ["Gifts for Her", "gift"], ["Anniversary", "anniversary"]],
     },
     mens: {
       title: "Men's Jewelry",
       intro: "Solid gold chains, rings, pendants and bracelets. Every link is solid, not hollow.",
-      chips: [["Rings", "ring"], ["Chains", "chain"], ["Pendants", "pendant"], ["Bracelets", "bracelet"], ["Earrings", "earrings"]],
+      chips: [["Rings", "ring"], ["Chains", "chain"], ["Pendants", "pendant"], ["Bracelets", "bracelet"], ["Earrings", "earrings"], ["Gifts for Him", "gift"]],
     },
     watches: {
       title: "Watches",
       intro: "Gold and diamond watches. All diamond setting is done in our shop.",
-      chips: [["Men's", "him"], ["Women's", "her"], ["Diamond", "diamond"], ["Solid Gold", "solid-gold"]],
+      chips: [["Men's", "him"], ["Women's", "her"], ["Diamond", "diamond"], ["Solid Gold", "solid-gold"], ["Gifts", "gift"]],
     },
-    gifts: {
+    gifts: { // no longer a tab: gifts are a selection inside Women's, Men's and Watches; kept so old links still work
       title: "Gifts",
       intro: "Popular gifts for anniversaries, birthdays and graduations.",
       chips: [["For Her", "her"], ["For Him", "him"], ["Anniversary", "anniversary"]],
@@ -92,7 +92,7 @@
       cols: [
         { title: "For Her", links: [["Women's Bands", "her"], ["Eternity Bands", "eternity"], ["Diamond Bands", "diamond"]] },
         { title: "For Him", links: [["Men's Bands", "him"], ["Classic Gold Bands", "plain"]] },
-        { title: "Services", raw: [["All Wedding Bands", shopUrl("wedding")], ["Custom Matching Bands", "custom.html"], ["Anniversary Gifts", shopUrl("gifts", "anniversary")]] },
+        { title: "Services", raw: [["All Wedding Bands", shopUrl("wedding")], ["Custom Matching Bands", "custom.html"], ["Anniversary Bands", shopUrl("wedding", "anniversary")]] },
       ],
       promo: { title: "Matching bands", text: "We can shape a band to fit your engagement ring.", href: "custom.html", cta: "Custom design" },
     },
@@ -100,8 +100,8 @@
       label: "Women's", cat: "womens", feature: "wom-tennis-bracelet",
       cols: [
         { title: "Shop by Category", links: [["Rings", "ring"], ["Necklaces & Pendants", "necklace"], ["Earrings", "earrings"], ["Bracelets", "bracelet"]] },
-        { title: "Featured", links: [["Tennis Collection", "tennis"], ["Gemstones", "gemstone"], ["Gifts for Her", "gift"]] },
-        { title: "More", raw: [["All Women's Jewelry", shopUrl("womens")], ["Women's Watches", shopUrl("watches", "her")], ["Women's Sale", shopUrl("sale", "her")]] },
+        { title: "Gifts for Her", raw: [["All Gifts for Her", shopUrl("womens", "gift")], ["Anniversary", shopUrl("womens", "anniversary")], ["Under $1,000", shopUrl("womens", "gift", "&max=1000")], ["Under $2,500", shopUrl("womens", "gift", "&max=2500")]] },
+        { title: "More", raw: [["All Women's Jewelry", shopUrl("womens")], ["Tennis Collection", shopUrl("womens", "tennis")], ["Gemstones", shopUrl("womens", "gemstone")], ["Women's Watches", shopUrl("watches", "her")], ["Women's Sale", shopUrl("sale", "her")]] },
       ],
       promo: { title: "Diamond tennis bracelet", text: "5.00 ctw in 14K yellow gold.", href: "product.html?id=wom-tennis-bracelet", cta: "Shop now" },
     },
@@ -109,8 +109,8 @@
       label: "Men's", cat: "mens", feature: "men-sovereign-signet",
       cols: [
         { title: "Shop by Category", links: [["Rings", "ring"], ["Chains", "chain"], ["Pendants", "pendant"], ["Bracelets", "bracelet"], ["Earrings", "earrings"]] },
-        { title: "Featured", links: [["Signature Pieces", "signature"], ["Diamond Tennis", "tennis"], ["Gifts for Him", "gift"]] },
-        { title: "More", raw: [["All Men's Jewelry", shopUrl("mens")], ["Men's Wedding Bands", shopUrl("wedding", "him")], ["Men's Watches", shopUrl("watches", "him")]] },
+        { title: "Gifts for Him", raw: [["All Gifts for Him", shopUrl("mens", "gift")], ["Under $3,000", shopUrl("mens", "gift", "&max=3000")], ["Under $5,000", shopUrl("mens", "gift", "&max=5000")]] },
+        { title: "More", raw: [["All Men's Jewelry", shopUrl("mens")], ["Signature Pieces", shopUrl("mens", "signature")], ["Diamond Tennis", shopUrl("mens", "tennis")], ["Men's Wedding Bands", shopUrl("wedding", "him")], ["Men's Watches", shopUrl("watches", "him")]] },
       ],
       promo: { title: "The Sovereign signet ring", text: "5.20 ctw in 18.5 g of 14K gold.", href: "product.html?id=men-sovereign-signet", cta: "Shop now" },
     },
@@ -118,19 +118,10 @@
       label: "Watches", cat: "watches", feature: "wat-meridian-41-diamond",
       cols: [
         { title: "Shop Watches", links: [["Men's Watches", "him"], ["Women's Watches", "her"]] },
-        { title: "Featured", links: [["Diamond Watches", "diamond"], ["Solid Gold", "solid-gold"]] },
+        { title: "Gifts", raw: [["Gift Watches", shopUrl("watches", "gift")], ["Anniversary", shopUrl("watches", "anniversary")], ["Diamond Watches", shopUrl("watches", "diamond")], ["Solid Gold", shopUrl("watches", "solid-gold")]] },
         { title: "Services", raw: [["All Watches", shopUrl("watches")], ["Custom Diamond Setting", "custom.html"], ["Financing", "financing.html"]] },
       ],
       promo: { title: "Custom diamond setting", text: "Bezels, dials and bracelets set in our shop.", href: "custom.html", cta: "Customize a watch" },
-    },
-    {
-      label: "Gifts", cat: "gifts", feature: "wom-diamond-studs",
-      cols: [
-        { title: "Shop by Recipient", links: [["Gifts for Her", "her"], ["Gifts for Him", "him"], ["Anniversary", "anniversary"]] },
-        { title: "Shop by Price", raw: [["Under $1,000", shopUrl("gifts", "", "&max=1000")], ["Under $2,500", shopUrl("gifts", "", "&max=2500")], ["Under $5,000", shopUrl("gifts", "", "&max=5000")]] },
-        { title: "More", raw: [["All Gifts", shopUrl("gifts")], ["Custom & Engraved Gifts", "custom.html"], ["Sale", shopUrl("sale")]] },
-      ],
-      promo: { title: "Diamond stud earrings", text: "1.00 ctw in 14K yellow gold.", href: "product.html?id=wom-diamond-studs", cta: "Shop now" },
     },
     { label: "Sale", cat: "sale", sale: true },
   ];
