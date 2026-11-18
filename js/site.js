@@ -414,6 +414,21 @@
       document.body.classList.add("no-scroll");
       if (name === "search") setTimeout(() => $("#searchInput").focus(), 60);
     };
+    // The header slides up as you scroll down and comes back as soon as you scroll up.
+    const header = $(".site-header");
+    if (header) {
+      let last = window.scrollY, ticking = false;
+      const update = () => {
+        ticking = false;
+        const y = window.scrollY;
+        const down = y > last + 2, up = y < last - 2;
+        const busy = header.matches(":hover, :focus-within") || document.body.classList.contains("no-scroll");
+        if (down && y > header.offsetHeight && !busy) header.classList.add("is-hidden");
+        else if (up || y <= 0) header.classList.remove("is-hidden");
+        last = y;
+      };
+      window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    }
     $("#menuOpen").addEventListener("click", () => open("menu"));
     $("#bagOpen").addEventListener("click", () => open("bag"));
     $("#searchOpen").addEventListener("click", () => open("search"));

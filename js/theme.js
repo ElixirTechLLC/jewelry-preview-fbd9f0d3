@@ -1,10 +1,10 @@
 /* Picks the color scheme before the page paints (loaded in <head>).
-   DEFAULT_THEME is what a first-time visitor sees: "dark" = hunter green,
-   "light" = ivory. A link ending in ?theme=green or ?theme=ivory
+   DEFAULT_THEME is what a first-time visitor sees: "heritage" = the Heritage look,
+   "dark" = hunter green, "light" = ivory. A link ending in ?theme=heritage, ?theme=green or ?theme=ivory
    switches scheme and is remembered for that visitor. */
 (function () {
-  var DEFAULT_THEME = "dark";
-  var KEY = "jw_theme";
+  var DEFAULT_THEME = "heritage";
+  var KEY = "jw_theme_v2"; // renamed when Heritage became the default so earlier visitors see it too
   var names = { white: "light", light: "light", ivory: "light", cream: "light", black: "dark", dark: "dark", green: "dark", maison: "maison", piaget: "maison", avenue: "avenue", mix: "avenue", heritage: "heritage", salon: "heritage" };
   var theme = DEFAULT_THEME;
   try {

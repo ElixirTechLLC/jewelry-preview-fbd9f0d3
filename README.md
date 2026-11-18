@@ -40,7 +40,7 @@ The site has five looks, switched with a footer link or a `?theme=` address, and
 Maison and Avenue follow the Wolf's design blueprint (`Wolfs_Fine_Jewelry_Claude_Website_Blueprint.pdf`): its color tokens, italic Cormorant headlines, brass-ruled wordmark, ivory shopping pages with a green header and footer, a consultation form on the Visit page, the 01–04 custom process, and the Our Story and Diamond Education pages. Their home pages are built around **stock photographs**: for now most slots use crops from the blueprint's own concept mockups plus our on-model product photos (see `js/stock-manifest.js`); replace them with final AI photos when made. Each slot shows a labelled placeholder describing the shot; drop AI-made photos into `assets/stock/` and list them in `js/stock-manifest.js`. The green and ivory looks share the panelled-room home page. Product photos keep their black backgrounds in every look.
 
 - The footer has a "Look" switch. It is there for review; remove it from `js/site.js` once a look is chosen.
-- `DEFAULT_THEME` at the top of `js/theme.js` sets which look a first-time visitor gets (`"dark"` or `"light"`).
+- `DEFAULT_THEME` at the top of `js/theme.js` sets which look a first-time visitor gets; it is `"heritage"` now (chosen 2026-11-18). Rename `KEY` there whenever the default changes, so returning visitors are not held on the look they saw before.
 - Green and ivory colors are in `css/styles.css`; Maison and Avenue are in `css/looks.css`; Heritage is in `css/heritage.css` (its tartan band is tiled from the showroom photo).
 
 ## Product images
