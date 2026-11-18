@@ -354,6 +354,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a class="logo" href="index.html"><span class="logo-name">${esc(S.logoName || S.brand)}</span><span class="logo-tag">${esc(S.logoSub || "")}</span></a>
+          <span class="footer-tagline">A Legacy of Elegance.</span>
           <p>Fine jewelry designed and made in our own workshop in Tappan, New York.</p>
         </div>
         <div><h4>Shop</h4><ul>
@@ -382,7 +383,7 @@
       <div class="footer-bottom">
         <p>© ${new Date().getFullYear()} ${esc(S.brand)}. ${esc(S.imageNote)}</p>
         <p>*${esc(F.disclosure)}</p>
-        <p class="theme-switch">Look: <button type="button" data-theme-set="dark">Hunter green</button> / <button type="button" data-theme-set="light">Ivory</button> / <button type="button" data-theme-set="maison">Maison</button> / <button type="button" data-theme-set="avenue">Avenue</button></p>
+        <p class="theme-switch">Look: <button type="button" data-theme-set="dark">Hunter green</button> / <button type="button" data-theme-set="light">Ivory</button> / <button type="button" data-theme-set="maison">Maison</button> / <button type="button" data-theme-set="avenue">Avenue</button> / <button type="button" data-theme-set="heritage">Heritage</button></p>
       </div>
     </div>`;
     document.body.appendChild(footer);

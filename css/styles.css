@@ -460,7 +460,8 @@ p { margin: 0 0 1em; }
 :root[data-theme="dark"] .theme-switch [data-theme-set="dark"],
 :root[data-theme="light"] .theme-switch [data-theme-set="light"],
 :root[data-theme="maison"] .theme-switch [data-theme-set="maison"],
-:root[data-theme="avenue"] .theme-switch [data-theme-set="avenue"] { color: var(--text); font-weight: 600; text-decoration: none; }
+:root[data-theme="avenue"] .theme-switch [data-theme-set="avenue"],
+:root[data-theme="heritage"] .theme-switch [data-theme-set="heritage"] { color: var(--text); font-weight: 600; text-decoration: none; }
 
 /* ==================================================================
    Responsive

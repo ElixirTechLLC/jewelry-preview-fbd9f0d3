@@ -40,6 +40,7 @@ window.JW.pages.product = function () {
   Object.entries(p.specs || {}).forEach(([k, v]) => rows.push([k, v]));
   rows.push(["Item number", p.sku]);
 
+  const ICONS = ['<svg viewBox="0 0 32 32"><path d="M6 12l5-6h10l5 6-10 14z"/><path d="M6 12h20M11 6l5 20 5-20"/></svg>', '<svg viewBox="0 0 32 32"><circle cx="16" cy="19" r="8"/><path d="M12 11l4-6 4 6M12 11h8"/></svg>', '<svg viewBox="0 0 32 32"><path d="M16 4v24M4 16h24M8 8l16 16M24 8L8 24"/><circle cx="16" cy="16" r="3"/></svg>'];
   const key = [];
   if (p.goldG) key.push([grams(p.goldG), "Gold weight"]);
   if (p.dia) key.push([`${ctw(p.dia.ctw)} ctw`, "Diamond weight"]);
@@ -54,7 +55,7 @@ window.JW.pages.product = function () {
   for (let s = lo; s <= hi; s += 0.5) sizes.push(s);
   const base = (p.metal.match(/\d+K/) || [""])[0];
   const sizeField = isRing
-    ? `<div class="field"><label for="optSize">Ring size</label>
+    ? `<div class="field"><label for="optSize">Ring size <a class="size-guide" href="education.html#sizing">Size guide</a></label>
         <select class="select" id="optSize"><option value="">Select size</option>${sizes.map((s) => `<option>${s}</option>`).join("")}<option value="Size to be confirmed">Not sure, help me size</option></select></div>`
     : "";
   const colorField = !isWatch
@@ -85,7 +86,7 @@ window.JW.pages.product = function () {
       <p class="pdp-blurb">${esc(p.blurb)}</p>
 
       <div class="keyspecs" style="grid-template-columns:repeat(${Math.min(key.length, 3)},1fr)">
-        ${key.slice(0, 3).map(([v, l]) => `<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("")}
+        ${key.slice(0, 3).map(([v, l], i) => `<div>${ICONS[i]}<b>${esc(v)}</b><span>${esc(l)}</span></div>`).join("")}
       </div>
 
       ${sizeField || colorField ? `<div class="options">${sizeField}${colorField}</div>` : ""}
@@ -94,7 +95,7 @@ window.JW.pages.product = function () {
         <a class="btn btn--block" href="custom.html?piece=${p.id}">Customize this piece</a>
       </div>
 
-      <p class="pdp-links"><a class="text-link" href="visit.html#appointment">Book an appointment</a><span>·</span><a class="text-link" href="custom.html?piece=${p.id}">Ask a jeweler</a></p>
+      <p class="pdp-links"><a class="text-link" href="visit.html#appointment">Book an appointment</a><span>·</span><a class="text-link" href="custom.html?piece=${p.id}">Concierge service</a></p>
 
       <ul class="pdp-assure">
         <li>Made to order in our shop.</li>

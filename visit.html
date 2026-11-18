@@ -13,11 +13,17 @@
   <script src="js/theme.js"></script>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/looks.css">
+  <link rel="stylesheet" href="css/heritage.css">
 </head>
 <body>
 <main>
 
-  <section class="page-head">
+  <section class="hz-hero hz-hero--short hz-dark" data-look="heritage">
+    <div class="stock has-img" data-stock="hz-visit-hero"><img src="assets/stock/showroom-appointment.webp" alt="">
+      <div class="over wrap"><h1>A Private<br>Appointment</h1><p class="sub plain">A personalized jewelry experience tailored to you.</p><a class="btn" href="#appointment">Schedule your consultation</a></div>
+    </div>
+  </section>
+  <section class="page-head" data-look="wolfs">
     <div class="wrap">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span>Visit Us</nav>
       <p class="eyebrow">A private appointment</p>
@@ -57,11 +63,15 @@
         <p class="eyebrow">The Wolf’s experience</p>
         <h2>A dedicated consultation, just for you</h2>
         <p class="muted">Whether you are choosing an engagement ring, marking an occasion or designing a one-of-a-kind piece, a jeweler sits down with you, one on one, in the showroom.</p>
-        <ul class="appt-points">
-          <li><b>Personal guidance</b><span>Advice shaped to your style, budget and occasion.</span></li>
-          <li><b>Custom creation</b><span>Bring a sketch, a photo or an heirloom stone.</span></li>
-          <li><b>Discreet and private</b><span>Time set aside for you, with no one else in the room.</span></li>
+        <ul class="appt-points hz-points">
+          <li><svg viewBox="0 0 32 32"><path d="M6 12l5-6h10l5 6-10 14z"/><path d="M6 12h20M11 6l5 20 5-20M11 6l-2 6 7 14M21 6l2 6-7 14"/></svg><div><b>Personalized guidance</b><span>Expert insight tailored to your style and occasion.</span></div></li>
+          <li><svg viewBox="0 0 32 32"><path d="M6 26L26 6M6 6l20 20"/><circle cx="6" cy="6" r="2"/><circle cx="26" cy="26" r="2"/></svg><div><b>Custom creation</b><span>Bring your vision to life with our design specialists.</span></div></li>
+          <li><svg viewBox="0 0 32 32"><rect x="5" y="12" width="22" height="16"/><path d="M5 17h22M16 12v16M16 12c-4 0-7-2-7-5s5-2 7 5c2-7 7-8 7-5s-3 5-7 5z"/></svg><div><b>Discreet &amp; private</b><span>A refined, one-on-one experience in our boutique.</span></div></li>
         </ul>
+        <div class="hz-boutique" data-look="heritage" style="display:grid">
+          <div><b>Visit our boutique</b><span data-brand></span><br><span data-address1></span><br><span data-address2></span></div>
+          <div><b>Boutique hours</b><span>Mon – Fri: [10:00 am – 6:00 pm]</span><br><span>Sat: [10:00 am – 5:00 pm]</span><br><span>Sun: By appointment</span></div>
+        </div>
       </div>
       <form class="appt-form" id="apptForm">
         <h3><i></i>Book a consultation<i></i></h3>
@@ -71,8 +81,17 @@
         <div class="row"><div class="field"><label for="ap_date">Preferred date</label><input type="date" id="ap_date"></div><div class="field"><label for="ap_time">Preferred time</label><select class="select" id="ap_time"><option>Morning</option><option>Midday</option><option>Afternoon</option><option>Evening</option></select></div></div>
         <div class="field"><label for="ap_msg">Tell us more (optional)</label><textarea id="ap_msg" maxlength="1200"></textarea></div>
         <button class="btn btn--gold btn--block" type="submit">Request appointment</button>
-        <p class="fine" style="margin:12px 0 0;text-align:center">This opens an email to <span data-email></span> with your request filled in. A jeweler confirms the time with you.</p>
+        <p class="fine hz-form-note" style="margin:14px 0 0">A member of our team will contact you to confirm your appointment and discuss any special requests. (Opens an email to <span data-email></span>.)</p>
       </form>
+    </div>
+  </section>
+
+  <section class="hz-concierge hz-dark section" data-look="heritage">
+    <div class="wrap" style="display:block"><div class="hz-head" style="margin-bottom:34px"><h2 style="color:#f0e4d0">The concierge advantage</h2></div></div>
+    <div class="wrap">
+      <div><svg viewBox="0 0 32 32"><path d="M4 22h24M6 22a10 10 0 0 1 20 0"/><path d="M16 9v3M4 26h24"/></svg><div><b>Personal concierge</b><span>Dedicated support from inquiry to delivery.</span></div></div>
+      <div><svg viewBox="0 0 32 32"><path d="M6 12l5-6h10l5 6-10 14z"/><path d="M6 12h20M11 6l5 20 5-20M11 6l-2 6 7 14M21 6l2 6-7 14"/></svg><div><b>Exclusive access</b><span>Private viewings and new collection previews.</span></div></div>
+      <div><svg viewBox="0 0 32 32"><path d="M16 4l10 4v8c0 6-4 10-10 12C10 26 6 22 6 16V8z"/><path d="M11 16l3 3 7-7"/></svg><div><b>Trust &amp; expertise</b><span>Jewelers who make what they sell.</span></div></div>
     </div>
   </section>
 
