@@ -1,8 +1,127 @@
 /* ==================================================================
-   HERITAGE look (data-theme="heritage"): built to match the
-   "Wolf's Fine Jewelry — Individual Pages" mockups page by page.
-   Dark heritage-green bands alternate with warm ivory sections;
-   brass hairlines, italic Cormorant display, tracked serif caps.
+   Shared blocks from the Wolf's design blueprint: stock-photo slots,
+   tokens, wordmark, eyebrow rules, story hero, consultation form,
+   custom process, education cards. The Heritage rules follow below.
+================================================================== */
+/* Stock-image slots (a labelled box until a photo is listed in js/stock-manifest.js) */
+.stock { position: relative; aspect-ratio: var(--ar, 16 / 9); overflow: hidden; background: linear-gradient(135deg, var(--stock-a, #e9e6df), var(--stock-b, #cfc9bc)); }
+.stock > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.stock > span { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); max-width: 70%; text-align: center; font-family: var(--sans); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(243, 234, 216, 0.62); padding: 10px 14px; border: 1px dashed rgba(243, 234, 216, 0.3); }
+.stock.has-img > span { display: none; }
+.stock .over { position: absolute; z-index: 2; }
+
+/* Blueprint tokens */
+:root {
+  --bg: #20291d;          /* Heritage Green */
+  --bg-2: #1b231a;
+  --panel: #343c2c;       /* Olive Forest */
+  --black: #161c14;
+  --walnut: #513422;
+  --ivory: #f0e4d0;       /* Warm Ivory */
+  --champagne: #b6a18a;   /* Muted Champagne */
+  --gold: #b08a50;        /* Antique Brass */
+  --gold-light: #d2b273;
+  --text: #f0e4d0;
+  --muted: #b6a18a;
+  --dim: #8a8572;
+  --line: rgba(176, 138, 80, 0.3);
+  --line-strong: rgba(176, 138, 80, 0.6);
+  --line-gold: rgba(176, 138, 80, 0.65);
+  --stock-a: #343c2c; --stock-b: #161c14;
+}
+.ph svg { stroke: var(--champagne); }
+
+/* Wordmark: name in the serif, "FINE JEWELRY" between two brass hairlines */
+.logo-tag { display: flex; align-items: center; justify-content: center; gap: 10px; color: var(--gold-light); }
+.logo-tag i { display: block; width: 28px; height: 1px; background: var(--gold); }
+.footer-brand .logo-tag { justify-content: flex-start; }
+.announce .wrap > span:first-child::before, .announce .wrap > span:first-child::after { content: ""; display: inline-block; width: 26px; height: 1px; background: var(--gold); vertical-align: middle; margin: 0 12px; opacity: 0.8; }
+
+/* Eyebrow label with a short brass rule beneath, as in the mockups */
+.eyebrow { display: block; font-family: var(--sans); font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin: 0 0 10px; }
+.eyebrow::after { content: ""; display: block; width: 34px; height: 1px; background: var(--gold); margin-top: 10px; }
+.center .eyebrow::after, .section-head .eyebrow::after { margin-left: auto; margin-right: auto; }
+.section-head .eyebrow { text-align: center; }
+.page-head .eyebrow::after { margin-left: 0; }
+.center .eyebrow { text-align: center; }
+.ed-split .eyebrow::after, .text .eyebrow::after { margin-left: 0; }
+
+/* Display headlines and buttons */
+.story-hero h1, .cta-band h2 { font-family: "Cormorant Garamond", var(--serif); font-weight: 400; }
+.story-hero h1 em, .cta-band h2 em { font-style: italic; color: var(--text); }
+.btn { border-color: var(--gold); color: var(--text); }
+.btn--gold { background: var(--gold); color: var(--black); border-color: var(--gold); }
+.btn--gold:hover { background: var(--gold-light); border-color: var(--gold-light); color: var(--black); }
+.btn:hover { background: var(--gold); color: var(--black); }
+
+/* Story hero and the photo-and-text splits */
+.story-hero { position: relative; }
+.story-hero .stock { --ar: 16 / 8; }
+.story-hero .stock::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(22, 28, 20, 0.82) 0%, rgba(22, 28, 20, 0.35) 55%, rgba(22, 28, 20, 0) 100%); }
+.story-hero .over { position: absolute; z-index: 2; left: 0; right: 0; top: 50%; transform: translateY(-50%); color: var(--ivory); }
+.story-hero h1 { font-size: clamp(38px, 4.8vw, 70px); line-height: 1.05; max-width: 12ch; }
+.story-hero .lead { max-width: 440px; font-size: 18px; color: var(--ivory); margin-top: 14px; }
+.story-hero .eyebrow { color: var(--gold-light); }
+.ed-split { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
+.ed-split .stock { --ar: 1; }
+.ed-split .text { padding: 0 8%; }
+.ed-split h2 { font-size: clamp(28px, 2.8vw, 40px); font-weight: 400; margin-bottom: 12px; }
+.ed-split p { color: var(--muted); }
+.ed-split--tight { gap: 48px; }
+.ed-split--tight .text { padding: 0; }
+.ed-split--flip .text { order: -1; }
+.cta-band { background: var(--black); border-top: 1px solid var(--line-strong); border-bottom: 1px solid var(--line-strong); padding: 80px 0; }
+.cta-band h2 { font-size: clamp(32px, 3.6vw, 52px); margin-bottom: 10px; }
+.cta-band .muted { max-width: 540px; margin: 0 auto 20px; }
+
+/* Consultation form on the Visit page */
+.appt { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; }
+.appt h2 { font-family: "Cormorant Garamond", var(--serif); font-style: italic; font-weight: 400; font-size: clamp(30px, 3.2vw, 46px); margin-bottom: 14px; }
+.appt-points { margin-top: 26px; border-top: 1px solid var(--line); }
+.appt-points li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.appt-points b { display: block; font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; }
+.appt-points span { color: var(--muted); }
+.appt-form { background: var(--black); border: 1px solid var(--line-gold); outline: 1px solid var(--line); outline-offset: 3px; padding: 30px 32px 28px; }
+.appt-form h3 { display: flex; align-items: center; justify-content: center; gap: 14px; font-family: var(--sans); font-size: 12px; letter-spacing: 0.26em; text-transform: uppercase; font-weight: 500; color: var(--text); margin-bottom: 22px; }
+.appt-form h3 i { flex: 1; height: 1px; background: var(--gold); max-width: 80px; }
+.appt-form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.appt-form .field { margin-bottom: 12px; }
+.appt-form .field input, .appt-form .field textarea, .appt-form .select { background: var(--bg); border-color: var(--line-gold); }
+.appt-form textarea { min-height: 96px; }
+
+/* 01-04 custom process, education cards, product page links */
+.process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; counter-reset: none; }
+.process li { display: block; }
+.process li::before { content: none; }
+.process b { display: block; margin-top: 14px; font-family: var(--sans); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; }
+.process b em { font-family: "Cormorant Garamond", var(--serif); font-style: italic; font-size: 24px; color: var(--gold); margin-right: 10px; letter-spacing: 0; font-weight: 400; }
+.process span { display: block; margin-top: 6px; color: var(--muted); }
+.edu-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.edu-grid article { border: 1px solid var(--line-gold); background: var(--panel); padding: 0 0 20px; }
+.edu-grid .stock { border: 0; outline: 0; }
+.edu-grid h3 { font-family: var(--sans); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; margin: 16px 20px 6px; }
+.edu-grid p { margin: 0 20px; color: var(--muted); font-size: 15.5px; }
+.pdp-links { display: flex; gap: 12px; align-items: center; font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin: 4px 0 0; }
+.pdp-links span { color: var(--dim); }
+
+@media (max-width: 960px) {
+  .appt { grid-template-columns: 1fr; gap: 30px; }
+  .appt-form { padding: 22px 18px; }
+  .appt-form .row { grid-template-columns: 1fr; }
+  .process, .edu-grid { grid-template-columns: 1fr 1fr; }
+  .story-hero .stock { --ar: 4 / 5; }
+  .story-hero .stock::after { background: linear-gradient(to top, rgba(22, 28, 20, 0.85), rgba(22, 28, 20, 0.1)); }
+  .story-hero .over { top: auto; bottom: 28px; transform: none; }
+  .ed-split--flip .text { order: 0; }
+}
+@media (max-width: 640px) { .process, .edu-grid { grid-template-columns: 1fr; } }
+
+/* ==================================================================
+   HERITAGE: the site's look, built to match the "Wolf's Fine Jewelry
+   Individual Pages" mockups page by page. Dark heritage-green bands
+   alternate with warm ivory sections; brass hairlines, italic
+   Cormorant display, tracked serif caps. js/theme.js sets
+   data-theme="heritage" and data-page on <html>.
 ================================================================== */
 :root[data-theme="heritage"] {
   color-scheme: dark;
@@ -178,20 +297,11 @@ html[data-theme="heritage"] .select, html[data-theme="heritage"] .field input, h
 .hz-edu a::after { content: " \2192"; }
 
 /* footer tagline + columns in the mockup's manner */
-.footer-tagline { display: none; }
 html[data-theme="heritage"] .footer-tagline { display: block; font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 19px; color: #f0e4d0; margin-top: 10px; }
 html[data-theme="heritage"] .site-footer h4 { font-family: "Cormorant Garamond", serif; font-size: 14px; letter-spacing: 0.28em; color: #f0e4d0; }
 html[data-theme="heritage"] .footer-brand .logo-name { font-size: 30px; }
 html[data-theme="heritage"] .newsletter { border-color: #b08a50; }
 html[data-theme="heritage"] .newsletter button { background: transparent; color: #d2b273; font-family: "Cormorant Garamond", serif; font-size: 18px; }
-
-/* visibility of look-specific blocks */
-[data-look="heritage"] { display: none; }
-html[data-theme="heritage"] [data-look="heritage"] { display: block; }
-html[data-theme="heritage"] [data-look="wolfs"], html[data-theme="heritage"] [data-look="maison"], html[data-theme="heritage"] [data-look="avenue"] { display: none; }
-html[data-theme="heritage"][data-page="index"] [data-look="shared"] { display: none; }
-html[data-theme="heritage"] h1[data-look="heritage"], html[data-theme="heritage"] h2[data-look="heritage"] { display: block; }
-html[data-theme="heritage"] .hz-perks[data-look="heritage"], html[data-theme="heritage"] .hz-concierge[data-look="heritage"] { display: block; }
 
 @media (max-width: 960px) {
   .hz-hero .stock, .hz-hero.hz-hero--short .stock { --ar: 4 / 5; }
@@ -214,7 +324,7 @@ html[data-theme="heritage"] .hz-perks[data-look="heritage"], html[data-theme="he
 }
 @media (max-width: 640px) { .hz-tiles, .hz-tiles--4, .hz-edu { grid-template-columns: 1fr; } .hz-head h2::before, .hz-head h2::after { width: 28px; } }
 
-/* fixes after the first render */
+/* details settled after the first renders */
 html[data-theme="heritage"] .hz-ivory .btn--solid { background: #20291d; color: #f0e4d0; border-color: #20291d; }
 html[data-theme="heritage"] .hz-ivory .btn--solid:hover { background: #343c2c; border-color: #343c2c; color: #f0e4d0; }
 html[data-theme="heritage"] .appt-form { --text: #f0e4d0; --muted: #b6a18a; --dim: #8a8572; --line: rgba(176, 138, 80, 0.3); --line-strong: rgba(176, 138, 80, 0.6); --line-gold: rgba(176, 138, 80, 0.7); --gold: #b08a50; color: var(--text); }

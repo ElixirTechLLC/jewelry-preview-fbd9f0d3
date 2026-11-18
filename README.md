@@ -25,23 +25,11 @@ Then open http://localhost:4173.
 
 Visitors sign up with an email, answer a few questions, get an AI picture of their piece (five per email), and submit the one they like. The page is in `js/design-studio.js`; the server side is a separate repo, https://github.com/ElixirTechLLC/jewelry-design-api, deployed on Vercel. Its README has the setup steps. Once it is deployed, put its address in `designApi` in `js/config.js`; until then the page shows a "coming soon" note in that spot.
 
-## Looks
+## The look
 
-The site has five looks, switched with a footer link or a `?theme=` address, and remembered per visitor:
+One look, "Heritage", built page by page from the *Wolf's Fine Jewelry – Individual Pages* mockups (and the design blueprint's tokens): heritage-green bands with warm ivory shopping pages, brass hairlines, italic Cormorant headlines, tracked serif caps, full-bleed heroes, the dark consultation form, the 01–04 custom process and the diamond education cards. `js/theme.js` puts `data-theme="heritage"` and `data-page` on `<html>`; the colors and blocks are in `css/heritage.css`, the base layout in `css/styles.css`.
 
-| Look | Address | Modelled on |
-| --- | --- | --- |
-| Hunter green (default) | `?theme=green` | The panelled showroom: green, brass, cream, serif type |
-| Ivory | `?theme=ivory` | The same, on ivory walls |
-| Maison | `?theme=maison` | Piaget's layout in the hunter green palette: light serif, full-width editorial photos |
-| Heritage | `?theme=heritage` | The Individual Pages mockups page for page: full-bleed heroes with italic headlines, collection tiles, emerald split, dark discovery tiles, panelling and tartan bands, spec icons on the product page, dark consultation form, education teaser on the custom page |
-| Avenue | `?theme=avenue` | David Yurman, Blue Nile, Gabriel & Co layout in the hunter green palette: bold caps, model-led hero, perks strip |
-
-Maison and Avenue follow the Wolf's design blueprint (`Wolfs_Fine_Jewelry_Claude_Website_Blueprint.pdf`): its color tokens, italic Cormorant headlines, brass-ruled wordmark, ivory shopping pages with a green header and footer, a consultation form on the Visit page, the 01–04 custom process, and the Our Story and Diamond Education pages. Their home pages are built around **stock photographs**: for now most slots use crops from the blueprint's own concept mockups plus our on-model product photos (see `js/stock-manifest.js`); replace them with final AI photos when made. Each slot shows a labelled placeholder describing the shot; drop AI-made photos into `assets/stock/` and list them in `js/stock-manifest.js`. The green and ivory looks share the panelled-room home page. Product photos keep their black backgrounds in every look.
-
-- The footer has a "Look" switch. It is there for review; remove it from `js/site.js` once a look is chosen.
-- `DEFAULT_THEME` at the top of `js/theme.js` sets which look a first-time visitor gets; it is `"heritage"` now (chosen 2026-11-18). Rename `KEY` there whenever the default changes, so returning visitors are not held on the look they saw before.
-- Green and ivory colors are in `css/styles.css`; Maison and Avenue are in `css/looks.css`; Heritage is in `css/heritage.css` (its tartan band is tiled from the showroom photo).
+The home page is built around **stock photographs**: for now the slots use crops from the blueprint's concept mockups plus our own on-model product photos (see `js/stock-manifest.js`). Replace them with final AI photos when made: drop the files into `assets/stock/` and point the slot at them; an empty slot shows a labelled placeholder describing the shot. The tartan band is tiled from the showroom photo. Product photos keep their black backgrounds.
 
 ## Product images
 
