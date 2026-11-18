@@ -9,14 +9,15 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231f3426'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='20' fill='%23c8a45a'%3EW%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Archivo:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <script src="js/theme.js"></script>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/looks.css">
 </head>
 <body>
 <main>
 
-  <section class="hero">
+  <section class="hero" data-look="wolfs">
     <div class="wrap">
       <div class="hero-copy">
         <h1>Fine jewelry, made in our own workshop.</h1>
@@ -32,7 +33,95 @@
     </div>
   </section>
 
-  <section class="section">
+
+  <!-- MAISON look (after Piaget): full-width editorial photos, airy -->
+  <section class="ed-hero" data-look="maison">
+    <div class="stock" data-stock="hero-maison" style="--ar:16/7.5"><span>Stock photo: a woman's hands at a set table, several Wolfs rings and a bracelet, soft daylight</span>
+      <div class="over wrap"><h1>Made in Tappan</h1><p>Fine jewelry from our own workshop</p><a href="shop.html?cat=all">Discover the collection</a></div>
+    </div>
+  </section>
+  <section class="section" data-look="maison">
+    <div class="wrap">
+      <div class="section-head"><h2>Our collections</h2></div>
+      <div class="ed-collections">
+        <a href="shop.html?cat=engagement"><div class="stock" data-stock="col-engagement"><span>Stock photo: engagement ring on a hand, close</span></div><b>Engagement</b><span>Rings made for one person</span></a>
+        <a href="shop.html?cat=mens"><div class="stock" data-stock="col-mens"><span>Stock photo: man's wrist, Cuban bracelet and watch</span></div><b>Men's</b><span>Solid gold, real weight</span></a>
+        <a href="shop.html?cat=womens"><div class="stock" data-stock="col-womens"><span>Stock photo: neckline with tennis necklace and studs</span></div><b>Women's</b><span>Diamonds for every day</span></a>
+        <a href="shop.html?cat=watches"><div class="stock" data-stock="col-watches"><span>Stock photo: gold watch on a cuff, dark background</span></div><b>Watches</b><span>Set by hand in our workshop</span></a>
+      </div>
+    </div>
+  </section>
+  <section class="ed-quote" data-look="maison">
+    <div class="wrap"><blockquote>“If you can imagine it, we can make it. Every piece leaves this bench finished by the hands that designed it.”<cite>Wolfs Fine Jewelry, Tappan, New York</cite></blockquote></div>
+  </section>
+  <section data-look="maison">
+    <div class="ed-split">
+      <div class="stock" data-stock="workshop-maison"><span>Stock photo: a jeweler setting a stone at the bench, loupe and brass tools</span></div>
+      <div class="text"><h2>The workshop</h2><p>We design, cast, set and polish under one roof. Bring a stone, a sketch or a piece you have seen, and we will show you a rendering with the exact gold and diamond weights before any metal is poured.</p><a class="btn" href="custom.html">Custom design</a></div>
+    </div>
+  </section>
+  <section class="section" data-look="maison">
+    <div class="wrap">
+      <div class="section-head"><h2>Services</h2></div>
+      <div class="ed-services">
+        <a href="visit.html"><div class="stock" data-stock="svc-showroom"><span>Stock photo: the showroom interior, green panelling and brass</span></div><b>The showroom</b><span>111 NY-303, Tappan</span></a>
+        <a href="custom.html"><div class="stock" data-stock="svc-design"><span>Stock photo: a 3D ring rendering beside a wax model</span></div><b>Design studio</b><span>See your piece before it exists</span></a>
+        <a href="visit.html#services"><div class="stock" data-stock="svc-care"><span>Stock photo: a ring being polished</span></div><b>Care and repair</b><span>Sizing, cleaning and setting checks</span></a>
+        <a href="financing.html"><div class="stock" data-stock="svc-financing"><span>Stock photo: a gift box and a handwritten card</span></div><b>Financing</b><span>On every piece</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVENUE look (after David Yurman, Blue Nile, Gabriel & Co): model-led hero, perks, split categories -->
+  <section class="av-hero" data-look="avenue">
+    <div class="stock" data-stock="hero-avenue" style="--ar:16/8"><span>Stock photo: a model in a black top wearing a tennis necklace and stacked rings, studio portrait</span>
+      <div class="over"><h1>Made by hand, in Tappan</h1><p>Fine jewelry and custom design from our own workshop</p><div class="btns"><a class="btn" href="shop.html?cat=gifts&tag=her">Shop women's</a><a class="btn" href="shop.html?cat=mens">Shop men's</a></div></div>
+    </div>
+  </section>
+  <section class="av-perks" data-look="avenue">
+    <div class="wrap">
+      <div><b>Made in our workshop</b><span>Designed, cast and set in Tappan, NY</span></div>
+      <div><b>Financing available</b><span>On every piece, in store and online</span></div>
+      <div><b>Custom design</b><span>From a sketch to a finished piece</span></div>
+      <div><b>Lifetime service</b><span>Cleaning and setting checks, always</span></div>
+    </div>
+  </section>
+  <section class="section" data-look="avenue">
+    <div class="wrap">
+      <div class="av-split-head"><h2>Shop by category</h2><div class="links"><a href="shop.html?cat=womens">Shop women's</a><a href="shop.html?cat=mens">Shop men's</a></div></div>
+      <div class="av-cats">
+        <a href="shop.html?cat=engagement"><div class="stock" data-stock="cat-rings"><span>Stock photo: rings in a cognac leather box</span></div><b>Rings</b></a>
+        <a href="shop.html?cat=womens&tag=necklace"><div class="stock" data-stock="cat-necklaces"><span>Stock photo: pendants on a velvet stand</span></div><b>Necklaces</b></a>
+        <a href="shop.html?cat=womens&tag=earrings"><div class="stock" data-stock="cat-earrings"><span>Stock photo: studs in a ring box</span></div><b>Earrings</b></a>
+        <a href="shop.html?cat=womens&tag=bracelet"><div class="stock" data-stock="cat-bracelets"><span>Stock photo: tennis bracelet over a velvet cone</span></div><b>Bracelets</b></a>
+        <a href="shop.html?cat=mens&tag=chain"><div class="stock" data-stock="cat-chains"><span>Stock photo: Cuban chain coiled in a tray</span></div><b>Chains</b></a>
+      </div>
+    </div>
+  </section>
+  <section class="section section--alt" data-look="avenue">
+    <div class="wrap">
+      <div class="section-head"><h2>Crafted by hand, in New York</h2><p>Browse the pieces we make most, or have one made to your own design.</p></div>
+      <div class="av-three">
+        <a href="shop.html?cat=engagement"><div class="stock" data-stock="three-bridal"><span>Stock photo: couple's hands, engagement ring and band</span></div><b>Engagement and wedding</b></a>
+        <a href="shop.html?cat=gifts"><div class="stock" data-stock="three-gifts"><span>Stock photo: a wrapped gift box with a diamond pendant</span></div><b>Gifts</b></a>
+        <a href="custom.html"><div class="stock" data-stock="three-custom"><span>Stock photo: a sketch, a wax model and the finished ring</span></div><b>Custom design</b></a>
+      </div>
+    </div>
+  </section>
+  <section class="section" data-look="avenue">
+    <div class="wrap av-two">
+      <article><div class="stock" data-stock="two-collection"><span>Stock photo: a tray of loose diamonds and settings</span></div><div class="body"><h3>Explore the collection</h3><p>Choose a piece from the case, in your size and gold color. Gold weight and diamond weight are listed on every one.</p><div class="btns"><a class="btn" href="shop.html?cat=engagement">Engagement rings</a><a class="btn" href="shop.html?cat=all">All jewelry</a></div></div></article>
+      <article><div class="stock" data-stock="two-studio"><span>Stock photo: a tablet showing a ring rendering on the bench</span></div><div class="body"><h3>The design studio</h3><p>Answer a few questions and see a picture of your piece in about half a minute, then send it to a jeweler for a quote.</p><div class="btns"><a class="btn" href="custom.html#studio">Design it yourself</a></div></div></article>
+    </div>
+  </section>
+  <section class="section section--alt" data-look="avenue">
+    <div class="wrap av-showroom">
+      <div class="stock" data-stock="showroom-avenue"><span>Stock photo: the showroom, cases and seating</span></div>
+      <div><h2>Visit the showroom</h2><p>111 NY-303, Tappan, New York. Walk in, or book a time with a jeweler for engagement rings and custom work.</p><p><a class="btn btn--gold" href="visit.html">Book an appointment</a></p></div>
+    </div>
+  </section>
+
+  <section class="section" data-look="wolfs">
     <div class="wrap">
       <div class="section-head"><h2>Shop by category</h2></div>
       <div class="tiles">
@@ -56,7 +145,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" data-look="wolfs">
     <div class="wrap promos">
       <div class="promo">
         <div class="promo-img"><img src="assets/products/men-sovereign-signet/5.webp" alt="Diamond signet ring worn on the hand" loading="lazy"></div>
@@ -87,7 +176,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" data-look="wolfs">
     <div class="wrap visit-strip">
       <div>
         <h2>Visit the shop</h2>
@@ -102,6 +191,7 @@
 <script src="js/config.js"></script>
 <script src="js/catalog.js"></script>
 <script src="js/image-manifest.js"></script>
+<script src="js/stock-manifest.js"></script>
 <script src="js/site.js"></script>
 </body>
 </html>

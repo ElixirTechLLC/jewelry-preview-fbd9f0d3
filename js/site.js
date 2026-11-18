@@ -377,7 +377,7 @@
       <div class="footer-bottom">
         <p>© ${new Date().getFullYear()} ${esc(S.brand)}. ${esc(S.imageNote)}</p>
         <p>*${esc(F.disclosure)}</p>
-        <p class="theme-switch">Color scheme: <button type="button" data-theme-set="dark">Hunter green</button> / <button type="button" data-theme-set="light">Ivory</button></p>
+        <p class="theme-switch">Look: <button type="button" data-theme-set="dark">Hunter green</button> / <button type="button" data-theme-set="light">Ivory</button> / <button type="button" data-theme-set="maison">Maison</button> / <button type="button" data-theme-set="avenue">Avenue</button></p>
       </div>
     </div>`;
     document.body.appendChild(footer);
@@ -470,6 +470,12 @@
     $$("[data-product-img]", root).forEach((el) => {
       const p = getProduct(el.dataset.productImg);
       if (p) el.innerHTML = mediaHTML(p, { eager: true }) + el.innerHTML;
+    });
+    // Stock photo slots: show the photo when one exists in assets/stock (see js/stock-manifest.js)
+    const STOCK = window.STOCK || {};
+    $$("[data-stock]", root).forEach((el) => {
+      const src = STOCK[el.dataset.stock];
+      if (src && !el.classList.contains("has-img")) { el.insertAdjacentHTML("afterbegin", `<img src="${src}" alt="" loading="lazy">`); el.classList.add("has-img"); }
     });
     $$("[data-grid]", root).forEach((el) => {
       const [kind, n] = el.dataset.grid.split(":");

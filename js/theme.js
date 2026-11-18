@@ -5,7 +5,7 @@
 (function () {
   var DEFAULT_THEME = "dark";
   var KEY = "jw_theme";
-  var names = { white: "light", light: "light", ivory: "light", cream: "light", black: "dark", dark: "dark", green: "dark" };
+  var names = { white: "light", light: "light", ivory: "light", cream: "light", black: "dark", dark: "dark", green: "dark", maison: "maison", piaget: "maison", avenue: "avenue", mix: "avenue" };
   var theme = DEFAULT_THEME;
   try {
     var asked = names[new URLSearchParams(location.search).get("theme")];

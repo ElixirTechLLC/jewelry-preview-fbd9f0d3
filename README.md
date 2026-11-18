@@ -25,14 +25,22 @@ Then open http://localhost:4173.
 
 Visitors sign up with an email, answer a few questions, get an AI picture of their piece (five per email), and submit the one they like. The page is in `js/design-studio.js`; the server side is a separate repo, https://github.com/ElixirTechLLC/jewelry-design-api, deployed on Vercel. Its README has the setup steps. Once it is deployed, put its address in `designApi` in `js/config.js`; until then the page shows a "coming soon" note in that spot.
 
-## Color schemes
+## Looks
 
-The site has two looks: hunter green with brass (default) and ivory with green trim. Product photos keep their black backgrounds in both, framed in brass.
+The site has four looks, switched with a footer link or a `?theme=` address, and remembered per visitor:
 
-- A link ending in `?theme=green` or `?theme=ivory` opens that look and remembers it for the visitor.
-- The footer has a "Color scheme" switch. It is there for review; remove it from `js/site.js` once a look is chosen.
+| Look | Address | Modelled on |
+| --- | --- | --- |
+| Hunter green (default) | `?theme=green` | The panelled showroom: green, brass, cream, serif type |
+| Ivory | `?theme=ivory` | The same, on ivory walls |
+| Maison | `?theme=maison` | Piaget: white, navy light serif, full-width editorial photos |
+| Avenue | `?theme=avenue` | David Yurman, Blue Nile, Gabriel & Co: white, bold caps, model-led hero, perks strip |
+
+Maison and Avenue have their own home page sections built around **stock photographs** that do not exist yet. Each slot shows a labelled placeholder describing the shot; drop AI-made photos into `assets/stock/` and list them in `js/stock-manifest.js`. The green and ivory looks share the panelled-room home page. Product photos keep their black backgrounds in every look.
+
+- The footer has a "Look" switch. It is there for review; remove it from `js/site.js` once a look is chosen.
 - `DEFAULT_THEME` at the top of `js/theme.js` sets which look a first-time visitor gets (`"dark"` or `"light"`).
-- The ivory colors are the `[data-theme="light"]` block in `css/styles.css`; the green ones are at the top of the file.
+- Green and ivory colors are in `css/styles.css`; Maison and Avenue are in `css/looks.css`.
 
 ## Product images
 

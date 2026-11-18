@@ -457,8 +457,10 @@ p { margin: 0 0 1em; }
 .theme-switch { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
 .theme-switch button { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-strong); }
 .theme-switch button:hover { color: var(--text); }
-:root:not([data-theme="light"]) .theme-switch [data-theme-set="dark"],
-:root[data-theme="light"] .theme-switch [data-theme-set="light"] { color: var(--text); font-weight: 600; text-decoration: none; }
+:root[data-theme="dark"] .theme-switch [data-theme-set="dark"],
+:root[data-theme="light"] .theme-switch [data-theme-set="light"],
+:root[data-theme="maison"] .theme-switch [data-theme-set="maison"],
+:root[data-theme="avenue"] .theme-switch [data-theme-set="avenue"] { color: var(--text); font-weight: 600; text-decoration: none; }
 
 /* ==================================================================
    Responsive
