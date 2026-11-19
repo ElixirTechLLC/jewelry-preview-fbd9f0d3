@@ -373,3 +373,11 @@ html[data-theme="heritage"] .fpanel { background: var(--bg); }
 html[data-theme="heritage"] .shape.on { background: rgba(154, 117, 56, 0.12); }
 html[data-theme="heritage"] .achip { font-family: var(--caps); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
 html[data-theme="heritage"] .fpanel-foot .btn { background: #20291d; color: #f0e4d0; border-color: #20291d; }
+
+/* Product option pickers on the ivory product page */
+html[data-theme="heritage"] .opt h3 { font-family: var(--caps); font-size: 13px; letter-spacing: 0.22em; font-weight: 500; }
+html[data-theme="heritage"] .tile { background: #f7efe2; }
+html[data-theme="heritage"] .tile.on, html[data-theme="heritage"] .shape-tile.on { border-color: #20291d; box-shadow: inset 0 0 0 1px #20291d; }
+html[data-theme="heritage"] .swatch-btn.on { border-color: #20291d; box-shadow: inset 0 0 0 2px var(--bg), 0 0 0 1px #20291d; }
+html[data-theme="heritage"] .pdp-actions .btn--gold { background: #20291d; border-color: #20291d; color: #f0e4d0; }
+html[data-theme="heritage"] .pdp-actions .btn--gold:hover { background: #343c2c; border-color: #343c2c; }
