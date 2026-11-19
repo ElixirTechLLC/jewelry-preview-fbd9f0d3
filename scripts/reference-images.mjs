@@ -28,7 +28,7 @@ const CATALOG = win.CATALOG;
 const FANCY = new Set(["solstice", "meridian", "portofino", "harbor", "atlas", "ridge", "lumen", "coast", "sable", "tempo", "arcadia", "celeste", "orion", "muse", "aurora", "riviera", "lattice", "starlight", "luna", "regent", "milano", "navigator", "sundial", "architect", "silk", "glide", "avenue", "fortress", "glow", "nova", "mosaic", "beacon", "helix", "serene", "flare", "prism", "dusk", "astoria", "cascade", "orbit", "lumiere", "spire", "forever", "infinity", "crown", "promise", "stellar", "petal", "harmony", "laurel", "secret", "evermore", "elara", "adeline", "seraphina", "isla", "vivienne", "aria", "eleanor", "verona", "monaco", "briar", "juliet", "solene", "iris", "cassia", "stella", "signature", "heritage", "artisan", "ribbon", "halo"]);
 
 /* A few titles need a plainer search phrase than their words give */
-const OVERRIDES = { "WB-020": "wedding band with single flush set diamond 14k gold", "RG-020": "open negative space gold ring 14k", "RG-019": "interlocking ribbon gold ring 14k", "CH-018": "diamond halo station necklace 14k gold", "CH-015": "byzantine chain solid 14k gold", "CH-008": "wheat chain solid 14k gold", "CH-001": "cable chain solid 14k gold", "RG-004": "oval diamond ring tapered band 14k gold", "RG-008": "cushion diamond ring thin band 14k gold", "BR-012": "wide ridged gold cuff bracelet 14k", "RG-017": "sculpted wave gold ring 14k", "RG-018": "polished dome gold ring 14k", "ER-016": "twisted band round diamond engagement ring 14k gold" };
+const OVERRIDES = { "BR-013": "twisted gold cuff bracelet solid 14k", "BR-011": "open cuff bracelet solid 14k gold", "WB-020": "wedding band with single flush set diamond 14k gold", "RG-020": "open negative space gold ring 14k", "RG-019": "interlocking ribbon gold ring 14k", "CH-018": "diamond halo station necklace 14k gold", "CH-015": "byzantine chain solid 14k gold", "CH-008": "wheat chain solid 14k gold", "CH-001": "cable chain solid 14k gold", "RG-004": "oval diamond ring tapered band 14k gold", "RG-008": "cushion diamond ring thin band 14k gold", "BR-012": "wide ridged gold cuff bracelet 14k", "RG-017": "sculpted wave gold ring 14k", "RG-018": "polished dome gold ring 14k", "ER-016": "twisted band round diamond engagement ring 14k gold" };
 
 export function queryFor(p) {
   if (OVERRIDES[p.sku]) return OVERRIDES[p.sku];
@@ -48,7 +48,7 @@ export function queryFor(p) {
 }
 
 async function search(q) {
-  const url = `https://www.bing.com/images/search?q=${encodeURIComponent(q)}&form=HDRSC2&first=1`;
+  const url = `https://www.bing.com/images/async?q=${encodeURIComponent(q)}&first=0&count=35&mmasync=1`;
   const r = await fetch(url, { headers: { "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36", "accept-language": "en-US,en;q=0.9" } });
   const html = await r.text();
   const hits = [];
