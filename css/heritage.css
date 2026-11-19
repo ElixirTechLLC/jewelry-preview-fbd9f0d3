@@ -299,7 +299,8 @@ html[data-theme="heritage"] .select, html[data-theme="heritage"] .field input, h
 /* footer tagline + columns in the mockup's manner */
 html[data-theme="heritage"] .footer-tagline { display: block; font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 19px; color: #f0e4d0; margin-top: 10px; }
 html[data-theme="heritage"] .site-footer h4 { font-family: "Cormorant Garamond", serif; font-size: 14px; letter-spacing: 0.28em; color: #f0e4d0; }
-html[data-theme="heritage"] .footer-brand .logo-name { font-size: 30px; }
+html[data-theme="heritage"] .footer-brand .logo-name { font-size: 30px; padding-left: 0; display: block; margin-left: -0.04em; }
+html[data-theme="heritage"] .footer-brand .logo-tag { padding-left: 0; justify-content: flex-start; margin-top: 2px; }
 html[data-theme="heritage"] .newsletter { border-color: #b08a50; }
 html[data-theme="heritage"] .newsletter button { background: transparent; color: #d2b273; font-family: "Cormorant Garamond", serif; font-size: 18px; }
 
