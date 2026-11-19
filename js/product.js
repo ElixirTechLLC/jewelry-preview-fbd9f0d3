@@ -7,7 +7,12 @@ window.JW.pages.product = function () {
   const F = S.financing;
   const PR = window.JW_PRICE;
   const p = getProduct(window.JW.route.params.get("id"));
+  // A shape switch re-runs this page in place: drop the previous run's listeners first
+  if (window.__pdpUnsub) { window.__pdpUnsub(); window.__pdpUnsub = null; }
+  const oldRoot = $("#pdp");
+  if (oldRoot.__bound) oldRoot.replaceWith(oldRoot.cloneNode(false));
   const root = $("#pdp");
+  root.__bound = true;
 
   if (!p) {
     root.style.display = "block";
@@ -28,7 +33,7 @@ window.JW.pages.product = function () {
   if (p.diamonds.includes(params.get("dia"))) choice.diamond = params.get("dia");
   if (p.carats && p.carats.includes(+params.get("ct"))) choice.carat = +params.get("ct");
   if (p.sizes && p.sizes.options[params.get("size")] != null) choice.size = params.get("size");
-  let color = "Yellow";
+  let color = ["Yellow", "White", "Rose"].includes(params.get("color")) ? params.get("color") : "Yellow";
 
   const ringSizes = [];
   for (let r = 4; r <= 13; r += 0.5) ringSizes.push(r);
@@ -64,7 +69,7 @@ window.JW.pages.product = function () {
       groups.push(`<div class="opt" data-group="shape"><h3>Shape <span>${esc(p.shape)}</span></h3><div class="shapes-row">${SHAPES.map((sh) => {
         const on = sh === p.shape; const sib = on ? null : sibling(sh);
         if (!on && !sib) return "";
-        return `<a class="shape-tile${on ? " on" : ""}" href="${on ? "#" : `product.html?id=${sib.id}&karat=${choice.karat}&dia=${encodeURIComponent(choice.diamond)}&ct=${choice.carat}`}" title="${on ? esc(sh) : esc(sib.name)}" aria-current="${on}"><svg viewBox="0 0 32 32" aria-hidden="true">${SHAPE_ICON[sh]}</svg><span>${sh}</span></a>`;
+        return `<a class="shape-tile${on ? " on" : ""}" href="${on ? "#" : `product.html?id=${sib.id}&karat=${choice.karat}&dia=${encodeURIComponent(choice.diamond)}&ct=${choice.carat}&color=${color}`}" title="${on ? esc(sh) : esc(sib.name)}" aria-current="${on}"><svg viewBox="0 0 32 32" aria-hidden="true">${SHAPE_ICON[sh]}</svg><span>${sh}</span></a>`;
       }).join("")}</div><p class="opt-note">Other shapes open the closest design in that shape, with your choices kept.</p></div>`);
     }
     if (p.diamonds.length) {
@@ -177,7 +182,7 @@ window.JW.pages.product = function () {
     $("#finRows").innerHTML = F.plans.map((pl) => `<tr><th scope="row">${esc(pl.label)}</th><td>about ${money(Math.ceil(monthly(q.price, pl.months)))}/mo* · ${esc(pl.note)}</td></tr>`).join("");
   }
   update();
-  PR.onGold(update);
+  window.__pdpUnsub = PR.onGold(update);
 
   /* Picking an option re-draws the pickers (so the headings show the choice) and re-prices */
   function repaint() {
@@ -189,6 +194,18 @@ window.JW.pages.product = function () {
     update();
   }
   root.addEventListener("click", (e) => {
+    const sh = e.target.closest(".shape-tile");
+    if (sh) {
+      // another shape = its sister design, shown here without leaving the page or losing your place
+      e.preventDefault();
+      if (sh.getAttribute("aria-current") === "true") return;
+      const y = window.scrollY;
+      history.pushState({ pdp: true }, "", sh.getAttribute("href"));
+      window.JW.route.params = new URLSearchParams(location.search);
+      window.JW.pages.product();
+      window.scrollTo(0, y);
+      return;
+    }
     const b = e.target.closest("[data-opt]");
     if (b) {
       const g = b.dataset.opt, v = b.dataset.value;
@@ -205,7 +222,6 @@ window.JW.pages.product = function () {
       $("#engraveToggle").setAttribute("aria-expanded", String(!f.hidden));
       if (!f.hidden) $("#engraving").focus();
     }
-    if (e.target.closest(".shape-tile[aria-current=\"true\"]")) e.preventDefault();
   });
   root.addEventListener("input", (e) => { if (e.target.id === "engraving") engraving = e.target.value.trim(); });
 
@@ -239,4 +255,13 @@ window.JW.pages.product = function () {
   $("#relatedLink").href = shopUrl(p.cat);
   $("#relatedLink").textContent = `All ${cat.title}`;
 };
-if (!window.PREVIEW) window.JW.pages.product();
+if (!window.PREVIEW) {
+  window.JW.pages.product();
+  // Back and forward between shapes re-render in place too
+  window.addEventListener("popstate", () => {
+    window.JW.route.params = new URLSearchParams(location.search);
+    const y = window.scrollY;
+    window.JW.pages.product();
+    window.scrollTo(0, y);
+  });
+}
