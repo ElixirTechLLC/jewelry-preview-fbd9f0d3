@@ -2,4 +2,4 @@
    Written by scripts/fetch-gold.mjs, which the gold-price workflow runs every
    morning (.github/workflows/gold-price.yml). The browser also asks the live
    feed on each page load and uses that when it answers. */
-window.GOLD_SPOT = {"usdPerOz": 3738.2, "asOf": "2026-11-18T18:27:00Z", "source": "Kitco (owners' workbook)"};
+window.GOLD_SPOT = {"usdPerOz":3713.67,"asOf":"2026-11-19T03:34:32Z","source":"gold-api.com"};
