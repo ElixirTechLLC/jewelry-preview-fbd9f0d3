@@ -347,3 +347,16 @@ html[data-theme="heritage"] .cta-band h2, html[data-theme="heritage"] .cta-band 
 @media (max-width: 760px) {
   .hz-hero .sub { font-size: 13px; letter-spacing: 0.2em; line-height: 1.7; max-width: none; }
 }
+
+/* Header wordmark in the gold of the grand-opening invitation: a warm foil gold
+   (#e8b870 core, #f5ce87 highlight, #b2946c shadow), drawn as a soft gradient
+   through the letters. The wolf crest is not used on the site. */
+html[data-theme="heritage"] .site-header .logo-name,
+html[data-theme="heritage"] .site-header .logo-tag {
+  color: #e8b870;
+  background: linear-gradient(180deg, #f5ce87 0%, #ecbf78 38%, #d4a965 58%, #f0c57e 82%, #e2b26c 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+html[data-theme="heritage"] .site-header .logo-tag i { background: #e8b870; }
+html[data-theme="heritage"] .site-header .logo-name { font-weight: 600; }
