@@ -7,10 +7,10 @@
        Run this any time you add, remove or rename image files.
 
    node scripts/generate-images.mjs --prompts
-       Write image-prompts.md — the full prompt for every piece, ready
-       to paste into whichever image generator you prefer. Save each
-       result as assets/products/<id>/1.webp (or .png / .jpg), then
-       run --sync.
+       Write image-prompts.md — the full prompt for every piece, built
+       from the owners' design brief in js/catalog.js, ready to paste
+       into whichever image generator you prefer. Save each result as
+       assets/products/<id>/1.webp (or .png / .jpg), then run --sync.
 
    OPENAI_API_KEY=sk-... node scripts/generate-images.mjs
        Generate every photo that is missing. Photo 1 of a piece is made
@@ -93,16 +93,30 @@ function loadCatalog() {
   return window.CATALOG;
 }
 
+/* What the piece is, in words, built from the owners' design brief (js/catalog.js). */
+function describe(p) {
+  const kind = { ring: "ring", band: "wedding band", bracelet: p.cls === "cuff" ? "cuff bracelet" : "bracelet", chain: "chain necklace" }[p.type] || p.type;
+  const detail = (p.brief || p.setting || "").replace(/\.$/, "");
+  const parts = [`a ${kind} in polished 14K yellow gold`, detail];
+  if (p.carats) parts.push(`with a single ${p.shape.toLowerCase()}-cut ${p.carats[0]} carat white diamond center stone${p.accentCtw ? ` and about ${p.accentCtw.toFixed(2)} ct of small round accent diamonds` : ""}`);
+  else if (p.accentCtw) parts.push(`set with about ${p.accentCtw.toFixed(2)} ct of small round white diamonds`);
+  else parts.push("no gemstones");
+  if (p.widthMm) parts.push(`about ${p.widthMm} mm wide`);
+  if (p.type === "chain") parts.push("20 inches long, laid in a loose loop");
+  if (p.type === "bracelet" && p.cls !== "cuff") parts.push("7.5 inches long, laid in a loose loop with the clasp visible");
+  return parts.filter(Boolean).join(", ");
+}
+
 /* Prompt for photo 1 (text only). */
 function fullPrompt(p) {
-  return `Luxury fine jewelry product photograph of ${p.prompt}. ${STYLE}`;
+  return `Luxury fine jewelry product photograph of ${describe(p)}. ${STYLE}`;
 }
 
 /* Prompt for photos 2–5, sent together with photo 1 as the reference. */
 function viewPrompt(p, view) {
   // A piece can override one view in the catalog: viewNotes: { 2: "…" } (keyed by photo number).
   const v = (p.viewNotes && p.viewNotes[view + 1]) || (VIEWS[p.type] || VIEWS.ring)[view - 1];
-  const who = p.tags.includes("him") ? "man's" : "woman's";
+  const who = p.type === "chain" || p.tags.some((t) => ["signet", "cuban", "franco"].includes(t)) ? "man's" : "woman's";
   const worn = typeof v === "function";
   const what = worn ? v(who) : v;
   return (

@@ -4,378 +4,802 @@ One prompt per piece. Generate in portrait (4:5 works best), save the result as
 `assets/products/<id>/1.webp` (png and jpg also work; add `2`, `3`… for more angles),
 then run `node scripts/generate-images.mjs --sync`.
 
-## The Classic Round Solitaire
+## Solstice Flat Curb Bracelet
 
-Folder: `assets/products/eng-round-solitaire/`
+Folder: `assets/products/solstice-flat-curb-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of a classic solitaire engagement ring, single 1.5 carat round brilliant diamond in a six-prong setting, slim polished 14k yellow gold band, standing upright, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, close-set flattened curb links with bright mirror-finished faces, no gemstones, about 5 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Oval Hidden Halo Ring
+## Meridian Paperclip Bracelet
 
-Folder: `assets/products/eng-oval-hidden-halo/`
+Folder: `assets/products/meridian-paperclip-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of an engagement ring with a 2 carat oval cut diamond center stone, four claw prongs, a hidden halo of tiny diamonds under the stone, thin polished 18k yellow gold band, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, airy elongated rectangular links with softened corners and a discreet lobster clasp, no gemstones, about 3.8 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Emerald Cut Three-Stone Ring
+## Portofino Figaro Bracelet
 
-Folder: `assets/products/eng-emerald-three-stone/`
+Folder: `assets/products/portofino-figaro-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of a three-stone engagement ring, large emerald cut diamond center flanked by two trapezoid cut side diamonds, polished 18k yellow gold band and prongs, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, alternating three short oval links and one elongated link in a rhythmic pattern, no gemstones, about 4.5 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Cushion Halo Pavé Ring
+## Harbor Mariner Bracelet
 
-Folder: `assets/products/eng-cushion-halo/`
+Folder: `assets/products/harbor-mariner-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of a halo engagement ring, cushion cut diamond center surrounded by a halo of small round diamonds, pave diamond band, polished 14k rose gold, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, classic nautical anchor links joined by a slim central bar, no gemstones, about 5 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Princess Cut Channel-Set Ring
+## Atlas Cuban Bracelet
 
-Folder: `assets/products/eng-princess-channel/`
+Folder: `assets/products/atlas-cuban-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of an engagement ring with a princess cut square diamond center stone and channel-set princess cut diamonds along the shoulders, polished 14k yellow gold, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, substantial interlocking Cuban links with hand-finished beveled edges, no gemstones, about 7 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Pear Solitaire Ring
+## Ridge Rope Bracelet
 
-Folder: `assets/products/eng-pear-solitaire/`
+Folder: `assets/products/ridge-rope-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of a solitaire engagement ring with a pear shaped teardrop diamond, delicate claw prongs, very thin polished 18k yellow gold band, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, tightly braided rope links that reflect light from every direction, no gemstones, about 3.5 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Radiant Cut Pavé Ring
+## Lumen Herringbone Bracelet
 
-Folder: `assets/products/eng-radiant-pave/`
+Folder: `assets/products/lumen-herringbone-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of an engagement ring with a large elongated radiant cut diamond center stone on a pave diamond band, polished 18k yellow gold, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, fluid tightly woven flat links creating a silky ribbon effect, no gemstones, about 4 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Marquise Vintage Milgrain Ring
+## Coast Square Box Bracelet
 
-Folder: `assets/products/eng-marquise-vintage/`
+Folder: `assets/products/coast-square-box-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of a vintage style engagement ring with a marquise cut diamond center, milgrain beaded halo of small diamonds, engraved 14k yellow gold band, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, precise four-sided box links with a crisp architectural silhouette, no gemstones, about 3 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Toi et Moi Two-Stone Ring
+## Sable Wheat Bracelet
 
-Folder: `assets/products/eng-toi-et-moi/`
+Folder: `assets/products/sable-wheat-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of a toi et moi engagement ring with two diamonds side by side, one pear shaped and one emerald cut, set at an angle on a thin polished 18k yellow gold band, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, interlaced oval wheat links forming a textured flexible strand, no gemstones, about 3.8 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Round Diamond Eternity Band
+## Tempo Bead Bracelet
 
-Folder: `assets/products/wed-eternity-round/`
+Folder: `assets/products/tempo-bead-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of a full eternity wedding band with a continuous row of round brilliant diamonds in shared prong setting, polished 14k yellow gold, standing upright, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, graduated polished round gold beads separated by delicate short links, no gemstones, about 4 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Classic Comfort-Fit Band · 2 mm
+## Arcadia Open Cuff
 
-Folder: `assets/products/wed-classic-band-2mm/`
+Folder: `assets/products/arcadia-open-cuff/`
 
 ```
-Luxury fine jewelry product photograph of a plain thin polished 14k yellow gold wedding band, 2mm wide, domed half-round profile, no stones, standing upright, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a cuff bracelet in polished 14K yellow gold, clean tapered oval cuff with an open underside and rounded ends, no gemstones, about 7 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Men's Comfort-Fit Band · 6 mm
+## Halo Ridge Cuff
 
-Folder: `assets/products/wed-mens-comfort-6mm/`
+Folder: `assets/products/halo-ridge-cuff/`
 
 ```
-Luxury fine jewelry product photograph of a men's plain polished 14k yellow gold wedding band, 6mm wide, low dome profile, no stones, standing upright, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a cuff bracelet in polished 14K yellow gold, raised twin ridges framing a satin-finished center channel, no gemstones, about 8 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Men's Channel-Set Diamond Band
+## Celeste Twist Cuff
 
-Folder: `assets/products/wed-mens-channel-diamond/`
+Folder: `assets/products/celeste-twist-cuff/`
 
 ```
-Luxury fine jewelry product photograph of a men's wide wedding band with a row of nine round diamonds channel-set across the top, satin brushed 14k yellow gold with polished edges, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a cuff bracelet in polished 14K yellow gold, single sculptural strand turning in a gentle continuous spiral, no gemstones, about 6 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Baguette Half-Eternity Band
+## Orion Hammered Cuff
 
-Folder: `assets/products/wed-baguette-half-eternity/`
+Folder: `assets/products/orion-hammered-cuff/`
 
 ```
-Luxury fine jewelry product photograph of a half eternity wedding band with a row of baguette cut diamonds channel-set side by side, polished 18k yellow gold, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a cuff bracelet in polished 14K yellow gold, low-domed cuff with individual light-catching hammered facets, no gemstones, about 9 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Curved Pavé Contour Band
+## Muse Knife-Edge Cuff
 
-Folder: `assets/products/wed-curved-contour/`
+Folder: `assets/products/muse-knife-edge-cuff/`
 
 ```
-Luxury fine jewelry product photograph of a thin curved chevron contour wedding band with micro pave round diamonds, polished 14k yellow gold, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a cuff bracelet in polished 14K yellow gold, sleek open cuff with sharp-looking but softly finished knife-edge profile, no gemstones, about 6.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Men's Hammered Band · 6 mm
+## Aurora Round Tennis Bracelet
 
-Folder: `assets/products/wed-mens-hammered/`
+Folder: `assets/products/aurora-round-tennis-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of a men's 14k yellow gold wedding band with a hand hammered faceted texture, 6mm wide, satin finish, no stones, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, uniform prong-set round diamonds in a delicate articulated line, set with about 1.75 ct of small round white diamonds, about 3 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Emerald Cut Eternity Band
+## Riviera Graduated Tennis Bracelet
 
-Folder: `assets/products/wed-emerald-eternity/`
+Folder: `assets/products/riviera-graduated-tennis-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of a full eternity band of large emerald cut diamonds set side by side in shared prongs, polished 18k yellow gold, standing upright, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, brilliant rounds that gradually increase toward the center of the wrist, set with about 2.50 ct of small round white diamonds, about 4 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Diamond Tennis Bracelet · 5 ctw
+## Lattice Pave Link Bracelet
 
-Folder: `assets/products/wom-tennis-bracelet/`
+Folder: `assets/products/lattice-pave-link-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of a diamond tennis bracelet, single row of round brilliant diamonds in four-prong 14k yellow gold settings, laid in a graceful curve. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, alternating polished oval links and diamond-set rectangular links, set with about 0.65 ct of small round white diamonds, about 5 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Round Diamond Stud Earrings · 1 ctw
+## Starlight Bezel Station Bracelet
 
-Folder: `assets/products/wom-diamond-studs/`
+Folder: `assets/products/starlight-bezel-station-bracelet/`
 
 ```
-Luxury fine jewelry product photograph of a pair of round brilliant diamond stud earrings in four-prong 14k yellow gold basket settings, side by side. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, five spaced round diamonds held in smooth protective bezel cups, set with about 0.50 ct of small round white diamonds, about 3 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Pavé Huggie Hoops
+## Luna Diamond Arc Bangle
 
-Folder: `assets/products/wom-huggie-hoops/`
+Folder: `assets/products/luna-diamond-arc-bangle/`
 
 ```
-Luxury fine jewelry product photograph of a pair of small huggie hoop earrings covered in micro pave round diamonds, polished 14k yellow gold, side by side. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a bracelet in polished 14K yellow gold, polished hinged bangle with a slender crescent of set diamonds, set with about 0.75 ct of small round white diamonds, about 6 mm wide, 7.5 inches long, laid in a loose loop with the clasp visible. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Riviera Diamond Tennis Necklace
+## Everyday Cable Chain
 
-Folder: `assets/products/wom-tennis-necklace/`
+Folder: `assets/products/everyday-cable-chain/`
 
 ```
-Luxury fine jewelry product photograph of a riviera diamond tennis necklace, continuous single row of round brilliant diamonds in 14k yellow gold prong settings, laid in an elegant loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, even round cable links with a clean lightweight profile, no gemstones, about 2 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Bezel Solitaire Pendant
+## Dainty Trace Chain
 
-Folder: `assets/products/wom-solitaire-pendant/`
+Folder: `assets/products/dainty-trace-chain/`
 
 ```
-Luxury fine jewelry product photograph of a solitaire pendant necklace, single round diamond in a polished 14k yellow gold bezel setting on a fine cable chain. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, extra-fine circular trace links designed for understated layering, no gemstones, about 1.2 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Paperclip Link Chain Necklace
+## Regent Curb Chain
 
-Folder: `assets/products/wom-paperclip-chain/`
+Folder: `assets/products/regent-curb-chain/`
 
 ```
-Luxury fine jewelry product photograph of a paperclip link chain necklace with elongated oval links in polished 14k yellow gold, no stones, laid in a loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, closely aligned rounded curb links in a classic everyday scale, no gemstones, about 3.5 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Colombian Emerald Halo Ring
+## Micro Cuban Chain
 
-Folder: `assets/products/wom-emerald-halo-ring/`
+Folder: `assets/products/micro-cuban-chain/`
 
 ```
-Luxury fine jewelry product photograph of a cocktail ring with a rich green emerald cut emerald center stone surrounded by a halo of round white diamonds, polished 18k yellow gold band, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, compact flattened Cuban links with a tightly articulated drape, no gemstones, about 4 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Blue Sapphire Drop Earrings
+## Milano Figaro Chain
 
-Folder: `assets/products/wom-sapphire-drop-earrings/`
+Folder: `assets/products/milano-figaro-chain/`
 
 ```
-Luxury fine jewelry product photograph of a pair of drop earrings each with a pear shaped royal blue sapphire framed by a halo of small white diamonds, 14k yellow gold, side by side. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, three short links followed by a longer oval in a vintage-inspired sequence, no gemstones, about 3.8 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Diamond Hinged Bangle
+## Navigator Mariner Chain
 
-Folder: `assets/products/wom-diamond-bangle/`
+Folder: `assets/products/navigator-mariner-chain/`
 
 ```
-Luxury fine jewelry product photograph of a hinged oval bangle bracelet with a row of round diamonds across the top half, polished 14k yellow gold, standing upright. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, open oval mariner links crossed by signature center bars, no gemstones, about 4 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Baguette Cluster Cocktail Ring
+## Sundial Rope Chain
 
-Folder: `assets/products/wom-baguette-cluster-ring/`
+Folder: `assets/products/sundial-rope-chain/`
 
 ```
-Luxury fine jewelry product photograph of a cocktail ring with a large rectangular face of two rows of baguette diamonds framed and divided by rows of round diamonds, split pave shank, polished 14k yellow gold, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, fine spiral rope construction with subtle sparkle along the twist, no gemstones, about 3 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Diamond Initial Pendant
+## Heirloom Wheat Chain
 
-Folder: `assets/products/wom-initial-pendant/`
+Folder: `assets/products/heirloom-wheat-chain/`
 
 ```
-Luxury fine jewelry product photograph of a small letter initial pendant necklace covered in micro pave diamonds, polished 14k yellow gold on a fine cable chain. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, four-strand woven wheat pattern with rich dimensional texture, no gemstones, about 3.5 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Classic Gold Hoops · 30 mm
+## Architect Box Chain
 
-Folder: `assets/products/wom-gold-hoops/`
+Folder: `assets/products/architect-box-chain/`
 
 ```
-Luxury fine jewelry product photograph of a pair of classic round polished 14k yellow gold hoop earrings, medium size, no stones, side by side. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, square-cut box links that create sharp reflections and structure, no gemstones, about 2.5 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Petite Diamond Cross Pendant
+## Silk Snake Chain
 
-Folder: `assets/products/wom-cross-pendant/`
+Folder: `assets/products/silk-snake-chain/`
 
 ```
-Luxury fine jewelry product photograph of a small delicate cross pendant necklace set with round diamonds, polished 14k yellow gold on a fine chain. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, smooth closely meshed tubular links with a seamless appearance, no gemstones, about 2.8 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## The Sovereign Diamond Signet Ring
+## Glide Omega Chain
 
-Folder: `assets/products/men-sovereign-signet/`
+Folder: `assets/products/glide-omega-chain/`
 
 ```
-Luxury fine jewelry product photograph of a men's square signet ring, top face of 25 invisible-set princess cut diamonds in a 5x5 grid framed by a border of baguette diamonds, pave round diamonds covering the shoulders, heavy polished 14k yellow gold, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, flat domed omega segments that follow the neckline in one fluid curve, no gemstones, about 4.5 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Miami Cuban Link Chain · 8 mm
+## Ribbon Herringbone Chain
 
-Folder: `assets/products/men-cuban-chain/`
+Folder: `assets/products/ribbon-herringbone-chain/`
 
 ```
-Luxury fine jewelry product photograph of a heavy solid miami cuban link chain necklace, flat tight interlocking curb links, polished 14k yellow gold, no stones, laid in a loop with box clasp. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, wide flat herringbone weave with a luminous liquid-gold finish, no gemstones, about 4.5 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Diamond-Cut Rope Chain · 4 mm
+## Avenue Paperclip Chain
 
-Folder: `assets/products/men-rope-chain/`
+Folder: `assets/products/avenue-paperclip-chain/`
 
 ```
-Luxury fine jewelry product photograph of a twisted rope chain necklace with sparkling diamond-cut facets, polished 14k yellow gold, no stones, laid in a loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, long open rectangular links balanced with crisp understated proportions, no gemstones, about 4.5 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Men's Diamond Tennis Chain · 4 mm
+## Fortress Franco Chain
 
-Folder: `assets/products/men-tennis-chain/`
+Folder: `assets/products/fortress-franco-chain/`
 
 ```
-Luxury fine jewelry product photograph of a men's diamond tennis chain necklace, one long single row of identical round brilliant diamonds that are all exactly the same size from clasp to clasp, uniform and not graduated, 14k yellow gold four-prong settings, laid flat in a large loop with the box clasp at the top. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, dense four-sided Franco links with a substantial flexible feel, no gemstones, about 4 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Pavé Diamond Cuban Bracelet · 10 mm
+## Byzantine Heritage Chain
 
-Folder: `assets/products/men-cuban-bracelet-pave/`
+Folder: `assets/products/byzantine-heritage-chain/`
 
 ```
-Luxury fine jewelry product photograph of a men's cuban link bracelet with every link covered in micro pave round diamonds, heavy polished 14k yellow gold, laid in a curve. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, intricate interwoven Byzantine loops for a bold textured statement, no gemstones, about 5.5 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Diamond Cross Pendant · 1.5 ctw
+## Twist Singapore Chain
 
-Folder: `assets/products/men-cross-pendant/`
+Folder: `assets/products/twist-singapore-chain/`
 
 ```
-Luxury fine jewelry product photograph of a men's cross pendant set with a single row of round brilliant diamonds in prong settings, polished 14k yellow gold with bail, on a gold chain. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, light spiral Singapore links that shimmer with movement, no gemstones, about 2 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Black Onyx & Diamond Signet Ring
+## North Star Station Chain
 
-Folder: `assets/products/men-onyx-signet/`
+Folder: `assets/products/north-star-station-chain/`
 
 ```
-Luxury fine jewelry product photograph of a men's signet ring with a flat rectangular polished black onyx stone in a heavy 14k yellow gold bezel, small pave diamonds on the shoulders, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, four evenly spaced bezel-set round diamond stations along a fine chain, set with about 0.30 ct of small round white diamonds, about 1.8 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Men's Diamond Stud Earrings · 2 ctw
+## Glow Halo Station Chain
 
-Folder: `assets/products/men-diamond-studs/`
+Folder: `assets/products/glow-halo-station-chain/`
 
 ```
-Luxury fine jewelry product photograph of a pair of large round brilliant diamond stud earrings in four-prong 14k yellow gold settings with screw backs, side by side. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, tiny clustered diamond halos punctuating a delicate cable chain, set with about 0.40 ct of small round white diamonds, about 2.5 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Franco Chain · 3.5 mm
+## Nova Bezel Chain
 
-Folder: `assets/products/men-franco-chain/`
+Folder: `assets/products/nova-bezel-chain/`
 
 ```
-Luxury fine jewelry product photograph of a franco chain necklace with dense square woven v-shaped links, polished 14k yellow gold, no stones, laid in a loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, seven small bezel-set diamond dots distributed across the neckline, set with about 0.55 ct of small round white diamonds, about 2.2 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Round Cluster Diamond Ring
+## Mosaic Pave Segment Chain
 
-Folder: `assets/products/men-cluster-ring/`
+Folder: `assets/products/mosaic-pave-segment-chain/`
 
 ```
-Luxury fine jewelry product photograph of a men's ring with a round domed cluster of many round diamonds on top and pave diamonds on the shoulders, heavy polished 14k yellow gold, three-quarter view. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a chain necklace in polished 14K yellow gold, three pavé diamond bars alternating with sleek polished chain sections, set with about 0.85 ct of small round white diamonds, about 3 mm wide, 20 inches long, laid in a loose loop. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Figaro ID Bracelet
+## Luna East-West Emerald Ring
 
-Folder: `assets/products/men-id-bracelet/`
+Folder: `assets/products/luna-east-west-emerald-ring/`
 
 ```
-Luxury fine jewelry product photograph of a men's ID bracelet with a blank polished rectangular plate and figaro chain links, solid 14k yellow gold, no stones, laid in a curve. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, horizontal emerald-cut centerpiece inside a low-profile full bezel, with a single emerald-cut 1 carat white diamond center stone, about 5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Meridian 41 Automatic · Solid Gold
+## Marquise Compass Ring
 
-Folder: `assets/products/wat-meridian-41-gold/`
+Folder: `assets/products/marquise-compass-ring/`
 
 ```
-Luxury fine jewelry product photograph of a men's luxury wristwatch in solid polished yellow gold with a three-link gold bracelet, champagne sunburst dial with plain gold baton markers and clearly visible gold hour, minute and seconds hands, smooth plain polished gold bezel, plain polished gold case and lugs, absolutely no diamonds and no gemstones anywhere on the watch, completely unbranded with no logo and no text on the dial. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, north-south marquise center lifted above a fine tapered split band, with a single marquise-cut 1 carat white diamond center stone, about 3.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Meridian 41 · Diamond Bezel
+## Beacon Bezel Round Ring
 
-Folder: `assets/products/wat-meridian-41-diamond/`
+Folder: `assets/products/beacon-bezel-round-ring/`
 
 ```
-Luxury fine jewelry product photograph of a men's luxury two-tone stainless steel and yellow gold wristwatch with a bezel set with round diamonds, black dial with diamond hour markers and gold hands, completely unbranded with no logo and no text on the dial. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, round brilliant centerpiece wrapped in a modern brushed bezel, with a single round-cut 1 carat white diamond center stone, about 5.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Monarch 42 · Full Pavé
+## Helix Oval Ring
 
-Folder: `assets/products/wat-monarch-42-pave/`
+Folder: `assets/products/helix-oval-ring/`
 
 ```
-Luxury fine jewelry product photograph of a men's luxury yellow gold wristwatch completely covered in pave round diamonds on the case, bezel, dial and bracelet, fully iced out, completely unbranded with no logo and no text on the dial. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, oval centerpiece held between graceful intersecting bypass shoulders, with a single oval-cut 1 carat white diamond center stone, about 4.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Céleste 28 · Diamond Bezel
+## Serene Pear Halo Ring
 
-Folder: `assets/products/wat-celeste-28-diamond/`
+Folder: `assets/products/serene-pear-halo-ring/`
 
 ```
-Luxury fine jewelry product photograph of a women's small luxury wristwatch in polished yellow gold with a five-link gold bracelet, round diamond-set bezel, white mother of pearl dial, completely unbranded with no logo and no text on the dial. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, pear-shaped center framed with a fine scalloped halo of small diamonds, with a single pear-cut 1 carat white diamond center stone and about 0.24 ct of small round accent diamonds, about 4.8 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Céleste 31 · Two-Tone
+## Flare Radiant Signet Ring
 
-Folder: `assets/products/wat-celeste-31-two-tone/`
+Folder: `assets/products/flare-radiant-signet-ring/`
 
 ```
-Luxury fine jewelry product photograph of a women's luxury two-tone stainless steel and yellow gold wristwatch with a fluted gold bezel, champagne dial with small diamond hour markers, completely unbranded with no logo and no text on the dial. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, radiant-cut center recessed into a bold tapered signet face, with a single radiant-cut 1 carat white diamond center stone, about 9 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
 
-## Nocturne Chronograph
+## Prism Princess Split Ring
 
-Folder: `assets/products/wat-nocturne-chrono/`
+Folder: `assets/products/prism-princess-split-ring/`
 
 ```
-Luxury fine jewelry product photograph of a men's luxury chronograph wristwatch with a polished yellow gold case and a smooth plain polished gold bezel, absolutely no diamonds and no gemstones anywhere on the watch, matte black dial with three gold sub-dials, black alligator leather strap, completely unbranded with no logo and no text on the dial. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, princess-cut center above crisp geometric split shoulders, with a single princess-cut 1 carat white diamond center stone, about 4 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Dusk Cushion Ring
+
+Folder: `assets/products/dusk-cushion-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, soft cushion-cut centerpiece set over a slender rounded cathedral band, with a single cushion-cut 1 carat white diamond center stone, about 3 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Astoria Asscher Step Ring
+
+Folder: `assets/products/astoria-asscher-step-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, Asscher center flanked by linear stepped shoulders in an Art Deco composition, with a single asscher-cut 1 carat white diamond center stone and about 0.16 ct of small round accent diamonds, about 5.2 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Orion Heart Halo Ring
+
+Folder: `assets/products/orion-heart-halo-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, heart-cut diamond enclosed by a fine halo and tapered shoulders, with a single heart-cut 1 carat white diamond center stone and about 0.28 ct of small round accent diamonds, about 4.8 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Nova Pave Dome Ring
+
+Folder: `assets/products/nova-pave-dome-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, rounded domed face covered by a graded constellation of pavé diamonds, set with about 0.40 ct of small round white diamonds, about 9 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Cascade Bypass Diamond Ring
+
+Folder: `assets/products/cascade-bypass-diamond-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, two overlapping curved arms tipped with diamond-set arcs, set with about 0.55 ct of small round white diamonds, about 7.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Celeste Zigzag Diamond Ring
+
+Folder: `assets/products/celeste-zigzag-diamond-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, graphic diagonal chevron line of small bead-set diamonds, set with about 0.30 ct of small round white diamonds, about 5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Orbit Scatter Diamond Ring
+
+Folder: `assets/products/orbit-scatter-diamond-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, asymmetric scattered star-like diamonds on a polished wide band, set with about 0.45 ct of small round white diamonds, about 7.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Lumiere Diamond Bar Ring
+
+Folder: `assets/products/lumiere-diamond-bar-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, five compact round diamonds in a straight east-west channel, set with about 0.25 ct of small round white diamonds, about 4 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Spire Ribbed Diamond Ring
+
+Folder: `assets/products/spire-ribbed-diamond-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, vertical gold ribs with small diamonds tucked between alternating ridges, set with about 0.20 ct of small round white diamonds, about 7 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Sculpted Wave Ring
+
+Folder: `assets/products/sculpted-wave-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, single flowing gold wave that rises and falls across the finger, no gemstones, about 7 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Mirror Dome Ring
+
+Folder: `assets/products/mirror-dome-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, smooth high-polish dome tapering into a comfort-fit shank, no gemstones, about 10 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Interlock Ribbon Ring
+
+Folder: `assets/products/interlock-ribbon-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, two gently overlapping gold ribbons with a softly polished edge, no gemstones, about 8.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Open Horizon Ring
+
+Folder: `assets/products/open-horizon-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, open-front band ending in two balanced rounded gold tips, no gemstones, about 6.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Signature Comfort Band 2mm
+
+Folder: `assets/products/signature-comfort-band-2mm/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, timeless narrow rounded band with a smooth comfort-fit interior, no gemstones, about 2 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Signature Comfort Band 4mm
+
+Folder: `assets/products/signature-comfort-band-4mm/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, classic medium-width rounded band with a balanced polished profile, no gemstones, about 4 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Signature Comfort Band 6mm
+
+Folder: `assets/products/signature-comfort-band-6mm/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, wide rounded traditional band with generous substantial presence, no gemstones, about 6 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Classic Knife Edge Band
+
+Folder: `assets/products/classic-knife-edge-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, precise central ridge softening into a polished tapered sidewall, no gemstones, about 3 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Brushed Flat Wedding Band
+
+Folder: `assets/products/brushed-flat-wedding-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, flat modern silhouette with a directional satin-brushed face, no gemstones, about 5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Heritage Milgrain Band
+
+Folder: `assets/products/heritage-milgrain-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, fine beaded milgrain borders around a polished recessed center, no gemstones, about 3.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Artisan Hammered Band
+
+Folder: `assets/products/artisan-hammered-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, uneven hand-hammered facets encircling a substantial band, no gemstones, about 5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Modern Beveled Band
+
+Folder: `assets/products/modern-beveled-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, flat top framed by crisp angled edges and a comfort-fit interior, no gemstones, about 6 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Heirloom Braided Band
+
+Folder: `assets/products/heirloom-braided-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, interlaced gold braid motif circling the finger, no gemstones, about 4.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Parallel Groove Band
+
+Folder: `assets/products/parallel-groove-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, two fine parallel incised grooves dividing a polished face, no gemstones, about 5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Forever Half Eternity Band
+
+Folder: `assets/products/forever-half-eternity-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, half-circle of shared-prong set round diamonds across the finger, set with about 0.35 ct of small round white diamonds, about 2.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Infinity Full Eternity Band
+
+Folder: `assets/products/infinity-full-eternity-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, continuous circle of evenly spaced round brilliant diamonds, set with about 1.00 ct of small round white diamonds, about 3 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Crown Channel Princess Band
+
+Folder: `assets/products/crown-channel-princess-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, flush-set princess diamonds held in a polished gold channel, set with about 0.65 ct of small round white diamonds, about 3.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Promise Chevron Pave Band
+
+Folder: `assets/products/promise-chevron-pave-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, delicate pointed chevron lined with micro-pavé round diamonds, set with about 0.30 ct of small round white diamonds, about 2.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Stellar Bezel Dot Band
+
+Folder: `assets/products/stellar-bezel-dot-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, individual bezel-set diamond dots spaced at a graceful interval, set with about 0.24 ct of small round white diamonds, about 3 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Deco Baguette Wedding Band
+
+Folder: `assets/products/deco-baguette-wedding-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, ordered baguette diamonds set horizontally across the upper face, set with about 0.50 ct of small round white diamonds, about 4 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Petal Scallop Diamond Band
+
+Folder: `assets/products/petal-scallop-diamond-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, soft scalloped edges surrounding a line of bright round diamonds, set with about 0.65 ct of small round white diamonds, about 3 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Harmony Mixed-Cut Band
+
+Folder: `assets/products/harmony-mixed-cut-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, alternating baguette and round diamonds in a repeating rhythm, set with about 0.55 ct of small round white diamonds, about 4.2 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Laurel Marquise Diamond Band
+
+Folder: `assets/products/laurel-marquise-diamond-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, leaf-like marquise accents alternating with polished gold stems, set with about 0.50 ct of small round white diamonds, about 3.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Secret Spark Diamond Band
+
+Folder: `assets/products/secret-spark-diamond-band/`
+
+```
+Luxury fine jewelry product photograph of a wedding band in polished 14K yellow gold, subtle tiny diamonds inset into one edge of a polished band, set with about 0.12 ct of small round white diamonds, about 3.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Evermore Round Solitaire
+
+Folder: `assets/products/evermore-round-solitaire/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, classic round brilliant on a tapered four-prong solitaire with an open gallery, with a single round-cut 1 carat white diamond center stone, about 2 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Elara Oval Solitaire
+
+Folder: `assets/products/elara-oval-solitaire/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, elongated oval center with delicate claw prongs and a slim cathedral rise, with a single oval-cut 1 carat white diamond center stone, about 2.1 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Adeline Emerald Bezel Ring
+
+Folder: `assets/products/adeline-emerald-bezel-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, emerald-cut center in a minimal full bezel above a polished low basket, with a single emerald-cut 1 carat white diamond center stone, about 2.3 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Seraphina Cushion Halo Ring
+
+Folder: `assets/products/seraphina-cushion-halo-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, cushion center framed by a close-set pavé halo on a refined shank, with a single cushion-cut 1 carat white diamond center stone and about 0.30 ct of small round accent diamonds, about 2.2 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Isla Pear Hidden Halo Ring
+
+Folder: `assets/products/isla-pear-hidden-halo-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, pear-cut center with a tiny hidden diamond halo beneath the crown, with a single pear-cut 1 carat white diamond center stone and about 0.15 ct of small round accent diamonds, about 2 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Celeste Radiant Split Shank Ring
+
+Folder: `assets/products/celeste-radiant-split-shank-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, radiant center above two slender shoulders flowing into a single shank, with a single radiant-cut 1 carat white diamond center stone, about 2.4 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Vivienne Marquise Cathedral Ring
+
+Folder: `assets/products/vivienne-marquise-cathedral-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, dramatic marquise diamond with protective V-prongs and rising cathedral shoulders, with a single marquise-cut 1 carat white diamond center stone, about 2.2 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Aria Princess Solitaire
+
+Folder: `assets/products/aria-princess-solitaire/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, square princess center secured by four V-shaped corner prongs, with a single princess-cut 1 carat white diamond center stone, about 2.1 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Eleanor Asscher Vintage Halo
+
+Folder: `assets/products/eleanor-asscher-vintage-halo/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, step-cut Asscher center with a geometric halo and fine milgrain, with a single asscher-cut 1 carat white diamond center stone and about 0.27 ct of small round accent diamonds, about 2.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Lumiere Round Pave Solitaire
+
+Folder: `assets/products/lumiere-round-pave-solitaire/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, round center with a fine band of bead-set diamond sparkle, with a single round-cut 1 carat white diamond center stone and about 0.22 ct of small round accent diamonds, about 2 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Verona Oval Three-Stone Ring
+
+Folder: `assets/products/verona-oval-three-stone-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, oval center balanced by two pear side diamonds in a low cathedral mount, with a single oval-cut 1 carat white diamond center stone and about 0.50 ct of small round accent diamonds, about 2.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Monaco Emerald Three-Stone Ring
+
+Folder: `assets/products/monaco-emerald-three-stone-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, emerald center with matched tapered baguette side diamonds, with a single emerald-cut 1 carat white diamond center stone and about 0.65 ct of small round accent diamonds, about 2.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Aurora Radiant Hidden Halo
+
+Folder: `assets/products/aurora-radiant-hidden-halo/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, radiant center over a hidden under-gallery diamond halo, with a single radiant-cut 1 carat white diamond center stone and about 0.20 ct of small round accent diamonds, about 2.1 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Briar Cushion Vintage Ring
+
+Folder: `assets/products/briar-cushion-vintage-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, cushion center framed by carved scrollwork and a fine milgrain border, with a single cushion-cut 1 carat white diamond center stone and about 0.30 ct of small round accent diamonds, about 2.6 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Nova Pear Bypass Ring
+
+Folder: `assets/products/nova-pear-bypass-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, pear center nestled between gently crossing diamond-lined arms, with a single pear-cut 1 carat white diamond center stone and about 0.15 ct of small round accent diamonds, about 2.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Juliet Round Twist Ring
+
+Folder: `assets/products/juliet-round-twist-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, round center held over softly twisting shoulders dotted with small diamonds, with a single round-cut 1 carat white diamond center stone and about 0.20 ct of small round accent diamonds, about 2.4 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Solene East-West Marquise Ring
+
+Folder: `assets/products/solene-east-west-marquise-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, marquise center set horizontally in a polished modern partial bezel, with a single marquise-cut 1 carat white diamond center stone, about 2.6 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Iris Oval Bezel Shoulder Ring
+
+Folder: `assets/products/iris-oval-bezel-shoulder-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, oval bezel center flanked by tapered rows of tiny diamonds, with a single oval-cut 1 carat white diamond center stone and about 0.30 ct of small round accent diamonds, about 2.5 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Cassia Heart Solitaire
+
+Folder: `assets/products/cassia-heart-solitaire/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, heart-cut center with a V-tip prong and restrained curved solitaire shank, with a single heart-cut 1 carat white diamond center stone, about 2.2 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
+```
+
+## Stella Round Double Halo Ring
+
+Folder: `assets/products/stella-round-double-halo-ring/`
+
+```
+Luxury fine jewelry product photograph of a ring in polished 14K yellow gold, round center wrapped by two delicate concentric diamond halos, with a single round-cut 1 carat white diamond center stone and about 0.60 ct of small round accent diamonds, about 2.7 mm wide. Resting on a glossy black mirror surface with a soft reflection beneath it, pure black background, dramatic studio lighting with warm golden highlights, razor-sharp macro focus, brilliant sparkling white diamonds, photorealistic high-end catalog photograph, the piece centered with generous dark space around it, portrait orientation. No text, no lettering, no logos, no watermark, no hands, no people.
 ```
