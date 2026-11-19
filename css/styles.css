@@ -577,3 +577,10 @@ h3.h3, .studio-sub h3, .studio-done h3, .info-card h3, .empty h3 { font-family: 
 .btn--gold { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18); }
 @media (max-width: 960px) { .hero-art { max-width: 420px; } }
 .pdp-info h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(28px, 2.6vw, 36px); }
+
+/* Live pricing */
+.card-price .from { font-style: normal; font-family: var(--sans); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-right: 7px; }
+.field--wide { grid-column: 1 / -1; }
+.field-note { display: block; margin-top: 6px; font-size: 12.5px; color: var(--muted); font-family: var(--sans); }
+.pdp-gold, .hz-gold { font-family: var(--sans); font-size: 12.5px; color: var(--muted); margin: -2px 0 16px; }
+.hz-gold { text-align: center; margin: 22px 0 0; }

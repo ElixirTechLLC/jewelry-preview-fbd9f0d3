@@ -361,3 +361,6 @@ html[data-theme="heritage"] .site-header .logo-tag, html[data-theme="heritage"] 
 }
 html[data-theme="heritage"] .site-header .logo-tag i, html[data-theme="heritage"] .site-footer .logo-tag i { background: #e8b870; }
 html[data-theme="heritage"] .site-header .logo-name, html[data-theme="heritage"] .site-footer .logo-name { font-weight: 600; }
+
+/* line-art placeholders read on the ivory cards until photographs exist */
+html[data-theme="heritage"] .card-media .ph svg, html[data-theme="heritage"] .stage .ph svg, html[data-theme="heritage"] .thumb .ph svg { stroke: #9a7538; opacity: 0.85; }

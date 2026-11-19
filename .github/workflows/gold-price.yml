@@ -1,0 +1,34 @@
+name: Daily gold price
+
+# Writes today's gold spot price into data/gold.js every morning, so every
+# price on the site follows the market even for visitors whose browser cannot
+# reach the live feed. GitHub Pages redeploys on the commit.
+on:
+  schedule:
+    - cron: "15 11 * * *"   # 11:15 UTC = 6:15 am New York (7:15 in summer)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Fetch the gold price
+        run: node scripts/fetch-gold.mjs
+      - name: Commit if it changed
+        run: |
+          if git diff --quiet -- data/gold.js; then
+            echo "Gold price unchanged"
+            exit 0
+          fi
+          git config user.name "gold-price bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/gold.js
+          git commit -m "Gold price: $(node -e "process.stdout.write(String(require('./data/gold.js').usdPerOz))" 2>/dev/null || date -u +%F)"
+          git push

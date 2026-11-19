@@ -1,6 +1,8 @@
-/* Category / search / sale listing page (shop.html?cat=…&tag=…&max=…&q=…) */
+/* Category / search listing page (shop.html?cat=…&tag=…&max=…&q=…)
+   Each card shows the piece's lowest price across its configurations,
+   computed by js/pricing.js at the day's gold price. */
 window.JW.pages.shop = function () {
-  const { $, $$, esc, money, CATS, inCat, shopUrl, productCard, imagesFor, search } = window.JW;
+  const { $, $$, esc, money, CATS, inCat, shopUrl, productCard, imagesFor, search, priceFrom } = window.JW;
   const params = window.JW.route.params;
   const cat = CATS[params.get("cat")] ? params.get("cat") : "all";
   const tag = params.get("tag") || "";
@@ -11,10 +13,9 @@ window.JW.pages.shop = function () {
   /* ----- Base list from the URL ----- */
   let base = q ? search(q) : window.CATALOG.slice();
   base = base.filter((p) => inCat(p, cat));
-  // "tag" matches either a tag or the piece type (rings, chains…)
-  const tagMatch = (p, t) => p.tags.includes(t) || p.type === t || (t === "ring" && p.type === "band" && p.cat !== "wedding") || (t === "necklace" && (p.type === "pendant" || p.type === "chain"));
+  const tagMatch = (p, t) => p.tags.includes(t) || p.type === t || p.cls === t || (p.shape || "").toLowerCase() === t;
   if (tag) base = base.filter((p) => tagMatch(p, tag));
-  if (max) base = base.filter((p) => p.price <= max);
+  if (max) base = base.filter((p) => priceFrom(p) <= max);
 
   /* ----- Heading ----- */
   const chip = (meta.chips || []).find(([, t]) => t === tag);
@@ -33,59 +34,58 @@ window.JW.pages.shop = function () {
   }
 
   /* ----- Sidebar filters ----- */
-  const TYPE_LABEL = { ring: "Rings", band: "Bands", necklace: "Necklaces", pendant: "Pendants", chain: "Chains", earrings: "Earrings", bracelet: "Bracelets", watch: "Watches" };
-  const metalColor = (p) => (/&/.test(p.metal) ? "Two-Tone" : /Rose/.test(p.metal) ? "Rose Gold" : /White/.test(p.metal) ? "White Gold" : "Yellow Gold");
-  const karat = (p) => (p.metal.match(/\d+K/) || ["—"])[0];
-  const stone = (p) => (p.gem ? "Gemstone" : p.dia ? "Diamond" : "Plain Gold");
+  const TYPE_LABEL = { ring: "Rings", band: "Bands", chain: "Chains", bracelet: "Bracelets" };
+  const CLS_LABEL = { gold: "Plain gold", cuff: "Cuffs", accent: "Diamond accents", center: "Center stone" };
   const PRICES = [["Any price", 0, Infinity], ["Under $1,000", 0, 1000], ["$1,000 – $2,500", 1000, 2500], ["$2,500 – $5,000", 2500, 5000], ["$5,000 – $10,000", 5000, 10000], ["$10,000 +", 10000, Infinity]];
   const GROUPS = [
     { key: "type", title: "Category", get: (p) => TYPE_LABEL[p.type] },
-    { key: "stone", title: "Stones", get: stone },
-    { key: "color", title: "Metal", get: metalColor },
-    { key: "karat", title: "Karat", get: karat },
+    { key: "cls", title: "Design", get: (p) => CLS_LABEL[p.cls] },
+    { key: "shape", title: "Center stone", get: (p) => p.shape || "" },
   ];
-  const state = { type: new Set(), stone: new Set(), color: new Set(), karat: new Set(), price: 0 };
+  const state = { type: new Set(), cls: new Set(), shape: new Set(), price: 0 };
 
   function renderFilters() {
     const groups = GROUPS.map((g) => {
       const counts = {};
-      base.forEach((p) => (counts[g.get(p)] = (counts[g.get(p)] || 0) + 1));
+      base.forEach((p) => { const k = g.get(p); if (k) counts[k] = (counts[k] || 0) + 1; });
       const keys = Object.keys(counts);
       if (keys.length < 2) return "";
       return `<div class="filter-group"><h4>${g.title}</h4>${keys
         .map((k) => `<label class="check"><input type="checkbox" data-group="${g.key}" value="${esc(k)}"${state[g.key].has(k) ? " checked" : ""}>${esc(k)}<small>${counts[k]}</small></label>`)
         .join("")}</div>`;
     }).join("");
-    const price = `<div class="filter-group"><h4>Price</h4>${PRICES.map(
+    const price = `<div class="filter-group"><h4>Price (from)</h4>${PRICES.map(
       ([l], i) => `<label class="check"><input type="radio" name="price" value="${i}"${state.price === i ? " checked" : ""}>${l}</label>`
     ).join("")}</div>`;
     $("#filters").innerHTML = groups + price + `<button class="clear-filters" id="clearFilters">Clear filters</button>
       <button class="btn btn--gold btn--block filter-toggle" data-close style="margin-top:22px">Show results</button>`;
   }
 
+  const diaWeight = (p) => (p.carats ? Math.max(...p.carats) + p.accentCtw : p.accentCtw);
+  const score = (p) => (imagesFor(p.id).length ? 2 : 0) + (p.featured ? 1 : 0);
   function apply() {
     const [, lo, hi] = PRICES[state.price];
     let list = base.filter(
-      (p) => GROUPS.every((g) => !state[g.key].size || state[g.key].has(g.get(p))) && p.price >= lo && p.price <= hi
+      (p) => GROUPS.every((g) => !state[g.key].size || state[g.key].has(g.get(p))) && priceFrom(p) >= lo && priceFrom(p) <= hi
     );
     const sort = $("#sort").value;
     const by = {
-      "price-asc": (a, b) => a.price - b.price,
-      "price-desc": (a, b) => b.price - a.price,
+      "price-asc": (a, b) => priceFrom(a) - priceFrom(b),
+      "price-desc": (a, b) => priceFrom(b) - priceFrom(a),
       "gold-desc": (a, b) => (b.goldG || 0) - (a.goldG || 0),
-      "dia-desc": (a, b) => ((b.dia && b.dia.ctw) || 0) - ((a.dia && a.dia.ctw) || 0),
+      "dia-desc": (a, b) => diaWeight(b) - diaWeight(a),
       featured: (a, b) => score(b) - score(a),
     }[sort];
     list = list.slice().sort(by);
-    $("#resultCount").textContent = `${list.length} piece${list.length === 1 ? "" : "s"}`;
+    $("#resultCount").textContent = `${list.length} design${list.length === 1 ? "" : "s"}`;
     $("#results").innerHTML = list.length
       ? list.map(productCard).join("")
       : `<div class="empty"><h3>No pieces match those filters.</h3><p>We also make jewelry to order. Tell us what you are looking for.</p><p style="margin-top:22px"><a class="btn" href="custom.html">Request a custom piece</a></p></div>`;
   }
-  const score = (p) => (imagesFor(p.id).length ? 2 : 0) + (p.featured ? 1 : 0);
 
   renderFilters();
   apply();
+  window.JW_PRICE.onGold(() => { window.JW.resetPrices(); apply(); });
 
   $("#filters").addEventListener("change", (e) => {
     const el = e.target;

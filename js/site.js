@@ -37,93 +37,80 @@
   const CATS = {
     engagement: {
       title: "Engagement Rings",
-      intro: "Solitaires, halos and three-stone rings in every diamond shape. Each ring is made to order in our shop, in your size.",
-      chips: [["Round", "round"], ["Oval", "oval"], ["Emerald", "emerald"], ["Cushion", "cushion"], ["Princess", "princess"], ["Pear", "pear"], ["Radiant", "radiant"], ["Marquise", "marquise"]],
+      intro: "Twenty settings in every diamond shape, each made to order in 10K, 14K or 18K gold with a natural or lab-grown center stone from one to five carats.",
+      chips: [["Round", "round"], ["Oval", "oval"], ["Emerald", "emerald"], ["Cushion", "cushion"], ["Pear", "pear"], ["Radiant", "radiant"], ["Marquise", "marquise"], ["Princess", "princess"], ["Asscher", "asscher"], ["Heart", "heart"]],
     },
     wedding: {
       title: "Wedding Bands",
-      intro: "Gold bands, diamond eternity rings and men's bands. We can shape a band to fit your engagement ring.",
-      chips: [["For Her", "her"], ["For Him", "him"], ["Eternity", "eternity"], ["Diamond", "diamond"], ["Classic Gold", "plain"], ["Anniversary", "anniversary"]],
+      intro: "Plain gold bands and diamond bands, made in our workshop in 10K, 14K or 18K gold.",
+      chips: [["Plain Gold", "gold"], ["Diamond", "diamond"], ["Eternity", "eternity"], ["Baguette", "baguette"], ["Pavé", "pave"], ["Milgrain", "milgrain"], ["Hammered", "hammered"]],
     },
-    womens: {
-      title: "Women's Jewelry",
-      intro: "Rings, necklaces, earrings and bracelets in gold, diamonds and colored stones.",
-      chips: [["Rings", "ring"], ["Necklaces", "necklace"], ["Earrings", "earrings"], ["Bracelets", "bracelet"], ["Gemstones", "gemstone"], ["Gifts for Her", "gift"], ["Anniversary", "anniversary"]],
+    rings: {
+      title: "Rings",
+      intro: "Center-stone rings, diamond accent rings and sculpted gold, each made to order in 10K, 14K or 18K.",
+      chips: [["Center Stone", "center"], ["Diamond Accents", "accent"], ["Plain Gold", "gold"], ["Halo", "halo"], ["Signet", "signet"], ["Bezel", "bezel"]],
     },
-    mens: {
-      title: "Men's Jewelry",
-      intro: "Solid gold chains, rings, pendants and bracelets. Every link is solid, not hollow.",
-      chips: [["Rings", "ring"], ["Chains", "chain"], ["Pendants", "pendant"], ["Bracelets", "bracelet"], ["Earrings", "earrings"], ["Gifts for Him", "gift"]],
+    bracelets: {
+      title: "Bracelets",
+      intro: "Solid gold link bracelets, cuffs and diamond bracelets in 10K, 14K or 18K gold, in 7, 7.5 or 8 inches.",
+      chips: [["Link", "gold"], ["Cuffs", "cuff"], ["Diamond", "diamond"], ["Tennis", "tennis"], ["Cuban", "cuban"]],
     },
-    watches: {
-      title: "Watches",
-      intro: "Gold and diamond watches. All diamond setting is done in our shop.",
-      chips: [["Men's", "him"], ["Women's", "her"], ["Diamond", "diamond"], ["Solid Gold", "solid-gold"], ["Gifts", "gift"]],
+    chains: {
+      title: "Chains",
+      intro: "Solid gold chains, never hollow, in 18, 20 or 22 inches, plus diamond station chains.",
+      chips: [["Plain Gold", "gold"], ["Diamond", "diamond"], ["Cuban", "cuban"], ["Rope", "rope"], ["Figaro", "figaro"], ["Paperclip", "paperclip"], ["Box", "box"], ["Herringbone", "herringbone"]],
     },
-    gifts: { // no longer a tab: gifts are a selection inside Women's, Men's and Watches; kept so old links still work
-      title: "Gifts",
-      intro: "Popular gifts for anniversaries, birthdays and graduations.",
-      chips: [["For Her", "her"], ["For Him", "him"], ["Anniversary", "anniversary"]],
-      filter: (p) => p.tags.includes("gift") || p.tags.includes("anniversary"),
-    },
-    sale: {
-      title: "Sale",
-      intro: "Reduced prices on selected pieces, while they last.",
-      chips: [["For Her", "her"], ["For Him", "him"]],
-      filter: (p) => !!p.was,
-    },
-    all: { title: "All Jewelry", intro: "Everything we currently offer.", chips: [], filter: () => true },
+    all: { title: "All Jewelry", intro: "Every design we make, priced at today's gold.", chips: [], filter: () => true },
   };
   const inCat = (p, cat) => (CATS[cat] && CATS[cat].filter ? CATS[cat].filter(p) : p.cat === cat);
   const shopUrl = (cat, tag, extra) => `shop.html?cat=${cat}${tag ? "&tag=" + tag : ""}${extra || ""}`;
 
   const NAV = [
     {
-      label: "Engagement", cat: "engagement", feature: "eng-oval-hidden-halo",
+      label: "Engagement", cat: "engagement", feature: "seraphina-cushion-halo-ring",
       cols: [
-        { title: "Shop by Shape", links: [["Round", "round"], ["Oval", "oval"], ["Emerald", "emerald"], ["Cushion", "cushion"], ["Princess", "princess"], ["Pear", "pear"], ["Radiant", "radiant"], ["Marquise", "marquise"]] },
-        { title: "Shop by Style", links: [["Solitaire", "solitaire"], ["Halo", "halo"], ["Three-Stone & Two-Stone", "three-stone"], ["Pavé Band", "pave"]] },
-        { title: "Services", raw: [["All Engagement Rings", shopUrl("engagement")], ["Design Your Own Ring", "custom.html"], ["Diamond Education", "education.html"], ["Financing", "financing.html"], ["Book an Appointment", "visit.html#appointment"]] },
+        { title: "Shop by Shape", links: [["Round", "round"], ["Oval", "oval"], ["Emerald", "emerald"], ["Cushion", "cushion"], ["Pear", "pear"], ["Radiant", "radiant"], ["Marquise", "marquise"], ["Princess", "princess"], ["Asscher", "asscher"], ["Heart", "heart"]] },
+        { title: "Shop by Style", links: [["Solitaire", "solitaire"], ["Halo", "halo"], ["Three-Stone", "three-stone"], ["Bezel", "bezel"], ["Cathedral", "cathedral"], ["Vintage", "vintage"]] },
+        { title: "Services", raw: [["All Engagement Rings", shopUrl("engagement")], ["Natural or Lab-Grown", "education.html"], ["Design Your Own Ring", "custom.html"], ["Financing", "financing.html"], ["Book an Appointment", "visit.html#appointment"]] },
       ],
-      promo: { title: "Design your own ring", text: "Bring a stone, a photo or a sketch and we will make the ring.", href: "custom.html", cta: "Start a design" },
+      promo: { title: "Your stone, your setting", text: "Every ring in 10K, 14K or 18K gold, with a natural or lab-grown center from one to five carats.", href: shopUrl("engagement"), cta: "Start with a shape" },
     },
     {
-      label: "Wedding", cat: "wedding", feature: "wed-eternity-round",
+      label: "Wedding", cat: "wedding", feature: "infinity-full-eternity-band",
       cols: [
-        { title: "For Her", links: [["Women's Bands", "her"], ["Eternity Bands", "eternity"], ["Diamond Bands", "diamond"]] },
-        { title: "For Him", links: [["Men's Bands", "him"], ["Classic Gold Bands", "plain"]] },
-        { title: "Services", raw: [["All Wedding Bands", shopUrl("wedding")], ["Custom Matching Bands", "custom.html"], ["Anniversary Bands", shopUrl("wedding", "anniversary")]] },
+        { title: "Plain Gold", links: [["All Plain Bands", "gold"], ["Comfort Fit", "comfort"], ["Milgrain", "milgrain"], ["Hammered", "hammered"], ["Brushed", "brushed"]] },
+        { title: "Diamond Bands", links: [["All Diamond Bands", "diamond"], ["Eternity", "eternity"], ["Baguette", "baguette"], ["Pavé", "pave"], ["Channel", "channel"]] },
+        { title: "Services", raw: [["All Wedding Bands", shopUrl("wedding")], ["Matching Bands", "custom.html"], ["Ring Sizing", "education.html#sizing"], ["Financing", "financing.html"]] },
       ],
-      promo: { title: "Matching bands", text: "We can shape a band to fit your engagement ring.", href: "custom.html", cta: "Custom design" },
+      promo: { title: "Made to match", text: "We shape any band to sit flush against your engagement ring.", href: "custom.html", cta: "Custom design" },
     },
     {
-      label: "Women's", cat: "womens", feature: "wom-tennis-bracelet",
+      label: "Rings", cat: "rings", feature: "beacon-bezel-round-ring",
       cols: [
-        { title: "Shop by Category", links: [["Rings", "ring"], ["Necklaces & Pendants", "necklace"], ["Earrings", "earrings"], ["Bracelets", "bracelet"]] },
-        { title: "Gifts for Her", raw: [["All Gifts for Her", shopUrl("womens", "gift")], ["Anniversary", shopUrl("womens", "anniversary")], ["Under $1,000", shopUrl("womens", "gift", "&max=1000")], ["Under $2,500", shopUrl("womens", "gift", "&max=2500")]] },
-        { title: "More", raw: [["All Women's Jewelry", shopUrl("womens")], ["Tennis Collection", shopUrl("womens", "tennis")], ["Gemstones", shopUrl("womens", "gemstone")], ["Women's Watches", shopUrl("watches", "her")], ["Women's Sale", shopUrl("sale", "her")]] },
+        { title: "Shop by Design", links: [["Center Stone", "center"], ["Diamond Accents", "accent"], ["Plain Gold", "gold"]] },
+        { title: "Shop by Style", links: [["Halo", "halo"], ["Bezel", "bezel"], ["Signet", "signet"], ["East-West", "east-west"], ["Dome", "dome"], ["Split Shank", "split"]] },
+        { title: "Gifts by Price", raw: [["Under $1,500", shopUrl("rings", "", "&max=1500")], ["Under $3,000", shopUrl("rings", "", "&max=3000")], ["All Rings", shopUrl("rings")]] },
       ],
-      promo: { title: "Diamond tennis bracelet", text: "5.00 ctw in 14K yellow gold.", href: "product.html?id=wom-tennis-bracelet", cta: "Shop now" },
+      promo: { title: "Center stones to five carats", text: "Ten center-stone rings, each in every shape's own setting.", href: shopUrl("rings", "center"), cta: "Shop center-stone rings" },
     },
     {
-      label: "Men's", cat: "mens", feature: "men-sovereign-signet",
+      label: "Bracelets", cat: "bracelets", feature: "aurora-round-tennis-bracelet",
       cols: [
-        { title: "Shop by Category", links: [["Rings", "ring"], ["Chains", "chain"], ["Pendants", "pendant"], ["Bracelets", "bracelet"], ["Earrings", "earrings"]] },
-        { title: "Gifts for Him", raw: [["All Gifts for Him", shopUrl("mens", "gift")], ["Under $3,000", shopUrl("mens", "gift", "&max=3000")], ["Under $5,000", shopUrl("mens", "gift", "&max=5000")]] },
-        { title: "More", raw: [["All Men's Jewelry", shopUrl("mens")], ["Signature Pieces", shopUrl("mens", "signature")], ["Diamond Tennis", shopUrl("mens", "tennis")], ["Men's Wedding Bands", shopUrl("wedding", "him")], ["Men's Watches", shopUrl("watches", "him")]] },
+        { title: "Shop by Style", links: [["Link Bracelets", "gold"], ["Cuffs", "cuff"], ["Diamond Bracelets", "diamond"], ["Tennis", "tennis"], ["Bangle", "bangle"]] },
+        { title: "Shop by Link", links: [["Cuban", "cuban"], ["Curb", "curb"], ["Figaro", "figaro"], ["Paperclip", "paperclip"], ["Rope", "rope"], ["Herringbone", "herringbone"]] },
+        { title: "Gifts by Price", raw: [["Under $1,500", shopUrl("bracelets", "", "&max=1500")], ["Under $3,000", shopUrl("bracelets", "", "&max=3000")], ["All Bracelets", shopUrl("bracelets")]] },
       ],
-      promo: { title: "The Sovereign signet ring", text: "5.20 ctw in 18.5 g of 14K gold.", href: "product.html?id=men-sovereign-signet", cta: "Shop now" },
+      promo: { title: "Solid gold, three lengths", text: "Every bracelet in 7, 7.5 or 8 inches, with a secure lobster or box clasp.", href: shopUrl("bracelets"), cta: "Shop bracelets" },
     },
     {
-      label: "Watches", cat: "watches", feature: "wat-meridian-41-diamond",
+      label: "Chains", cat: "chains", feature: "micro-cuban-chain",
       cols: [
-        { title: "Shop Watches", links: [["Men's Watches", "him"], ["Women's Watches", "her"]] },
-        { title: "Gifts", raw: [["Gift Watches", shopUrl("watches", "gift")], ["Anniversary", shopUrl("watches", "anniversary")], ["Diamond Watches", shopUrl("watches", "diamond")], ["Solid Gold", shopUrl("watches", "solid-gold")]] },
-        { title: "Services", raw: [["All Watches", shopUrl("watches")], ["Custom Diamond Setting", "custom.html"], ["Financing", "financing.html"]] },
+        { title: "Shop by Link", links: [["Cuban", "cuban"], ["Rope", "rope"], ["Figaro", "figaro"], ["Curb", "curb"], ["Franco", "franco"], ["Paperclip", "paperclip"], ["Box", "box"], ["Herringbone", "herringbone"], ["Byzantine", "byzantine"]] },
+        { title: "Diamond Chains", links: [["Station Chains", "station"], ["Bezel Chain", "bezel"], ["Pavé Segments", "pave"]] },
+        { title: "Gifts by Price", raw: [["Under $1,000", shopUrl("chains", "", "&max=1000")], ["Under $2,500", shopUrl("chains", "", "&max=2500")], ["All Chains", shopUrl("chains")]] },
       ],
-      promo: { title: "Custom diamond setting", text: "Bezels, dials and bracelets set in our shop.", href: "custom.html", cta: "Customize a watch" },
+      promo: { title: "Never hollow", text: "Solid links in 18, 20 or 22 inches, weighed before they leave the bench.", href: shopUrl("chains"), cta: "Shop chains" },
     },
-    { label: "Sale", cat: "sale", sale: true },
   ];
 
   /* ---------- Line-art placeholders, shown until a piece has an image ---------- */
@@ -147,33 +134,40 @@
     return first + second;
   }
 
+  /* Prices: the lowest configuration of each piece, computed by js/pricing.js and cached until the gold price changes */
+  const priceCache = new Map();
+  function priceRange(p) {
+    if (!priceCache.has(p.id)) priceCache.set(p.id, window.JW_PRICE.range(p));
+    return priceCache.get(p.id);
+  }
+  const priceFrom = (p) => priceRange(p).from;
+  const resetPrices = () => priceCache.clear();
+
   function specLine(p) {
-    const parts = [p.metal];
-    if (p.dia) parts.push(`${ctw(p.dia.ctw)} ctw`);
-    else if (p.goldG) parts.push(grams(p.goldG));
+    const parts = ["10K · 14K · 18K gold"];
+    if (p.carats) parts.push(`${p.shape} center, 1–5 ct`);
+    else if (p.accentCtw) parts.push(`${p.accentCtw.toFixed(2)} ctw diamonds`);
+    else parts.push(`${grams(p.goldG)} in 14K`);
     return parts.join(" · ");
   }
 
   function productCard(p) {
-    const badge = p.was
-      ? `<span class="badge badge--sale">Save ${money(p.was - p.price)}</span>`
-      : p.badge ? `<span class="badge">${esc(p.badge)}</span>` : "";
-    const price = p.was
-      ? `<span class="now-sale">${money(p.price)}</span><s>${money(p.was)}</s>`
-      : `<span>${money(p.price)}</span>`;
+    const r = priceRange(p);
+    const badge = p.badge ? `<span class="badge">${esc(p.badge)}</span>` : "";
+    const price = r.single ? `<span>${money(r.from)}</span>` : `<span><em class="from">From</em>${money(r.from)}</span>`;
     return `<a class="card" href="product.html?id=${p.id}">
       <div class="card-media">${badge}${mediaHTML(p)}</div>
       <div class="card-body">
         <div class="card-name">${esc(p.name)}</div>
         <div class="card-spec">${esc(specLine(p))}</div>
         <div class="card-price">${price}</div>
-        <div class="card-fin">${finLine(p.price)}</div>
+        <div class="card-fin">${finLine(r.from)}</div>
       </div>
     </a>`;
   }
 
   /* ---------- Shopping bag (saved in the browser) ---------- */
-  const BAG_KEY = "jw_bag_v1";
+  const BAG_KEY = "jw_bag_v2";
   const Bag = {
     items: (() => {
       try { return JSON.parse(localStorage.getItem(BAG_KEY)) || []; } catch (e) { return []; }
@@ -182,15 +176,16 @@
       try { localStorage.setItem(BAG_KEY, JSON.stringify(this.items)); } catch (e) { /* private mode */ }
       renderBag();
     },
-    add(id, opts = "") {
+    // price and variant SKU are those quoted when the piece was added (today's gold)
+    add(id, opts = "", price, vsku) {
       const line = this.items.find((l) => l.id === id && l.opts === opts);
-      if (line) line.qty += 1;
-      else this.items.push({ id, opts, qty: 1 });
+      if (line) { line.qty += 1; line.price = price; line.vsku = vsku; }
+      else this.items.push({ id, opts, qty: 1, price, vsku });
       this.save();
     },
-    lines() { return this.items.map((l) => ({ ...l, p: getProduct(l.id) })).filter((l) => l.p); },
+    lines() { return this.items.map((l) => ({ ...l, p: getProduct(l.id) })).filter((l) => l.p).map((l) => ({ ...l, price: l.price || priceFrom(l.p) })); },
     count() { return this.lines().reduce((n, l) => n + l.qty, 0); },
-    total() { return this.lines().reduce((n, l) => n + l.qty * l.p.price, 0); },
+    total() { return this.lines().reduce((n, l) => n + l.qty * l.price, 0); },
   };
 
   function renderBag() {
@@ -211,18 +206,18 @@
           <a class="thumb" href="product.html?id=${l.p.id}">${mediaHTML(l.p)}</a>
           <div>
             <h4><a href="product.html?id=${l.p.id}">${esc(l.p.name)}</a></h4>
-            <div class="meta">${esc(/Gold/.test(l.opts) ? l.opts : [l.p.metal, l.opts].filter(Boolean).join(" · "))}</div>
+            <div class="meta">${esc(l.opts)}</div><div class="meta">Item ${esc(l.vsku || l.p.sku)}</div>
             <div class="qty"><button data-bag="dec" data-i="${i}" aria-label="Decrease quantity">–</button><span>${l.qty}</span><button data-bag="inc" data-i="${i}" aria-label="Increase quantity">+</button></div>
             <button class="remove" data-bag="rm" data-i="${i}">Remove</button>
           </div>
-          <div class="price">${money(l.p.price * l.qty)}</div>
+          <div class="price">${money(l.price * l.qty)}</div>
         </div>`)
       .join("");
     const total = Bag.total();
     const mail = [
       `Hello ${S.brand},`, "", "I would like to purchase the following:", "",
-      ...lines.map((l) => `- ${l.p.name} (${l.p.sku})${l.opts ? ", " + l.opts : ""}, qty ${l.qty}: ${money(l.p.price * l.qty)}`),
-      "", `Subtotal: ${money(total)}`, "", "Name:", "Phone:", "I am interested in financing: yes / no",
+      ...lines.map((l) => `- ${l.p.name} (${l.vsku || l.p.sku})${l.opts ? ", " + l.opts : ""}, qty ${l.qty}: ${money(l.price * l.qty)}`),
+      "", `Subtotal: ${money(total)}`, `Quoted at ${window.JW_PRICE.goldLine()}`, "", "Name:", "Phone:", "I am interested in financing: yes / no",
     ].join("\n");
     $("#bagFoot").hidden = false;
     $("#bagFoot").innerHTML = `
@@ -461,8 +456,19 @@
     const terms = q.toLowerCase().trim().split(/\s+/).filter(Boolean);
     if (!terms.length) return [];
     return CATALOG.filter((p) => {
-      const hay = [p.name, p.metal, p.cat, p.type, p.sku, p.tags.join(" "), p.dia ? p.dia.shape + " diamond" : "", p.gem ? p.gem.name : ""].join(" ").toLowerCase();
+      const hay = [p.name, p.cat, p.type, p.cls, p.sku, p.tags.join(" "), p.shape ? p.shape + " diamond" : "", p.accentCtw ? "diamond" : "gold", p.setting].join(" ").toLowerCase();
       return terms.every((t) => hay.includes(t));
+    });
+  }
+
+  const goldText = () => `Every price follows the gold market. ${window.JW_PRICE.goldLine()}.`;
+  function renderGrids(root = document) {
+    $$("[data-grid]", root).forEach((el) => {
+      const [kind, n] = el.dataset.grid.split(":");
+      let list = kind === "featured" ? CATALOG.filter((p) => p.featured) : CATALOG.filter((p) => inCat(p, kind));
+      // pieces that already have a photo lead the row
+      list = list.slice().sort((a, b) => (imagesFor(b.id).length ? 1 : 0) - (imagesFor(a.id).length ? 1 : 0));
+      el.innerHTML = list.slice(0, +n || 4).map(productCard).join("");
     });
   }
 
@@ -486,19 +492,14 @@
       const src = STOCK[el.dataset.stock];
       if (src && !el.classList.contains("has-img")) { el.insertAdjacentHTML("afterbegin", `<img src="${src}" alt="" loading="lazy">`); el.classList.add("has-img"); }
     });
-    $$("[data-grid]", root).forEach((el) => {
-      const [kind, n] = el.dataset.grid.split(":");
-      let list = kind === "featured" ? CATALOG.filter((p) => p.featured) : CATALOG.filter((p) => inCat(p, kind));
-      // pieces that already have a photo lead the row
-      list = list.slice().sort((a, b) => (imagesFor(b.id).length ? 1 : 0) - (imagesFor(a.id).length ? 1 : 0));
-      el.innerHTML = list.slice(0, +n || 4).map(productCard).join("");
-    });
+    renderGrids(root);
+    $$("[data-gold-line]", root).forEach((el) => (el.textContent = goldText()));
     document.title = document.title.replace("{brand}", S.brand);
   }
 
   const JW = (window.JW = {
     $, $$, esc, money, ctw, grams, monthly, finLine, getProduct, imagesFor, mediaHTML, placeholder,
-    specLine, productCard, CATS, inCat, shopUrl, Bag, toast, search,
+    specLine, productCard, priceFrom, priceRange, resetPrices, CATS, inCat, shopUrl, Bag, toast, search,
     route: initialRoute, pages: {}, fillTokens, markCurrent,
   });
 
@@ -507,4 +508,6 @@
   renderBag();
   fillTokens();
   markCurrent();
+  // a live gold quote re-prices the cards and the bag
+  window.JW_PRICE.onGold(() => { resetPrices(); renderGrids(); renderBag(); $$("[data-gold-line]").forEach((el) => (el.textContent = goldText())); });
 })();
