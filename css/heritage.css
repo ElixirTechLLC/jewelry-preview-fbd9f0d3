@@ -145,7 +145,7 @@ html[data-theme="heritage"][data-page="education"], html[data-theme="heritage"][
   --bg: #f0e4d0; --bg-2: #e8dbc5; --panel: #e6d9c2; --text: #20291d; --muted: #5a5f4f; --dim: #8a8572; --gold: #9a7538; --gold-light: #7e5e2a;
   --line: rgba(32, 41, 29, 0.18); --line-strong: rgba(32, 41, 29, 0.45); --line-gold: rgba(154, 117, 56, 0.6); --stock-a: #e6d9c2; --stock-b: #c9b996; color-scheme: light;
 }
-html[data-theme="heritage"] .site-header, html[data-theme="heritage"] .mega, html[data-theme="heritage"] .drawer, html[data-theme="heritage"] .search-panel, html[data-theme="heritage"] .filters, html[data-theme="heritage"] .site-footer, html[data-theme="heritage"] .announce {
+html[data-theme="heritage"] .site-header, html[data-theme="heritage"] .mega, html[data-theme="heritage"] .drawer, html[data-theme="heritage"] .search-panel, html[data-theme="heritage"] .site-footer, html[data-theme="heritage"] .announce {
   --bg: #20291d; --bg-2: #1b231a; --panel: #343c2c; --black: #161c14; --text: #f0e4d0; --muted: #b6a18a; --dim: #8a8572; --gold: #b08a50; --gold-light: #d2b273;
   --line: rgba(176, 138, 80, 0.3); --line-strong: rgba(176, 138, 80, 0.6); --line-gold: rgba(176, 138, 80, 0.7); background: var(--bg); color: var(--text); color-scheme: dark;
 }
@@ -364,3 +364,12 @@ html[data-theme="heritage"] .site-header .logo-name, html[data-theme="heritage"]
 
 /* line-art placeholders read on the ivory cards until photographs exist */
 html[data-theme="heritage"] .card-media .ph svg, html[data-theme="heritage"] .stage .ph svg, html[data-theme="heritage"] .thumb .ph svg { stroke: #9a7538; opacity: 0.85; }
+
+/* Shop filters: tracked caps in the toolbar, brass accents in the panel */
+html[data-theme="heritage"] .toolbar { font-family: var(--caps); font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; }
+html[data-theme="heritage"] .tool { font-family: var(--caps); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; }
+html[data-theme="heritage"] .fgroup h4 { font-family: var(--caps); font-size: 13px; letter-spacing: 0.22em; font-weight: 500; }
+html[data-theme="heritage"] .fpanel { background: var(--bg); }
+html[data-theme="heritage"] .shape.on { background: rgba(154, 117, 56, 0.12); }
+html[data-theme="heritage"] .achip { font-family: var(--caps); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+html[data-theme="heritage"] .fpanel-foot .btn { background: #20291d; color: #f0e4d0; border-color: #20291d; }

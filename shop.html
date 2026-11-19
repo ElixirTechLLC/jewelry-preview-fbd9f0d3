@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Archivo:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <script src="js/theme.js?v=202611190333"></script>
-  <link rel="stylesheet" href="css/styles.css?v=202611190333">
-  <link rel="stylesheet" href="css/heritage.css?v=202611190333">
+  <script src="js/theme.js?v=202611190507"></script>
+  <link rel="stylesheet" href="css/styles.css?v=202611190507">
+  <link rel="stylesheet" href="css/heritage.css?v=202611190507">
 </head>
 <body>
 <main>
@@ -26,36 +26,37 @@
   </section>
 
   <div class="wrap shop">
-    <aside class="filters" id="filters" aria-label="Filters"></aside>
     <section>
       <div class="toolbar">
-        <div style="display:flex;align-items:center;gap:14px">
-          <button class="btn btn--quiet filter-toggle" id="filterToggle">Filter</button>
-          <span id="resultCount"></span>
+        <div class="applied" id="applied"></div>
+        <span class="count" id="resultCount"></span>
+        <div class="tools">
+          <button type="button" class="tool" id="filterToggle" aria-expanded="false" aria-controls="filters"><span>Filter</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16"/><circle cx="9" cy="7" r="2.5"/><circle cx="15" cy="17" r="2.5"/></svg><b id="filterCount"></b></button>
+          <label class="tool tool--sort"><span>Sort</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M7 12h10M10 17h4"/></svg>
+            <select class="select" id="sort" aria-label="Sort by">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="gold-desc">Gold Weight: Heaviest</option>
+              <option value="dia-desc">Diamond Weight: Largest</option>
+            </select>
+          </label>
         </div>
-        <label><span class="sr-only">Sort by</span>
-          <select class="select" id="sort">
-            <option value="featured">Sort: Featured</option>
-            <option value="price-asc">Price: Low to High</option>
-            <option value="price-desc">Price: High to Low</option>
-            <option value="gold-desc">Gold Weight: Heaviest</option>
-            <option value="dia-desc">Diamond Weight: Largest</option>
-          </select>
-        </label>
       </div>
+      <div class="fpanel" id="filters" hidden></div>
       <div class="grid grid--3" id="results"></div>
       <p class="fine" style="margin-top:44px">*<span data-fin-disclosure></span> <span data-image-note></span></p>
     </section>
   </div>
 </main>
 
-<script src="js/config.js?v=202611190333"></script>
-<script src="js/catalog.js?v=202611190333"></script>
+<script src="js/config.js?v=202611190507"></script>
+<script src="js/catalog.js?v=202611190507"></script>
 <script src="data/gold.js"></script>
-<script src="js/pricing.js?v=202611190333"></script>
-<script src="js/image-manifest.js?v=202611190333"></script>
-<script src="js/stock-manifest.js?v=202611190333"></script>
-<script src="js/site.js?v=202611190333"></script>
-<script src="js/shop.js?v=202611190333"></script>
+<script src="js/pricing.js?v=202611190507"></script>
+<script src="js/image-manifest.js?v=202611190507"></script>
+<script src="js/stock-manifest.js?v=202611190507"></script>
+<script src="js/site.js?v=202611190507"></script>
+<script src="js/shop.js?v=202611190507"></script>
 </body>
 </html>

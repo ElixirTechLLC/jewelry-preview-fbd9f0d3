@@ -131,14 +131,24 @@
     return out;
   }
 
-  /* Lowest and highest price of a piece across its configurations */
-  function range(p) {
-    let lo = Infinity, hi = 0, loChoice = null;
+  /* Lowest and highest price of a piece across its configurations, optionally only those
+     within limits: { karats: ["14K"], origins: ["Lab"], carats: [lo, hi] }. Null when none fit. */
+  function range(p, limits) {
+    const L = limits || {};
+    let lo = Infinity, hi = 0, loChoice = null, any = false;
     configurations(p).forEach((c) => {
+      if (L.karats && L.karats.length && !L.karats.includes(c.karat)) return;
+      if (L.origins && L.origins.length) {
+        const d = c.diamond && DIAMONDS[c.diamond];
+        if (!d || !L.origins.includes(d.origin)) return;
+      }
+      if (L.carats && c.carat != null && (c.carat < L.carats[0] || c.carat > L.carats[1])) return;
+      any = true;
       const q = quote(p, c);
       if (q.price < lo) { lo = q.price; loChoice = c; }
       if (q.price > hi) hi = q.price;
     });
+    if (!any) return null;
     return { from: lo, to: hi, choice: loChoice, single: lo === hi };
   }
 

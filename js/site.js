@@ -136,9 +136,10 @@
 
   /* Prices: the lowest configuration of each piece, computed by js/pricing.js and cached until the gold price changes */
   const priceCache = new Map();
-  function priceRange(p) {
-    if (!priceCache.has(p.id)) priceCache.set(p.id, window.JW_PRICE.range(p));
-    return priceCache.get(p.id);
+  function priceRange(p, limits) {
+    const key = limits ? p.id + "|" + JSON.stringify(limits) : p.id;
+    if (!priceCache.has(key)) priceCache.set(key, window.JW_PRICE.range(p, limits));
+    return priceCache.get(key);
   }
   const priceFrom = (p) => priceRange(p).from;
   const resetPrices = () => priceCache.clear();
@@ -151,8 +152,8 @@
     return parts.join(" · ");
   }
 
-  function productCard(p) {
-    const r = priceRange(p);
+  function productCard(p, limits) {
+    const r = priceRange(p, limits) || priceRange(p);
     const badge = p.badge ? `<span class="badge">${esc(p.badge)}</span>` : "";
     const price = r.single ? `<span>${money(r.from)}</span>` : `<span><em class="from">From</em>${money(r.from)}</span>`;
     return `<a class="card" href="product.html?id=${p.id}">
@@ -383,8 +384,7 @@
 
   function wireChrome() {
     const scrim = $("#scrim");
-    // looked up when used: the filters panel is re-created on each shop view in the preview build
-    const panels = { menu: "#menuDrawer", bag: "#bagDrawer", search: "#searchPanel", filters: "#filters" };
+    const panels = { menu: "#menuDrawer", bag: "#bagDrawer", search: "#searchPanel" };
     const closeAll = () => {
       Object.values(panels).forEach((sel) => { const el = $(sel); if (el) el.classList.remove("is-open"); });
       scrim.classList.remove("is-open");
@@ -448,7 +448,6 @@
     });
 
     JW.openBag = () => open("bag");
-    JW.openFilters = () => open("filters");
     JW.closePanels = closeAll;
   }
 
