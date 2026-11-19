@@ -51,7 +51,7 @@ window.JW.pages.shop = function () {
   const STYLE_LABEL = { "three-stone": "Three-stone", "east-west": "East-west", "knife-edge": "Knife edge", pave: "Pavé" };
   const NOT_STYLE = new Set(["plain", "accent", "center", "diamond", "cuff", "round", "oval", "emerald", "cushion", "pear", "radiant", "marquise", "princess", "asscher", "heart"]);
   const KARATS = PR.KARATS;
-  const hasShape = base.some((p) => p.shape);
+  const hasShape = base.some((p) => p.carats && p.shape); // shape is a center-stone choice; accent stones are always round
   const hasDia = base.some((p) => p.diamonds.length);
   const hasCarat = base.some((p) => p.carats);
   const clsKeys = [...new Set(base.map((p) => p.cls))];
@@ -82,7 +82,7 @@ window.JW.pages.shop = function () {
   const activeCount = () => state.shape.size + state.cls.size + state.origin.size + state.karat.size + state.style.size + (caratActive() ? 1 : 0) + (priceActive() ? 1 : 0);
 
   function matches(p) {
-    if (state.shape.size && !state.shape.has(p.shape)) return false;
+    if (state.shape.size && !(p.carats && state.shape.has(p.shape))) return false;
     if (state.cls.size && !state.cls.has(p.cls)) return false;
     if (state.origin.size && !p.diamonds.some((d) => state.origin.has(PR.DIAMONDS[d].origin))) return false;
     if (state.style.size && !p.tags.some((t) => state.style.has(t))) return false;
@@ -113,7 +113,7 @@ window.JW.pages.shop = function () {
   const swatch = (k) => `<i class="swatch swatch--${k}"></i>`;
   function panelHTML() {
     const cols = [];
-    if (hasShape) cols.push(`<div class="fgroup fgroup--shapes"><h4>Shape</h4><div class="shapes">${SHAPES.filter((s) => base.some((p) => p.shape === s)).map((s) => `<button type="button" class="shape${state.shape.has(s) ? " on" : ""}" data-shape="${s}" aria-pressed="${state.shape.has(s)}"><svg viewBox="0 0 32 32" aria-hidden="true">${SHAPE_ICON[s]}</svg><span>${s}</span></button>`).join("")}</div></div>`);
+    if (hasShape) cols.push(`<div class="fgroup fgroup--shapes"><h4>Shape</h4><div class="shapes">${SHAPES.filter((s) => base.some((p) => p.carats && p.shape === s)).map((s) => `<button type="button" class="shape${state.shape.has(s) ? " on" : ""}" data-shape="${s}" aria-pressed="${state.shape.has(s)}"><svg viewBox="0 0 32 32" aria-hidden="true">${SHAPE_ICON[s]}</svg><span>${s}</span></button>`).join("")}</div></div>`);
     const mid = [];
     if (clsKeys.length > 1) mid.push(`<div class="fgroup"><h4>Design</h4>${clsKeys.map((k) => check("cls", k, CLS_LABEL[k])).join("")}</div>`);
     mid.push(`<div class="fgroup"><h4>Gold</h4>${KARATS.map((k) => check("karat", k, `${k} gold`, swatch(k))).join("")}<p class="fnote">Prices shown for the gold you choose; every piece is made in all three.</p></div>`);
