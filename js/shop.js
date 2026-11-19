@@ -27,11 +27,7 @@ window.JW.pages.shop = function () {
   $("#shopIntro").textContent = q ? `${base.length} design${base.length === 1 ? "" : "s"} found.` : meta.intro;
   $("#crumbs").innerHTML = `<a href="index.html">Home</a><span>/</span><a href="${shopUrl(cat)}">${esc(meta.title)}</a>${chip ? `<span>/</span>${esc(chip[0])}` : ""}`;
   document.title = `${title} | ${window.SITE.brand}`;
-  if (!q && meta.chips && meta.chips.length) {
-    $("#chips").innerHTML =
-      `<a class="pill${!tag ? " is-active" : ""}" href="${shopUrl(cat)}">All</a>` +
-      meta.chips.map(([l, t]) => `<a class="pill${t === tag ? " is-active" : ""}" href="${shopUrl(cat, t)}">${l}</a>`).join("");
-  }
+  // The quick-link chips under the heading are gone; the Filter panel covers them. Menu links with a tag still narrow the list.
 
   /* ----- What can be filtered in this list ----- */
   const SHAPES = ["Round", "Oval", "Emerald", "Cushion", "Pear", "Radiant", "Marquise", "Princess", "Asscher", "Heart"];
