@@ -2,7 +2,7 @@
    Prices are computed live by js/pricing.js from the chosen gold purity, size,
    diamond selection and center carat, at the day's gold price. */
 window.JW.pages.product = function () {
-  const { $, $$, esc, money, grams, monthly, getProduct, imagesFor, placeholder, productCard, CATS, shopUrl, Bag, toast } = window.JW;
+  const { $, $$, esc, money, grams, monthly, getProduct, imagesFor, small, full, placeholder, productCard, CATS, shopUrl, Bag, toast } = window.JW;
   const S = window.SITE;
   const F = S.financing;
   const PR = window.JW_PRICE;
@@ -22,7 +22,6 @@ window.JW.pages.product = function () {
   }
 
   const cat = CATS[p.cat];
-  const imgs = imagesFor(p.id);
   const params = window.JW.route.params;
   document.title = `${p.name} | ${S.brand}`;
   $("#crumbs").innerHTML = `<a href="index.html">Home</a><span>/</span><a href="${shopUrl(p.cat)}">${esc(cat.title)}</a><span>/</span>${esc(p.name)}`;
@@ -34,6 +33,7 @@ window.JW.pages.product = function () {
   if (p.carats && p.carats.includes(+params.get("ct"))) choice.carat = +params.get("ct");
   if (p.sizes && p.sizes.options[params.get("size")] != null) choice.size = params.get("size");
   let color = ["Yellow", "White", "Rose"].includes(params.get("color")) ? params.get("color") : "Yellow";
+  let imgs = imagesFor(p.id, color);
 
   const ringSizes = [];
   for (let r = 4; r <= 13; r += 0.5) ringSizes.push(r);
@@ -87,8 +87,8 @@ window.JW.pages.product = function () {
 
   root.innerHTML = `
     <div class="gallery">
-      <div class="thumbs" id="thumbs">${imgs.length > 1 ? imgs.map((src, i) => `<button class="${i ? "" : "is-active"}" data-i="${i}" aria-label="View image ${i + 1}"><img src="${src}" alt=""></button>`).join("") : ""}</div>
-      <div class="stage" id="stage">${imgs.length ? `<img src="${imgs[0]}" alt="${esc(p.name)}">` : placeholder(p.type) + `<div class="stage-note">Photography in production</div>`}</div>
+      <div class="thumbs" id="thumbs">${imgs.length > 1 ? imgs.map((src, i) => `<button class="${i ? "" : "is-active"}" data-i="${i}" aria-label="View image ${i + 1}"><img src="${small(src)}" alt=""></button>`).join("") : ""}</div>
+      <div class="stage" id="stage">${imgs.length ? `<img src="${full(imgs[0])}" alt="${esc(p.name)}">` : placeholder(p.type) + `<div class="stage-note">Photography in production</div>`}</div>
     </div>
 
     <div class="pdp-info">
@@ -209,7 +209,7 @@ window.JW.pages.product = function () {
     const b = e.target.closest("[data-opt]");
     if (b) {
       const g = b.dataset.opt, v = b.dataset.value;
-      if (g === "color") color = v;
+      if (g === "color") { color = v; paintGallery(); }
       else if (g === "karat") choice.karat = v;
       else if (g === "diamond") choice.diamond = v;
       else if (g === "carat") choice.carat = +v;
@@ -225,12 +225,23 @@ window.JW.pages.product = function () {
   });
   root.addEventListener("input", (e) => { if (e.target.id === "engraving") engraving = e.target.value.trim(); });
 
-  /* ----- Gallery ----- */
+  /* ----- Gallery: the photos of the chosen gold colour, when that colour has been photographed ----- */
+  let shown = 0;
+  function paintGallery() {
+    const next = imagesFor(p.id, color);
+    if (!next.length || next === imgs) return;
+    imgs = next;
+    if (shown >= imgs.length) shown = 0;
+    const stage = $("#stage img");
+    if (stage) stage.src = full(imgs[shown]);
+    $$("#thumbs button").forEach((b, i) => { const im = b.querySelector("img"); if (im && imgs[i]) im.src = small(imgs[i]); b.hidden = !imgs[i]; });
+  }
   $("#thumbs").addEventListener("click", (e) => {
     const b = e.target.closest("button");
     if (!b) return;
+    shown = +b.dataset.i;
     $$("#thumbs button").forEach((x) => x.classList.toggle("is-active", x === b));
-    $("#stage img").src = imgs[+b.dataset.i];
+    $("#stage img").src = full(imgs[shown]);
   });
   if (imgs.length < 2) { $(".gallery").style.gridTemplateColumns = "1fr"; $("#thumbs").remove(); }
 

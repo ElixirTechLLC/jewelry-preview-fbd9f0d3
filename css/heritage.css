@@ -186,7 +186,7 @@ html[data-theme="heritage"] .section-head { flex-direction: column; align-items:
 html[data-theme="heritage"] .card-name { font-family: var(--serif); font-size: 20px; }
 html[data-theme="heritage"] .card-body { text-align: center; }
 html[data-theme="heritage"] .card-price { justify-content: center; font-family: var(--serif); font-size: 19px; }
-html[data-theme="heritage"] .card-media { border: 1px solid var(--line-gold); outline: 0; border-radius: 0; background: #000; }
+html[data-theme="heritage"] .card-media { border: 1px solid var(--line-gold); outline: 0; border-radius: 0; background: #ece2cf; }
 html[data-theme="heritage"] .tile-img, html[data-theme="heritage"] .tile-img img, html[data-theme="heritage"] .tile-img .ph, html[data-theme="heritage"] .stage, html[data-theme="heritage"] .promo-img, html[data-theme="heritage"] .split-media, html[data-theme="heritage"] .studio-image, html[data-theme="heritage"] .map-frame, html[data-theme="heritage"] .mega-feature .thumb { border-radius: 0; outline: 0; }
 html[data-theme="heritage"] .pdp-info h1 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(34px, 3.4vw, 46px); line-height: 1.1; }
 html[data-theme="heritage"] .pdp-price { font-family: var(--serif); font-style: italic; font-size: 34px; font-weight: 400; }

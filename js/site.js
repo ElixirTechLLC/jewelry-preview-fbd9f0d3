@@ -20,7 +20,24 @@
     page: (location.pathname.split("/").pop() || "index.html").replace(/\.html$/, "") || "index",
     params: new URLSearchParams(location.search),
   };
-  const imagesFor = (id) => IMAGES[id] || [];
+  /* Full-size original of a photo. Before launch the originals live on the Vercel Blob store (js/config.js →
+     imageBase) and only the web-size copies are in the repo; with no imageBase the local file is used. */
+  const full = (src) => (S.imageBase && /^assets\/products\//.test(src) ? S.imageBase + src.replace(/^assets\/products\//, "products/") : src);
+
+  /* Web-size copy of a photo when one exists (assets/products-sm, 800px); the original otherwise. */
+  const SMALL = new Set(window.IMAGES_SMALL || []);
+  const small = (src) => {
+    const s = src.replace(/^assets\/products\//, "assets/products-sm/").replace(/\.[a-z]+$/i, ".webp");
+    return SMALL.has(s) ? s : src;
+  };
+
+  /* Photos for a piece in a gold colour ("Yellow" | "White" | "Rose"); falls back to yellow, then to whatever exists. */
+  const imagesFor = (id, color) => {
+    const set = IMAGES[id];
+    if (!set) return [];
+    if (Array.isArray(set)) return set;
+    return set[color] || set.Yellow || Object.values(set)[0] || [];
+  };
 
   /* ---------- Financing estimate (driven by js/config.js) ---------- */
   function monthly(price, months, apr) {
@@ -129,8 +146,8 @@
   function mediaHTML(p, opts = {}) {
     const imgs = imagesFor(p.id);
     if (!imgs.length) return placeholder(p.type);
-    const first = `<img src="${imgs[0]}" alt="${esc(p.name)}" ${opts.eager ? "" : 'loading="lazy"'}>`;
-    const second = opts.hover && imgs[1] ? `<img class="alt" src="${imgs[1]}" alt="" loading="lazy">` : "";
+    const first = `<img src="${small(imgs[0])}" alt="${esc(p.name)}" ${opts.eager ? "" : 'loading="lazy"'}>`;
+    const second = opts.hover && imgs[1] ? `<img class="alt" src="${small(imgs[1])}" alt="" loading="lazy">` : "";
     return first + second;
   }
 
@@ -497,7 +514,7 @@
   }
 
   const JW = (window.JW = {
-    $, $$, esc, money, ctw, grams, monthly, finLine, getProduct, imagesFor, mediaHTML, placeholder,
+    $, $$, esc, money, ctw, grams, monthly, finLine, getProduct, imagesFor, small, full, mediaHTML, placeholder,
     specLine, productCard, priceFrom, priceRange, resetPrices, CATS, inCat, shopUrl, Bag, toast, search,
     route: initialRoute, pages: {}, fillTokens, markCurrent,
   });

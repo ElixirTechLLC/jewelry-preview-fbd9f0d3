@@ -51,6 +51,10 @@ window.SITE = {
   /* DESIGN STUDIO — the address of the design API once it is deployed on Vercel,
      e.g. "https://jewelry-design-api.vercel.app". Empty = the studio shows a "coming soon" note. */
   designApi: "",
+  // Full-size product photos. Before launch they live on the Vercel Blob store and only the 800px web copies
+  // (assets/products-sm) are in this repo; the product page builds originals' URLs from this base + "products/<id>/<file>".
+  // Empty = load originals from assets/products locally. Change at go-live when the photos move to their final host.
+  imageBase: "https://di5t1gkk0gbtq3uh.public.blob.vercel-storage.com/",
 
   imageNote:
     "Each piece is made to order in our workshop. Prices follow the day's gold price and are confirmed, with the final gold and diamond weights, before we begin.",

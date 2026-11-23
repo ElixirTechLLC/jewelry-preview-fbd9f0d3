@@ -159,9 +159,10 @@ function buildBoard() {
   const sections = CATS.map(([cat, title]) => {
     const items = CATALOG.filter((p) => p.cat === cat && index[p.sku]).map((p) => {
       const e = index[p.sku];
-      const imgs = e.images.map((i, k) => `<a href="sources/${p.sku}/${i.file}" target="_blank" class="${i.pick ? "pick" : ""}"><img src="sources/${p.sku}/${i.file}" alt="" loading="lazy"><span>${i.pick ? "owners' pick" : k + 1}</span></a>`).join("");
-      const host = (() => { try { return new URL(e.page).hostname.replace(/^www\./, ""); } catch (x) { return e.page; } })();
-      return `<article id="${p.sku}"><header><span class="sku">${p.sku}</span><h3>${esc(p.name)}</h3><p>${esc(p.brief || p.setting)}.</p>${e.note ? `<p class="note">Owners: “${esc(e.note)}”</p>` : ""}<p class="src">${e.images.length} image${e.images.length === 1 ? "" : "s"} from <a href="${esc(e.page)}" target="_blank" rel="noopener">${esc(host)}</a> · ${esc(e.pageTitle).slice(0, 80)} <em>(${esc(e.status)})</em></p></header><div class="imgs">${imgs || "<em>Nothing could be saved from this source.</em>"}</div></article>`;
+      const imgs = e.images.map((i, k) => `<a href="sources/${p.sku}/${i.file}" target="_blank" class="${i.pick ? "pick" : i.alt ? "alt" : ""}"><img src="sources/${p.sku}/${i.file}" alt="" loading="lazy"><span>${i.pick ? "owners' pick" : i.alt ? "2nd listing" : k + 1}</span></a>`).join("");
+      const altLine = e.alt ? ` · second listing: <a href="${esc(e.alt.page)}" target="_blank" rel="noopener">${esc((() => { try { return new URL(e.alt.page).hostname.replace(/^www\./, ""); } catch (x) { return e.alt.page; } })())}</a>` : "";
+      const host = (() => { try { return new URL(e.page).hostname.replace(/^www\./, ""); } catch (x) { return e.page || "no owners' pick"; } })();
+      return `<article id="${p.sku}"><header><span class="sku">${p.sku}</span><h3>${esc(p.name)}</h3><p>${esc(p.brief || p.setting)}.</p>${e.note ? `<p class="note">Owners: “${esc(e.note)}”</p>` : ""}<p class="src">${e.images.length} image${e.images.length === 1 ? "" : "s"} from <a href="${esc(e.page)}" target="_blank" rel="noopener">${esc(host)}</a> · ${esc(e.pageTitle).slice(0, 80)} <em>(${esc(e.status)})</em>${altLine}</p></header><div class="imgs">${imgs || "<em>Nothing could be saved from this source.</em>"}</div></article>`;
     }).join("");
     return items ? `<section id="${cat}"><h2>${title}</h2>${items}</section>` : "";
   }).join("");
@@ -180,6 +181,7 @@ article h3{margin:2px 0 6px;font-weight:500;font-size:22px}article p{margin:0 0 
 .imgs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:12px}
 .imgs a{position:relative;display:block;aspect-ratio:1;background:#fff;border:1px solid var(--line);overflow:hidden}
 .imgs a.pick{outline:3px solid var(--brass);border-color:var(--brass)}
+.imgs a.alt span{background:rgba(90,95,79,.85)}
 .imgs img{width:100%;height:100%;object-fit:cover}
 .imgs span{position:absolute;left:0;right:0;bottom:0;background:rgba(32,41,29,.72);color:#f0e4d0;font:600 9px/1 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:4px 0}
 .imgs a.pick span{background:var(--brass)}
@@ -189,6 +191,69 @@ article h3{margin:2px 0 6px;font-weight:500;font-size:22px}article p{margin:0 0 
 <nav>${CATS.map(([c, t]) => `<a href="#${c}">${t}</a>`).join("")}</nav>
 ${sections}</div></body></html>`);
   return total;
+}
+
+/* --alt SKU=search words[;SKU=…]: for a design whose source gave only one photo, find a second listing of
+   the same kind of piece in a shop that serves its gallery, and add that gallery marked as a second listing. */
+const BLOCKED_HOSTS = /etsy\.com|walmart\.com|1stdibs\.com|therealreal\.com|ebay\.com|amazon\.com|nordstrom\.com|macys\.com|bjs\.com|belk\.com|pinterest|facebook|instagram|tiktok|youtube|reddit|aliexpress|temu|shein|wish\.com/i;
+async function galleryOf(pageUrl) {
+  let urls = [];
+  const sh = await shopifyImages(pageUrl);
+  if (sh) urls = sh.images;
+  else { try { const pg = await fetchText(pageUrl); if (pg.ok) urls = candidates(pg.text, pg.url); } catch (e) { /* none */ } }
+  const seen = new Set();
+  return urls.filter((u) => { const k = key(u); if (seen.has(k)) return false; seen.add(k); return true; });
+}
+async function findAlt(entry, query, skip = []) {
+  if (/^https?:\/\//i.test(query)) {
+    const urls = await galleryOf(query);
+    return urls.length ? { page: query, title: "", image: urls[0], urls: urls.slice(1, 11) } : null;
+  }
+  const r = await fetchText(`https://www.bing.com/images/async?q=${encodeURIComponent(query)}&first=0&count=35&mmasync=1`);
+  const hits = [];
+  for (const m of r.text.matchAll(/\sm="(\{&quot;[^"]+)"/g)) {
+    try { const j = JSON.parse(m[1].replace(/&quot;/g, '"').replace(/&amp;/g, "&")); if (j.purl && j.murl && !BLOCKED_HOSTS.test(j.purl) && !samePage(j.purl, entry.page) && !skip.some((u) => samePage(j.purl, u))) hits.push(j); } catch (e) { /* skip */ }
+  }
+  const tried = new Set();
+  for (const h of hits) {
+    const pageKey = h.purl.replace(/[?#].*$/, "");
+    if (tried.has(pageKey)) continue; tried.add(pageKey);
+    if (tried.size > 12) break;
+    const urls = await galleryOf(h.purl);
+    if (urls.length >= 3) return { page: h.purl, title: h.t || "", image: h.murl, urls: urls.slice(0, 10) };
+  }
+  return null;
+}
+const altArg = args.indexOf("--alt");
+if (altArg >= 0) {
+  const specs = args[altArg + 1].split(";").map((s) => s.split("=")).map(([sku, q]) => [sku.trim(), (q || "").trim()]);
+  for (const [sku, q] of specs) {
+    let e = index[sku];
+    const p = CATALOG.find((x) => x.sku === sku);
+    if (!p) { console.log(`${sku}  not in catalog`); continue; }
+    if (!e) { e = index[sku] = { sku, name: p.name, pick: null, page: "", pageTitle: "", note: (answers[sku] && answers[sku].note) || "", track: null, images: [], status: "no owners' pick" }; }
+    const rejected = [...(e.altRejected || []), ...(e.alt ? [e.alt.page] : [])];
+    const alt = await findAlt(e, q || `${p.name} 14k gold`, rejected);
+    if (!alt) { console.log(`${sku}  no second listing with a gallery found`); continue; }
+    const dir = path.join(OUT_DIR, sku); fs.mkdirSync(dir, { recursive: true });
+    if (e.alt) {
+      for (const i of e.images.filter((x) => x.alt)) { try { fs.unlinkSync(path.join(dir, i.file)); } catch (x) { /* gone */ } }
+      e.images = e.images.filter((x) => !x.alt);
+      e.altRejected = rejected;
+    }
+    let n = e.images.length, added = 0;
+    for (const u of [alt.image, ...alt.urls]) {
+      if (n >= MAX_IMAGES) break;
+      try { const got = await download(u, path.join(dir, String(n + 1).padStart(2, "0")), alt.page); e.images.push({ file: got.file, url: u, pick: false, alt: true, bytes: got.bytes }); n++; added++; }
+      catch (err) { try { const got = await download(upsize(u), path.join(dir, String(n + 1).padStart(2, "0")), alt.page); e.images.push({ file: got.file, url: u, pick: false, alt: true, bytes: got.bytes }); n++; added++; } catch (e2) { /* skip */ } }
+    }
+    e.alt = { page: alt.page, title: alt.title };
+    e.status = e.status.replace(/;\s*\d+ from a second listing.*$/, "") + `; ${added} from a second listing`;
+    console.log(`${sku}  +${added} from ${alt.page.slice(0, 90)}`);
+    fs.writeFileSync(INDEX, JSON.stringify(index, null, 1));
+  }
+  console.log(`Board: ${BOARD}  (${buildBoard()} images)`);
+  process.exit(0);
 }
 
 /* --import <file.json>: { "SKU": ["image url", …] } gathered by hand or from a browser session; images are added to that design */

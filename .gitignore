@@ -4,3 +4,7 @@ design-api/
 
 # web reference photos for internal comparison, never published
 reference/
+
+# full-size product photos: 765 originals (~870 MB) live on the Vercel Blob store (scripts/upload-originals.mjs);
+# only the web-size copies in assets/products-sm are committed. See js/config.js imageBase.
+assets/products/
