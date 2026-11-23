@@ -46,6 +46,9 @@ for v in variants:
 
 CAT = {"Bracelets": ("bracelets", "bracelet"), "Chains": ("chains", "chain"), "Rings": ("rings", "ring"), "Wedding Bands": ("wedding", "band"), "Engagement Rings": ("engagement", "ring")}
 STYLE_WORDS = ["solitaire", "halo", "three-stone", "bezel", "pave", "cathedral", "split", "twist", "bypass", "vintage", "east-west", "signet", "dome", "eternity", "channel", "milgrain", "hammered", "knife-edge", "brushed", "beveled", "braided", "groove", "chevron", "baguette", "scallop", "comfort", "cuban", "curb", "paperclip", "figaro", "mariner", "rope", "herringbone", "box", "wheat", "bead", "cuff", "tennis", "station", "bangle", "cable", "trace", "franco", "byzantine", "singapore", "snake", "omega", "ribbon", "wave", "step", "compass", "arc", "scatter", "bar", "ribbed"]
+# Owners' review of 2026-11-22: designs dropped from the catalog, and renamed ones (old title -> new title)
+REMOVED = {"BR-007", "BR-008", "BR-009", "BR-012", "BR-013", "BR-014", "BR-015", "BR-020", "CH-008", "CH-009", "CH-010", "CH-011", "CH-012", "CH-015", "CH-016"}
+RENAMES = {"BR-005": ("Atlas Cuban Bracelet", "Miami Cuban Bracelet", "miami-cuban-bracelet")}
 FEATURED = ["ER-001", "ER-004", "ER-011", "WB-012", "WB-001", "BR-005", "BR-016", "CH-004", "CH-007", "RG-003", "RG-011", "BR-011"]
 
 def tags_for(p):
@@ -69,6 +72,13 @@ def tags_for(p):
 
 out = []
 for sku, p in products.items():
+    if sku in REMOVED:
+        continue
+    if sku in RENAMES:
+        old, new, handle = RENAMES[sku]
+        for k, v in list(p.items()):
+            if isinstance(v, str): p[k] = v.replace(old, new)
+        p["Handle"] = handle
     d = per[sku]
     assert len(d["labor"]) == 1, (sku, d["labor"])
     cat, typ = CAT[p["Category"]]

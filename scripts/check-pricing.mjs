@@ -32,11 +32,14 @@ function parseCsv(text) {
 
 const rows = parseCsv(readFileSync(csvPath, "utf8"));
 const bySku = Object.fromEntries(CATALOG.map((p) => [p.sku, p]));
+// designs the owners removed after the workbook was issued (kept in sync with scripts/import-catalog.py)
+const REMOVED = new Set((readFileSync("scripts/import-catalog.py", "utf8").match(/REMOVED = \{([^}]*)\}/) || ["", ""])[1].split(",").map((s) => s.trim().replace(/"/g, "")).filter(Boolean));
+let removed = 0;
 let ok = 0, bad = 0, missing = 0;
 const examples = [];
 for (const r of rows) {
   const p = bySku[r["Parent SKU"]];
-  if (!p) { missing++; continue; }
+  if (!p) { if (REMOVED.has(r["Parent SKU"])) removed++; else missing++; continue; }
   const choice = { karat: r["Option1 Value"] };
   [[r["Option2 Name"], r["Option2 Value"]], [r["Option3 Name"], r["Option3 Value"]]].forEach(([n, v]) => {
     if (n === "Diamond Selection") choice.diamond = v;
@@ -49,7 +52,7 @@ for (const r of rows) {
   if (q.price === want && q.sku === r["Variant SKU"] && Math.abs(q.goldG - wantG) < 0.011 /* Excel's ROUND and JS differ on a few x.xx5 weights by 0.01 g; prices never do */) ok++;
   else { bad++; if (examples.length < 12) examples.push({ sku: r["Variant SKU"], ours: q.sku, want, got: q.price, wantG, gotG: q.goldG }); }
 }
-console.log(`${ok} of ${rows.length} variants match (price, gold weight and SKU); ${bad} differ; ${missing} rows had no catalog piece`);
+console.log(`${ok} of ${rows.length - removed} variants match (price, gold weight and SKU); ${bad} differ; ${missing} rows had no catalog piece; ${removed} rows belong to designs the owners removed`);
 if (examples.length) console.table(examples);
 // a sample of what the engine says at the live/default gold price for the README
 process.exit(bad || missing ? 1 : 0);

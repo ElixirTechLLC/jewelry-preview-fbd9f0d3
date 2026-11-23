@@ -35,7 +35,7 @@ The home page is built around **stock photographs**: for now the slots use crops
 
 ## Catalog and pricing
 
-The catalog is the owners' **100-design workbook** (`Jewelry_100_Designs_Pricing_Catalog.xlsx`, 2026-11-18): 20 each of engagement rings, wedding bands, rings, bracelets and chains. Nothing on the site is a stored price. For each design `js/catalog.js` carries the reference 14K gold weight, the workshop labor, accent diamond carats, the center-stone shape and the options the owners offer (10K / 14K / 18K; lengths or sizes; diamond selections; center carats 1–5). `js/pricing.js` turns a chosen configuration into a price with the workbook's own formulas:
+The catalog is the owners' **100-design workbook**, less the 15 designs they removed in their review of 2026-11-22 (listed as `REMOVED` in `scripts/import-catalog.py`, with the one rename), so 85 designs are live (`Jewelry_100_Designs_Pricing_Catalog.xlsx`, 2026-11-18): 20 each of engagement rings, wedding bands, rings, bracelets and chains. Nothing on the site is a stored price. For each design `js/catalog.js` carries the reference 14K gold weight, the workshop labor, accent diamond carats, the center-stone shape and the options the owners offer (10K / 14K / 18K; lengths or sizes; diamond selections; center carats 1–5). `js/pricing.js` turns a chosen configuration into a price with the workbook's own formulas:
 
 - gold: estimated weight × today's gold price per gram × purity × sourcing allowance 1.15 × retail multiple 1.55
 - labor: the design's workshop labor (+ $70 per carat over 1) × 1.65

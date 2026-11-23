@@ -58,7 +58,7 @@
     chains: {
       title: "Chains",
       intro: "Solid gold chains, never hollow, in 18, 20 or 22 inches, plus diamond station chains.",
-      chips: [["Plain Gold", "gold"], ["Diamond", "diamond"], ["Cuban", "cuban"], ["Rope", "rope"], ["Figaro", "figaro"], ["Paperclip", "paperclip"], ["Box", "box"], ["Herringbone", "herringbone"]],
+      chips: [["Plain Gold", "gold"], ["Diamond", "diamond"], ["Cuban", "cuban"], ["Rope", "rope"], ["Figaro", "figaro"], ["Paperclip", "paperclip"], ["Franco", "franco"], ["Mariner", "mariner"]],
     },
     all: { title: "All Jewelry", intro: "Every design we make, priced at today's gold.", chips: [], filter: () => true },
   };
@@ -96,8 +96,8 @@
     {
       label: "Bracelets", cat: "bracelets", feature: "aurora-round-tennis-bracelet",
       cols: [
-        { title: "Shop by Style", links: [["Link Bracelets", "gold"], ["Cuffs", "cuff"], ["Diamond Bracelets", "diamond"], ["Tennis", "tennis"], ["Bangle", "bangle"]] },
-        { title: "Shop by Link", links: [["Cuban", "cuban"], ["Curb", "curb"], ["Figaro", "figaro"], ["Paperclip", "paperclip"], ["Rope", "rope"], ["Herringbone", "herringbone"]] },
+        { title: "Shop by Style", links: [["Link Bracelets", "gold"], ["Cuffs", "cuff"], ["Diamond Bracelets", "diamond"], ["Tennis", "tennis"]] },
+        { title: "Shop by Link", links: [["Cuban", "cuban"], ["Curb", "curb"], ["Figaro", "figaro"], ["Paperclip", "paperclip"], ["Rope", "rope"], ["Mariner", "mariner"]] },
         { title: "Gifts by Price", raw: [["Under $1,500", shopUrl("bracelets", "", "&max=1500")], ["Under $3,000", shopUrl("bracelets", "", "&max=3000")], ["All Bracelets", shopUrl("bracelets")]] },
       ],
       promo: { title: "Solid gold, three lengths", text: "Every bracelet in 7, 7.5 or 8 inches, with a secure lobster or box clasp.", href: shopUrl("bracelets"), cta: "Shop bracelets" },
@@ -105,7 +105,7 @@
     {
       label: "Chains", cat: "chains", feature: "micro-cuban-chain",
       cols: [
-        { title: "Shop by Link", links: [["Cuban", "cuban"], ["Rope", "rope"], ["Figaro", "figaro"], ["Curb", "curb"], ["Franco", "franco"], ["Paperclip", "paperclip"], ["Box", "box"], ["Herringbone", "herringbone"], ["Byzantine", "byzantine"]] },
+        { title: "Shop by Link", links: [["Cuban", "cuban"], ["Rope", "rope"], ["Figaro", "figaro"], ["Curb", "curb"], ["Franco", "franco"], ["Paperclip", "paperclip"], ["Mariner", "mariner"], ["Cable", "cable"]] },
         { title: "Diamond Chains", links: [["Station Chains", "station"], ["Bezel Chain", "bezel"], ["Pavé Segments", "pave"]] },
         { title: "Gifts by Price", raw: [["Under $1,000", shopUrl("chains", "", "&max=1000")], ["Under $2,500", shopUrl("chains", "", "&max=2500")], ["All Chains", shopUrl("chains")]] },
       ],
